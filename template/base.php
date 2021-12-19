@@ -16,7 +16,8 @@
 </head>
 <body>
     <header> 
-        
+        immagini
     </header>
+    <footer>ciao</footer>
 </body>
 </html>
