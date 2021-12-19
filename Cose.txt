@@ -1,0 +1,26 @@
+LISTA AZIONI IMPORTANTI PROGETTO:
+- cookies
+- chat cliente e titolare o impiegato
+- recensioni prodotti
+- aggiornamento chat 
+
+NOTIFICHE: 
+	Cliente: 
+		- ordine confermato
+		- messaggio chat
+		- prodotto in esaurimento che sta nel carrello 
+		- utilizzo codice sconto
+	Venditore: 
+		- Ordine in arrivo
+		- messaggio chat
+		- prodotto sold-out
+		- prodotto in esaurimento
+		- prodotto invenduto > 1 mese
+
+WOW: 
+- foto bianco e nero se prodotto esaurito
+- codici affiliati 
+- email per attivazione account
+- registrazione tramite google 
+- (invia notifica per rifornimento prodotto)
+- saltare e hashare le password
