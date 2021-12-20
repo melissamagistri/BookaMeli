@@ -1,6 +1,6 @@
 <?php
 session_start();
 define("UPLOAD_DIR", "./upload/");
-require_once("db/database.php");
-$dbh = new DatabaseHelper("localhost", "root", "", "BookaMeli", 3306);
+require_once "database/database.php";
+$dbh = new Database("localhost", "root", "", "BookaMeli", 3306);
 ?>

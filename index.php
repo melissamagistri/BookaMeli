@@ -3,5 +3,5 @@ require_once 'util.php';
 
 $templateParams["titolo"] = "ciao";
 
-require_once 'base.php';
+require_once 'template/base.php';
 ?>
