@@ -13,6 +13,25 @@ body > header, body > footer{
     text-align: center;
 }
 
+body > footer{
+    display: inline-block;
+    width: 100%;
+}
+
+body > footer > div:first-of-type{
+    float: left;
+    padding: 10px 5px;
+}
+
+body > footer > div:nth-of-type(2){
+    float: right;
+    padding: 10px 5px;
+}
+
+div > ul > li:first-of-type > img{
+    width: 100px;
+}
+
 body > header > nav > div{
     display: inline-block;
     padding: 10px 20px;
@@ -33,4 +52,10 @@ body > header > nav > div:nth-child(2){
 ul > li {
     list-style: none;
 }
+
+footer{
+    display: inline-block;
+}
+
+
 

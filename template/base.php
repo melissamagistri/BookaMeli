@@ -46,7 +46,6 @@
                 <li><p>Chi siamo</p></li>
             </ul>
         </div>
-        <div><img src="" alt=""></div>
     </footer>
 </body>
 </html>
