@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $("body > header > nav > div:last-child>img, div > ul > li:first-of-type > img:first-of-type").click(function(e){
         window.location.href = '#';
     });

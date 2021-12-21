@@ -8,6 +8,10 @@ body {
     color: black;
 }
 
+body > header > nav{
+    margin: 0 0 20px 0;
+}
+
 body > header, body > footer{
     background-color: lightblue;
     text-align: center;
@@ -15,7 +19,7 @@ body > header, body > footer{
 
 body > footer > div:first-of-type{
     float: left;
-    padding: 10px 5px;
+    padding: 10px 10px;
 }
 
 body > footer > div:nth-of-type(2){
@@ -23,6 +27,9 @@ body > footer > div:nth-of-type(2){
     padding: 10px 5px;
 }
 
+body > footer > div > ul, body > footer > div > ul > li > div > ul{
+    padding : 0;
+}
 div > ul > li:first-of-type > img{
     width: 100px;
 }
@@ -66,5 +73,6 @@ footer > div > ul > li:last-of-type > div > ul > li{
 footer > div > ul > li > a{
     text-decoration: inherit;
 }
+
 
 
