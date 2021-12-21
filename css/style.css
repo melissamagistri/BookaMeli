@@ -13,14 +13,24 @@ body > header, body > footer{
     text-align: center;
 }
 
-body > div {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body > header > nav > div{
+    display: inline-block;
+    padding: 10px 20px;
 }
 
-body > div > img{
-    width: 50px;
-    margin-right: 5px;
+body > header > nav > div:last-child>img{
+    width: 200px;
 }
-body > footer > div > li {
+
+body > header > nav > div:first-child{
+    float : right;
+}
+
+body > header > nav > div:nth-child(2){
+    float: left;
+}
+
+ul > li {
     list-style: none;
 }
+
