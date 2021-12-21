@@ -23,7 +23,7 @@
         </nav>    
     </header>
     <main>
-
+        
     </main>
     <footer>
         <div>
@@ -32,9 +32,9 @@
                 <li><h3>I nostri social</h3></li>
                 <li><div>
                     <ul>
-                        <li>Instagram</li>
-                        <li>Facebook</li>
-                        <li>Youtube</li>
+                        <li><img src="<?php echo UPLOAD_DIR.'youtube.png'?>" alt="youtube"></li>
+                        <li><img src="<?php echo UPLOAD_DIR.'instagram.png'?>" alt="instagram"></li>
+                        <li><img src="<?php echo UPLOAD_DIR.'facebook.png'?>" alt="facebook"></li>
                     </ul>
                 </div></li>
 
@@ -43,7 +43,7 @@
         <div>
             <ul>
                 <li><h3>Informazioni</h3></li>
-                <li><p>Chi siamo</p></li>
+                <li><a href="#">Chi siamo</a></li>
             </ul>
         </div>
     </footer>

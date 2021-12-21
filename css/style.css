@@ -4,18 +4,13 @@ body, header{
 }
 
 body {
-    background-color: cornsilk;
+    background-color: white;
+    color: black;
 }
 
 body > header, body > footer{
     background-color: lightblue;
-    color: white;
     text-align: center;
-}
-
-body > footer{
-    display: inline-block;
-    width: 100%;
 }
 
 body > footer > div:first-of-type{
@@ -55,7 +50,21 @@ ul > li {
 
 footer{
     display: inline-block;
+    margin: 20px 0;
+    width: 100%;
 }
 
+footer > div > ul > li:last-of-type > div > ul > li > img{
+    width: 50px;
+}
+
+footer > div > ul > li:last-of-type > div > ul > li{
+    display: inline-block;
+    padding: 5px 5px;
+}
+
+footer > div > ul > li > a{
+    text-decoration: inherit;
+}
 
 
