@@ -20,7 +20,17 @@
             <div><img src="<?php echo UPLOAD_DIR.'carrello.png'?>" alt="carrello"></div>
             <div><img src="<?php echo UPLOAD_DIR.'menu.png'?>" alt="menu"></div>
             <div><img src="<?php echo UPLOAD_DIR.'logo.png'?>" alt="BookaMeli"></div>
-        </nav>    
+        </nav> 
+        
+        <div id="menunav" class="sidenav">
+            <ul>
+                <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         
