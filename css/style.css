@@ -1,6 +1,7 @@
-body, header{
+body, header, h3, img, a{
     margin: 0;
     padding: 0;
+    font-family: "Helvetica", sans-serif;
 }
 
 body {
@@ -51,6 +52,13 @@ body > header > nav > div:nth-child(2){
     float: left;
 }
 
+body > header >div:nth-of-type(2) > ul > li:first-child > img{
+  padding: 0 0 0 20px;
+}
+
+body > header >div:nth-of-type(2) > ul > li:first-child > h3{
+  text-align: center;
+}
 ul > li {
     list-style: none;
 }
@@ -75,18 +83,26 @@ footer > div > ul > li > a{
 }
 
 
-.sidenav {
+.sidenav , .sidenavcar{
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 250px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    left: 0;
+
     background-color: lightblue; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
-  
+
+.sidenavcar{
+  right: 0;
+}
+
+.sidenav{
+  left:0;
+}
+
   /* The navigation menu links */
   .sidenav a {
     padding: 8px 8px 8px 10px;
@@ -96,25 +112,25 @@ footer > div > ul > li > a{
     display: block;
     transition: 0.3s;
   }
-  
+
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
-  .sidenav ul:first-child img{
+
+  .sidenav ul:first-child img, .sidenavcar ul:first-child img{
     width: 20px;
     padding: 0 20px 20px 0;
   }
 
-  .sidenav ul{
+  .sidenav ul, .sidenavcar ul{
       padding: 0;
   }
-  .sidenav ul li:first-of-type{
+  .sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
     text-align: right;
   }
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+    .sidenav , .sidenavcar{padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
