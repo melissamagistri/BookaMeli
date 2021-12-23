@@ -61,10 +61,21 @@
             </ul>
         </div>
         <div>
-            <ul>
-                <li><h3>Informazioni</h3></li>
-                <li><a href="#">Chi siamo</a></li>
-            </ul>
+          <ul>
+            <li><h3>Prodotti</h3></li>
+            <li><a href="#">Novità</a></li>
+            <li><a href="#">Manga</a></li>
+            <li><a href="#">Action Figure</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+             <li><h3>Informazioni</h3></li>
+             <li><a href="#">Chi siamo</a></li>
+             <li><a href="#"> Cookies policy</a></li>
+             <li><a href="#">Spedizioni e resi</a></li>
+             <li><a href="#">Termini e condizioni </a></li>
+         </ul>
         </div>
     </footer>
 </body>

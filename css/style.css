@@ -80,12 +80,13 @@ footer > div > ul > li:last-of-type > div > ul > li{
 
 footer > div > ul > li > a{
     text-decoration: inherit;
+    padding: 5px 0 5px 0;
 }
 
 
 .sidenav , .sidenavcar{
     height: 100%; /* 100% Full-height */
-    width: 250px; /* 0 width - change this with JavaScript */
+    width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
