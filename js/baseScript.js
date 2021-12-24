@@ -32,11 +32,15 @@ $(document).ready(function(){
 
 function openNav(nav) {
     $(nav).addClass('open');
-    $('body').addClass('background');
+    $('body > header > nav').addClass('background');
+    $('body> footer').addClass('background');
+    $('body> main').addClass('background');
   }
   
-  /* Set the width of the side navigation to 0 */
+  
   function closeNav(nav) {
     $(nav).removeClass('open');
-    $('body').removeClass('background');
+    $('body > header > nav').removeClass('background');
+    $('body> footer').removeClass('background');
+    $('body> main').removeClass('background');
   }

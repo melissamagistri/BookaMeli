@@ -11,12 +11,13 @@ body {
 
 body > header > nav{
     margin: 0 0 20px 0;
+    background-color: lightblue;
 }
 
 body > header, body > footer{
-    background-color: lightblue;
     text-align: center;
 }
+
 
 body > footer > div:first-of-type{
     float: left;
@@ -63,6 +64,7 @@ footer{
     display: inline-block;
     margin: 20px 0;
     width: 100%;
+    background-color: lightblue;
 }
 
 footer > div > ul > li:last-of-type > div > ul > li > img{
@@ -86,8 +88,7 @@ footer > div > ul > li > a{
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-
-    background-color: lightblue; /* Black*/
+    background-color: white; 
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
@@ -120,7 +121,7 @@ footer > div > ul > li > a{
 
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: black;
   }
 
   .sidenav ul:first-child img, .sidenavcar ul:first-child img{
@@ -134,8 +135,9 @@ footer > div > ul > li > a{
   .sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
     text-align: right;
   }
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav , .sidenavcar{padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+
+  @media screen and (max-width: 300px) {
+    .open{
+      width: 100%;
+    }
   }
