@@ -25,10 +25,11 @@
         <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">Action Figure</a></li>
+                <li><a href="#">Informazioni</a></li>
+                <li><a href="#">Il tuo Account</a></li>
+                <li><a href="#">Chat e Notifiche</a></li>
             </ul>
         </div>
 
@@ -41,7 +42,11 @@
         </div>
     </header>
     <main>
-        
+    <?php
+    if(isset($templateParams["nome"])){
+        require($templateParams["nome"]);
+    }
+    ?>
     </main>
     <footer>
         <div>
