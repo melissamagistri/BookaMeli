@@ -52,10 +52,6 @@ body > header > nav > div:nth-child(2){
     float: left;
 }
 
-body > header >div:nth-of-type(2) > ul > li:first-child > img{
-  padding: 0 0 0 20px;
-}
-
 body > header >div:nth-of-type(2) > ul > li:first-child > h3{
   text-align: center;
 }
@@ -98,6 +94,14 @@ footer > div > ul > li > a{
 
 .sidenavcar{
   right: 0;
+}
+
+.background{
+  opacity: 0.5;
+}
+
+.open{
+  width: 250px;
 }
 
 .sidenav{
