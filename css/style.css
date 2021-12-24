@@ -10,21 +10,12 @@ body {
 }
 
 body > header > nav{
-<<<<<<< HEAD
   margin: 0 0 20px 0;
-}
-
-body > header, body > footer{
   background-color: lightblue;
-  text-align: center;
-=======
-    margin: 0 0 20px 0;
-    background-color: lightblue;
 }
 
 body > header, body > footer{
-    text-align: center;
->>>>>>> 5703d957f30e3b6ab4bdebf62e52d5cfb8f0cb48
+  text-align: center;
 }
 
 
@@ -62,13 +53,6 @@ body > header > nav > div:nth-child(2){
   float: left;
 }
 
-<<<<<<< HEAD
-body > header >div:nth-of-type(2) > ul > li:first-child > img{
-padding: 0 0 0 20px;
-}
-
-=======
->>>>>>> 5703d957f30e3b6ab4bdebf62e52d5cfb8f0cb48
 body > header >div:nth-of-type(2) > ul > li:first-child > h3{
 text-align: center;
 }
@@ -77,16 +61,10 @@ ul > li {
 }
 
 footer{
-<<<<<<< HEAD
   display: inline-block;
   margin: 20px 0;
   width: 100%;
-=======
-    display: inline-block;
-    margin: 20px 0;
-    width: 100%;
-    background-color: lightblue;
->>>>>>> 5703d957f30e3b6ab4bdebf62e52d5cfb8f0cb48
+  background-color: lightblue;
 }
 
 footer > div > ul > li:last-of-type > div > ul > li > img{
@@ -100,55 +78,34 @@ footer > div > ul > li:last-of-type > div > ul > li{
 
 footer > div > ul > li > a{
   text-decoration: inherit;
-}
-
-footer > div:nth-of-type(2) > ul > li,footer > div:nth-of-type(3) > ul > li{
-padding: 5px 0 5px 0;
-}
-
-footer > div:nth-of-type(3) > ul > li{
-  margin: 0 5px 0 0;
+  padding: 5px 0 5px 0;
 }
 
 
 .sidenav , .sidenavcar{
-<<<<<<< HEAD
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-
-  background-color: lightblue; /* Black*/
+  background-color: white; 
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-=======
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    background-color: white; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
->>>>>>> 5703d957f30e3b6ab4bdebf62e52d5cfb8f0cb48
 
 .sidenavcar{
 right: 0;
 }
 
 .background{
-  opacity: 0.5;
+opacity: 0.5;
 }
 
 .open{
-  width: 250px;
+width: 250px;
 }
 
 .sidenav{
-<<<<<<< HEAD
 left:0;
 }
 
@@ -164,7 +121,7 @@ left:0;
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: black;
 }
 
 .sidenav ul:first-child img, .sidenavcar ul:first-child img{
@@ -179,43 +136,19 @@ left:0;
   text-align: right;
 }
 
-@media screen and (min-width: 768px) {
-  
+@media screen and (max-width: 300px) {
+  .open{
+    width: 100%;
+  }
 }
-=======
-  left:0;
-}
 
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 10px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: black;
-  }
-
-  .sidenav ul:first-child img, .sidenavcar ul:first-child img{
-    width: 20px;
-    padding: 0 20px 20px 0;
-  }
-
-  .sidenav ul, .sidenavcar ul{
-      padding: 0;
-  }
-  .sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
-    text-align: right;
-  }
-
-  @media screen and (max-width: 300px) {
-    .open{
-      width: 100%;
+@media screen and(max-width: 500px) {
+  body > header >div:nth-of-type(2) > ul > li:first-child > h3{
+    text-align: left;
     }
-  }
->>>>>>> 5703d957f30e3b6ab4bdebf62e52d5cfb8f0cb48
+
+    body > header > nav > div:last-child>img{
+      width: 100px;
+    }
+
+}
