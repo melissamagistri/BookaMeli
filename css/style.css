@@ -1,137 +1,143 @@
 body, header, h3, img, a{
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
 }
 
 body {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 body > header > nav{
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 body > header, body > footer{
-    background-color: lightblue;
-    text-align: center;
+  background-color: lightblue;
+  text-align: center;
 }
 
 body > footer > div:first-of-type{
-    float: left;
-    padding: 10px 10px;
+  float: left;
+  padding: 10px 10px;
 }
 
 body > footer > div:nth-of-type(2){
-    float: right;
-    padding: 10px 5px;
+  float: right;
+  padding: 10px 5px;
 }
 
 body > footer > div > ul, body > footer > div > ul > li > div > ul{
-    padding : 0;
+  padding : 0;
 }
 div > ul > li:first-of-type > img{
-    width: 100px;
+  width: 100px;
 }
 
 body > header > nav > div{
-    display: inline-block;
-    padding: 10px 20px;
+  display: inline-block;
+  padding: 10px 20px;
 }
 
 body > header > nav > div:last-child>img{
-    width: 200px;
+  width: 200px;
 }
 
 body > header > nav > div:first-child{
-    float : right;
+  float : right;
 }
 
 body > header > nav > div:nth-child(2){
-    float: left;
+  float: left;
 }
 
 body > header >div:nth-of-type(2) > ul > li:first-child > img{
-  padding: 0 0 0 20px;
+padding: 0 0 0 20px;
 }
 
 body > header >div:nth-of-type(2) > ul > li:first-child > h3{
-  text-align: center;
+text-align: center;
 }
 ul > li {
-    list-style: none;
+  list-style: none;
 }
 
 footer{
-    display: inline-block;
-    margin: 20px 0;
-    width: 100%;
+  display: inline-block;
+  margin: 20px 0;
+  width: 100%;
 }
 
 footer > div > ul > li:last-of-type > div > ul > li > img{
-    width: 50px;
+  width: 50px;
 }
 
 footer > div > ul > li:last-of-type > div > ul > li{
-    display: inline-block;
-    padding: 5px 5px;
+  display: inline-block;
+  padding: 5px 5px;
 }
 
 footer > div > ul > li > a{
-    text-decoration: inherit;
-    padding: 5px 0 5px 0;
+  text-decoration: inherit;
+}
+
+footer > div:nth-of-type(2) > ul > li,footer > div:nth-of-type(3) > ul > li{
+padding: 5px 0 5px 0;
+}
+
+footer > div:nth-of-type(3) > ul > li{
+  margin: 0 5px 0 0;
 }
 
 
 .sidenav , .sidenavcar{
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
 
-    background-color: lightblue; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
+  background-color: lightblue; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
 .sidenavcar{
-  right: 0;
+right: 0;
 }
 
 .sidenav{
-  left:0;
+left:0;
 }
 
-  /* The navigation menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 10px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-  .sidenav ul:first-child img, .sidenavcar ul:first-child img{
-    width: 20px;
-    padding: 0 20px 20px 0;
-  }
+.sidenav ul:first-child img, .sidenavcar ul:first-child img{
+  width: 20px;
+  padding: 0 20px 20px 0;
+}
 
-  .sidenav ul, .sidenavcar ul{
-      padding: 0;
-  }
-  .sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
-    text-align: right;
-  }
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav , .sidenavcar{padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+.sidenav ul, .sidenavcar ul{
+    padding: 0;
+}
+.sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  
+}
