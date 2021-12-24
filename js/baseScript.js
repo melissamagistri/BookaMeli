@@ -1,11 +1,19 @@
 $(document).ready(function(){
 
-    $("body > header > nav > div:nth-child(2)").click(function (e){
-        openNav();
+    $("body > header > nav > div:first-child").click(function (e){
+        openNav($('.sidenavcar'));
     });
 
-    $("body > header > div > ul:nth-child(1)").click(function (e){
-        closeNav();
+    $("body > header > div:nth-of-type(2) > ul:nth-child(1)").click(function (e){
+        closeNav($('.sidenavcar'));
+    }); 
+
+    $("body > header > nav > div:nth-child(2)").click(function (e){
+        openNav($('.sidenav'));
+    });
+
+    $("body > header > div:first-of-type > ul:nth-child(1)").click(function (e){
+        closeNav($('.sidenav'));
     });    
     $("body > header > nav > div:last-child>img, div > ul > li:first-of-type > img:first-of-type").click(function(e){
         window.location.href = '#';
@@ -22,11 +30,17 @@ $(document).ready(function(){
     });
 });
 
-function openNav() {
-    
+function openNav(nav) {
+    $(nav).addClass('open');
+    $('body > header > nav').addClass('background');
+    $('body> footer').addClass('background');
+    $('body> main').addClass('background');
   }
   
-  /* Set the width of the side navigation to 0 */
-  function closeNav() {
-    
+  
+  function closeNav(nav) {
+    $(nav).removeClass('open');
+    $('body > header > nav').removeClass('background');
+    $('body> footer').removeClass('background');
+    $('body> main').removeClass('background');
   }

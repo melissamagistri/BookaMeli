@@ -22,7 +22,7 @@
             <div><img src="<?php echo UPLOAD_DIR.'logo.png'?>" alt="BookaMeli"></div>
         </nav> 
         
-        <div id="menunav" class="sidenav">
+        <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
                 <li><a href="#">About</a></li>
@@ -32,12 +32,10 @@
             </ul>
         </div>
 
-        <div  id="carrellonav" class="sidenavcar" >
+        <div class="sidenavcar" >
             <ul>
-                <li> <div>
-                  <img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></div>
-                  <h3>Carrello</h3> 
-                </li>
+                <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
+                <li><h3>Carrello</h3></li>
             </ul>
 
         </div>
