@@ -21,16 +21,17 @@ body > header, body > footer{
 
 body > footer > div:first-of-type{
   float: left;
-  width: 25%;
+  width: 35%;
 }
 
 body > footer > div:nth-of-type(2){
-  float: right;
-  width: 20%;
+  float: left;
+  width: 30%;
 }
 
 body > footer > div:nth-of-type(3){
-  width: 20%;
+  float: left;
+  width: 30%;
 }
 
 body > footer > div > ul, body > footer > div > ul > li > div > ul{
@@ -50,7 +51,7 @@ body > header > nav > div:last-child>img{
 }
 
 body > header > nav > div:first-child{
-  float : right;
+  float: right;
 }
 
 body > header > nav > div:nth-child(2){
@@ -179,6 +180,7 @@ left:0;
 
     body > footer > div:nth-of-type(2), body > footer > div:first-of-type{
       float:none;
+      text-align: center;
     }
 }
 
