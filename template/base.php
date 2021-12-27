@@ -19,7 +19,7 @@
         <nav>
             <div><img src="<?php echo UPLOAD_DIR.'carrello.png'?>" alt="carrello"></div>
             <div><img src="<?php echo UPLOAD_DIR.'menu.png'?>" alt="menu"></div>
-            <div><img src="<?php echo UPLOAD_DIR.'logo.png'?>" alt="BookaMeli"></div>
+            <div><img src="<?php echo UPLOAD_DIR.'logo1.png'?>" alt="BookaMeli"></div>
         </nav> 
         
         <div class="sidenav">
@@ -37,6 +37,8 @@
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
                 <li><h3>Carrello</h3></li>
+                <li><img src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="vol1"></li>
+                <li><h4>Prodotto</h4></li>
             </ul>
 
         </div>
@@ -51,7 +53,7 @@
     <footer>
         <div>
             <ul>
-                <li><img src="<?php echo UPLOAD_DIR.'logo.png'?>" alt="BookaMeli"></li>
+                <li><img src="<?php echo UPLOAD_DIR.'logo1.png'?>" alt="BookaMeli"></li>
                 <li><h3>I nostri social</h3></li>
                 <li><div>
                     <ul>

@@ -162,6 +162,13 @@ left:0;
   width: 15px;
 }
 
+
+body > header > div:nth-of-type(2) > ul > li:nth-of-type(3) > img{
+  width: 100px;
+  
+}
+
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
@@ -180,6 +187,9 @@ left:0;
 
     body > footer > div:nth-of-type(2), body > footer > div:first-of-type{
       float:none;
+    }
+
+    footer{
       text-align: center;
     }
 }
