@@ -1,16 +1,29 @@
 $(document).ready(function(){
-
-    $("body > header > nav > div:first-child").click(function (e){
-        openNav($('.sidenavcar'));
+    $(document).click(function (e){
+        if($(e.target).is('body > header > nav > div:nth-child(2) > img')){
+            openNav($('.sidenav'));
+        }
+        else if($(e.target).is('body > header > nav > div:first-child > img')){
+            openNav($('.sidenavcar'));
+        }
+        else if(!($(e.target).is('.sidenavcar')) && document.getElementsByClassName('sidenavcar')[0].classList.contains('open')){
+            closeNav($('.sidenavcar'));
+        }
+        else if(!($(e.target).is('.sidenav')) && document.getElementsByClassName('sidenav')[0].classList.contains('open')){
+            closeNav($('.sidenav'));
+        }
     });
+    /*$("body > header > nav > div:first-child").click(function (e){
+        openNav($('.sidenavcar'));
+    });*/
 
     $("body > header > div:nth-of-type(2) > ul:nth-child(1)").click(function (e){
         closeNav($('.sidenavcar'));
     }); 
 
-    $("body > header > nav > div:nth-child(2)").click(function (e){
+    /*$("body > header > nav > div:nth-child(2)").click(function (e){
         openNav($('.sidenav'));
-    });
+    });*/
 
     $("body > header > div:first-of-type > ul:nth-child(1)").click(function (e){
         closeNav($('.sidenav'));
