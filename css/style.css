@@ -203,16 +203,46 @@ left:0;
 body > header > div:nth-of-type(2) > div{
   padding: 10px 10px;
 }
-body > header > div:nth-of-type(2) > div > img{
+
+img[alt~='chiusura']{
   width: 20px;
   float: right;
   padding: 0 0 20px 0;
 }
 
 body > header > div:nth-of-type(2) > ul > li > div{
+  padding: 0 0 30px 0;
   border-bottom: 1px solid #f4f4f4;
 }
 
+.button{
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  border: 2px solid grey;
+}
+
+input[type=text]{
+  width: 10%;
+  border: none;
+}
+
+body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > div{
+  display: inline-block;
+}
+
+body > header > div:nth-of-type(2) > ul > div > a:link{
+  background-color: lightblue;
+  font-weight: 200;
+  text-decoration: none;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 10px;
+}
+/*tasto checkout quando viene premuto*/
+body > header > div:nth-of-type(2) > ul > div > a:hover{
+  background-color: lightcyan;
+}
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
