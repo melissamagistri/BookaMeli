@@ -209,6 +209,9 @@ body > header > div:nth-of-type(2) > div > img{
   padding: 0 0 20px 0;
 }
 
+body > header > div:nth-of-type(2) > ul > li > div{
+  border-bottom: 1px solid #f4f4f4;
+}
 
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{

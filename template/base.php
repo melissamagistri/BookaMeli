@@ -52,7 +52,7 @@
                                 <div class="quantityButton">+</div>
                             </li>
                             <li> <p> prezzo</p></li>
-                            <li><a href="">Rimuovi</a></li>
+                            <li><button>Rimuovi</button></li>
                         </ul>
                     </div>
                     
