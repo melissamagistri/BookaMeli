@@ -34,13 +34,30 @@
         </div>
 
         <div class="sidenavcar" >
+            <div>
+                <h3>Carrello</h3>
+                <img class="img" src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura">
+            </div>
             <ul>
-                <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><h3>Carrello</h3></li>
-                <li><img src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1"></li>
-                <li><h4>Prodotto</h4></li>
+                <li>
+                    <span>
+                        <img class="img" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1">
+                    </span>
+                    <div>
+                        <ul>
+                            <li><a href="">Nome prodotto</a></li>
+                            <li> 
+                                <div class="quantityButton">-</div>
+                                <input type="text">
+                                <div class="quantityButton">+</div>
+                            </li>
+                            <li> <p> prezzo</p></li>
+                            <li><a href="">Rimuovi</a></li>
+                        </ul>
+                    </div>
+                    
+                </li>
             </ul>
-
         </div>
     </header>
     <main>

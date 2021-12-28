@@ -46,6 +46,24 @@ body > header > nav > div{
   padding: 10px 20px;
 }
 
+body > header > div:nth-of-type(2) > ul > li{
+margin: 0 20px;
+padding: 20px 0;
+}
+
+body > header > div:nth-of-type(2) > ul > li > span{
+  float: left;
+}
+
+body > header > div:nth-of-type(2) > ul > li > div > ul{
+  text-align: center;
+}
+
+body > header > div:nth-of-type(2) > ul > li > div > ul > li:first-of-type{
+  text-align: center;
+  padding: 10px;
+}
+
 body > header > nav > div:last-child>img{
   width: 200px;
 }
@@ -164,13 +182,31 @@ left:0;
 }
 
 .img{
-  width: 15px;
-}
-
-
-body > header > div:nth-of-type(2) > ul > li:nth-of-type(3) > img{
   width: 100px;
-  
+}
+/*
+.quantityButton{
+  border: 0!important;
+    background-color: #f4f4f4;
+    font-size: 18px;
+    position: static; 
+    height: 40px!important;
+    width: 34px!important;
+    display: block!important;
+    text-align: center;
+    line-height: 40px;
+    transform: translateX(0)!important;
+    padding: 0;
+    cursor: pointer;
+}*/
+
+body > header > div:nth-of-type(2) > div{
+  padding: 10px 10px;
+}
+body > header > div:nth-of-type(2) > div > img{
+  width: 20px;
+  float: right;
+  padding: 0 0 20px 0;
 }
 
 
