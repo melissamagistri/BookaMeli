@@ -37,7 +37,7 @@
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
                 <li><h3>Carrello</h3></li>
-                <li><img src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="vol1"></li>
+                <li><img src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1"></li>
                 <li><h4>Prodotto</h4></li>
             </ul>
 

@@ -112,6 +112,11 @@ opacity: 0.5;
 width: 400px;
 }
 
+.disable{
+  pointer-events: none;
+  cursor: default;
+}
+
 .sidenav{
 left:0;
 }
@@ -185,12 +190,11 @@ body > header > div:nth-of-type(2) > ul > li:nth-of-type(3) > img{
       width: 100%; 
     }
 
-    body > footer > div:nth-of-type(2), body > footer > div:first-of-type{
+    body > footer > div:nth-of-type(2), body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
       float:none;
     }
-
-    footer{
-      text-align: center;
+    footer > div {
+      margin: 0 auto;
     }
 }
 
