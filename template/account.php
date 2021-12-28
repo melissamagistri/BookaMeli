@@ -1,16 +1,24 @@
 <section>
-    <h1>Accedi al tuo account</h1>
+    <h1>Crea un account</h1>
     <div>
-    <form action="/action_page.php">
-    <input type="text" id="email" name="firstname" placeholder="Email">
+    <label for="fname">Nome</label>
+    <input type="text" id="nome" name="firstname" placeholder="">
 
-    <input type="text" id="password" name="lastname" placeholder="Password">
+    <label for="fname">Cognome</label>
+    <input type="text" id="cognome" name="lastname" placeholder="">
+
+    <label for="fname">Email</label>
+    <input type="text" id="email" name="email" placeholder="">
+
+    <label for="fname">Password</label>
+    <input type="text" id="password" name="password" placeholder="">
+
+    <label for="">
+        <p>Accetta le condizioni e i termini</p>
+        <input type="checkbox" name="" id="">
+    </label>
   
     <input type="submit" value="Accedi">
-  </form>
-</div>
 
-<div>
-  <a href="creaaccount"> Crea un account</a>
 </div>
 </section>
