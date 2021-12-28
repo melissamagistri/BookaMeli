@@ -35,8 +35,8 @@
 
         <div class="sidenavcar" >
             <div>
-                <h3>Carrello</h3>
                 <img class="img" src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura">
+                <h1>Carrello</h1>
             </div>
             <ul>
                 <li>
