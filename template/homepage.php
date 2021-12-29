@@ -1,7 +1,8 @@
-<div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Che cosa stai cercando?" name="search">
-      <button type="submit"><i class="fa fa-search"></i>
-        <img src="./upload/lente.png" alt="lente" class="img"></button>
-    </form>
-  </div>
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="Che cosa stai cercando?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>

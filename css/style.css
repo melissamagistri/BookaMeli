@@ -93,7 +93,9 @@ footer{
   text-align: center;
 }
 
-
+.imgcarrello{
+  width: 100px;
+}
 footer > div > ul > li:last-of-type > div > ul > li > img{
   width: 50px;
   cursor: pointer;
@@ -104,11 +106,20 @@ footer > div > ul > li:last-of-type > div > ul > li{
   padding: 5px 5px;
 }
 
-footer > div > ul > li > a{
-  text-decoration: inherit;
+footer > div > ul > li{
   padding: 5px 0;
 }
 
+footer > div > ul > li > a, body > main > form > ul > li > a{
+  text-decoration: inherit;
+  padding: 5px 0;
+  color: black;
+}
+
+footer > div > ul > li > a:hover{
+  color: white;
+  transition: 0.3s;
+}
 
 .sidenav , .sidenavcar{
   height: 100%; /* 100% Full-height */
@@ -153,7 +164,7 @@ left:0;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav a:hover{
   color: black;
 }
 
@@ -184,28 +195,10 @@ left:0;
   cursor: pointer;
 }
 
-.img{
-  width: 100px;
-}
-/*
-.quantityButton{
-  border: 0!important;
-    background-color: #f4f4f4;
-    font-size: 18px;
-    position: static; 
-    height: 40px!important;
-    width: 34px!important;
-    display: block!important;
-    text-align: center;
-    line-height: 40px;
-    transform: translateX(0)!important;
-    padding: 0;
-    cursor: pointer;
-}*/
-
 body > header > div:nth-of-type(2) > div{
   padding: 10px 10px;
 }
+
 
 img[alt~='chiusura']{
   width: 20px;
@@ -226,7 +219,7 @@ body > header > div:nth-of-type(2) > ul > li > div{
   cursor: pointer;
 }
 
-input[type=text]{
+.inputnoborder{
   width: 10%;
   border: none;
 }
@@ -235,21 +228,83 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > di
   display: inline-block;
 }
 
-body > header > div:nth-of-type(2) > ul > li:last-of-type > a{
+body > header > div:nth-of-type(2) > ul > li:last-of-type > a, input[name="submit"]{
   background-color: lightblue;
   font-weight: 200;
   text-decoration: none;
   color: white;
   padding: 14px 25px;
   border-radius: 10px;
+  border: none;
 }
-/*tasto checkout quando viene premuto*/
-body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover{
+/*tasto quando viene premuto*/
+body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover, input[name="submit"]:hover{
   background-color: rgb(93, 179, 225);
   color: white;
   font-weight: bold;
   transition: 0.2s;
+  cursor: pointer;
 }
+
+body > main > form{
+  text-align: center;
+}
+
+body > main > form > ul > li{
+  padding: 0 0 20px;
+}
+
+/*input di tutte le pagine*/
+body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search']{
+  width: 300px;
+  height: 50px;
+  font-size: large;
+}
+
+::-webkit-input-placeholder{
+  font-size: large;
+  color: black;
+}
+
+body > main > form > ul > li > a:hover{
+  color: rgb(93, 179, 225);
+  transition: 0.3s;
+}
+
+/*barra di ricerca*/
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 3px solid lightblue;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: black;
+  font-size: large;
+}
+
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid lightblue;
+  background: lightblue;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
@@ -267,7 +322,7 @@ body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover{
     }
 
     body > footer > div:nth-of-type(2), body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
-      float:none;
+      float: none;
     }
     footer > div {
       margin: 0 auto;

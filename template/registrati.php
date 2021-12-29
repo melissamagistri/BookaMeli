@@ -1,24 +1,28 @@
-<section>
-    <h1>Crea un account</h1>
-    <div>
-    <label for="fname">Nome</label>
-    <input type="text" id="nome" name="firstname" placeholder="">
+<form action="#" method="POST">
+            <h1>Crea Account</h1>
+            <?php if(isset($templateParams["errorelogin"])): ?>
+            <p><?php echo $templateParams["errorelogin"]; ?></p>
+            <?php endif; ?>
+            <ul>
+                <li>
+                    <input type="text"  name="nome" placeholder="Nome" required/>
+                </li>
+                <li>
+                    <input type="text"  name="cognome" placeholder="Cognome" required/>
+                </li>
 
-    <label for="fname">Cognome</label>
-    <input type="text" id="cognome" name="lastname" placeholder="">
+                <li>
+                    <input type="text"  name="email" placeholder="Email" required/>
+                </li>
+                <li>
+                    <input type="password"  name="password" placeholder="Password" required/>
+                </li>
 
-    <label for="fname">Email</label>
-    <input type="text" id="email" name="email" placeholder="">
-
-    <label for="fname">Password</label>
-    <input type="text" id="password" name="password" placeholder="">
-
-    <label for="">
-        <p>Accetta le condizioni e i termini</p>
-        <input type="checkbox" name="" id="">
-    </label>
-  
-    <input type="submit" value="Accedi">
-
-</div>
-</section>
+                <li>
+                    <input type="password"  name="confermapassword" placeholder="Conferma Password" required/>
+                </li>
+                <li>
+                    <input type="submit" name="submit" value="Invia" />
+                </li>
+            </ul>
+        </form>

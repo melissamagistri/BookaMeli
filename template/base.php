@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $templateParams["titolo"]; ?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <?php 
     if(isset($templateParams["js"])):
         foreach($templateParams["js"] as $script):
@@ -41,14 +42,14 @@
             <ul>
                 <li>
                     <span>
-                        <img class="img" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1">
+                        <img class="imgcarrello" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1">
                     </span>
                     <div>
                         <ul>
                             <li><a href="">Nome prodotto</a></li>
                             <li> 
                                 <div class="quantityButton">-</div>
-                                <input type="text">
+                                <input class="inputnoborder" type="text">
                                 <div class="quantityButton">+</div>
                             </li>
                             <li> <p> prezzo</p></li>
