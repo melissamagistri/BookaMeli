@@ -39,7 +39,7 @@ function openNav(nav) {
     $('body > header > nav').addClass('background');
     $('body> footer').addClass('background');
     $('body> main').addClass('background');
-    $('a:not(.sidenav *)').addClass('disable');
+    $('a:not(.sidenav *, .sidenavcar *)').addClass('disable');
   }
   
   

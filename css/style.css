@@ -39,6 +39,7 @@ body > footer > div > ul, body > footer > div > ul > li > div > ul{
 }
 div > ul > li:first-of-type > img{
   width: 100px;
+  cursor: pointer;
 }
 
 body > header > nav > div{
@@ -66,6 +67,7 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:first-of-type{
 
 body > header > nav > div:last-child>img{
   width: 200px;
+  cursor: pointer;
 }
 
 body > header > nav > div:first-child{
@@ -94,6 +96,7 @@ footer{
 
 footer > div > ul > li:last-of-type > div > ul > li > img{
   width: 50px;
+  cursor: pointer;
 }
 
 footer > div > ul > li:last-of-type > div > ul > li{
@@ -219,7 +222,8 @@ body > header > div:nth-of-type(2) > ul > li > div{
   background-color: white;
   border-radius: 10px;
   color: black;
-  border: 2px solid grey;
+  border: none;
+  cursor: pointer;
 }
 
 input[type=text]{
@@ -231,7 +235,7 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > di
   display: inline-block;
 }
 
-body > header > div:nth-of-type(2) > ul > div > a:link{
+body > header > div:nth-of-type(2) > ul > li:last-of-type > a{
   background-color: lightblue;
   font-weight: 200;
   text-decoration: none;
@@ -240,8 +244,11 @@ body > header > div:nth-of-type(2) > ul > div > a:link{
   border-radius: 10px;
 }
 /*tasto checkout quando viene premuto*/
-body > header > div:nth-of-type(2) > ul > div > a:hover{
-  background-color: lightcyan;
+body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover{
+  background-color: rgb(93, 179, 225);
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
 }
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
@@ -266,4 +273,5 @@ body > header > div:nth-of-type(2) > ul > div > a:hover{
       margin: 0 auto;
     }
 }
+
 

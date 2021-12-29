@@ -56,9 +56,10 @@
                         </ul>
                     </div>
                 </li>
-                <div>
-                    <a href="checkout">Procedi al checkout</a>
-                </div>
+                <li>
+                    <a href="checkout">Procedi al Checkout</a>
+                </li>
+                
             </ul>
         </div>
     </header>

@@ -1,16 +1,17 @@
-<section>
-    <h1>Accedi al tuo account</h1>
-    <div>
-    <form action="/action_page.php">
-    <input type="text" id="email" name="firstname" placeholder="Email">
-
-    <input type="text" id="password" name="lastname" placeholder="Password">
-  
-    <input type="submit" value="Accedi">
-  </form>
-</div>
-
-<div>
-  <a href="creaaccount"> Crea un account</a>
-</div>
-</section>
+<form action="#" method="POST">
+            <h2>Accedi</h2>
+            <?php if(isset($templateParams["errorelogin"])): ?>
+            <p><?php echo $templateParams["errorelogin"]; ?></p>
+            <?php endif; ?>
+            <ul>
+                <li>
+                    <label for="username">Username:</label><input type="text" id="username" name="username" />
+                </li>
+                <li>
+                    <label for="password">Password:</label><input type="password" id="password" name="password" />
+                </li>
+                <li>
+                    <input type="submit" name="submit" value="Invia" />
+                </li>
+            </ul>
+        </form>
