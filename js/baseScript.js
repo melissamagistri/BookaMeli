@@ -13,7 +13,7 @@ $(document).ready(function(){
             closeNav($('.sidenav'));
         }
         else if($(e.target).is("img[alt~='BookaMeli']")){
-            window.location.href = '#';
+            window.location.href = 'index.php';
         }
         else if($(e.target).is("img[alt~='youtube']")){
             window.location.href = 'https://www.youtube.com';

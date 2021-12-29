@@ -28,7 +28,7 @@
                 <li><a href="#">Manga</a></li>
                 <li><a href="#">Action Figure</a></li>
                 <li><a href="#">Informazioni</a></li>
-                <li><a href="#">Il tuo Account</a></li>
+                <li><a href="login.php">Il tuo Account</a></li>
                 <li><a href="#">Chat e Notifiche</a></li>
             </ul>
         </div>
