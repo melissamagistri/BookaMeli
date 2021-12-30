@@ -29,7 +29,7 @@
         <li><p>Prezzo</p></li>
         <li>
           <div>
-              <a class="bluebutton" href="">Aggiungi al carrello</a>
+              <button class="bluebutton" href="">Aggiungi al carrello</button>
           </div>
         </li>
       </ul>
@@ -55,7 +55,7 @@
         <li><p>Prezzo</p></li>
         <li>
           <div>
-              <a class="bluebutton" href="">Aggiungi al carrello</a>
+              <button class="bluebutton" href="">Aggiungi al carrello</button>
           </div>
         </li>
     </ul>

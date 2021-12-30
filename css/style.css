@@ -309,13 +309,18 @@ body > main > form > ul > li > a:hover{
   width: 200px;
 }
 
-body > main > section > div > ul > li{
-  width: 30%;
+body > main > section > div{
   text-align: center;
+  display: inline-block;
+
 }
 
-body > main > section > div {
+body > main > h1, body > main > section{
   text-align: center;
+}
+.descrizioni{
+  width: 80%;
+  padding: 0 90px 0 110px;
 }
 
 @media screen and (max-width: 768px) {
@@ -332,10 +337,6 @@ body > main > section > div {
     }
     .open{
       width: 100%; 
-    }
-
-    .bluebutton{
-      width: 100%;
     }
     body > footer > div:nth-of-type(2), body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
       float: none;
