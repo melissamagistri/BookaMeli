@@ -4,7 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $templateParams["titolo"]; ?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <?php
+    if(isset($templateParams["link"])):
+        foreach($templateParams["link"] as $link):
+    ?>
+        <link href="<?php echo $link;?>" rel="stylesheet">
+    <?php
+        endforeach;
+    endif;
+    ?>
     <?php 
     if(isset($templateParams["js"])):
         foreach($templateParams["js"] as $script):
@@ -26,9 +34,9 @@
         <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><a href="#">Manga</a></li>
-                <li><a href="#">Action Figure</a></li>
-                <li><a href="#">Informazioni</a></li>
+                <li><a href="listaProdotti.php?cat=manga">Manga</a></li>
+                <li><a href="listaProdotti.php?cat=actionFigure">Action Figure</a></li>
+                <li><a href="informazioni.php">Informazioni</a></li>
                 <li><a href="login.php">Il tuo Account</a></li>
                 <li><a href="#">Chat e Notifiche</a></li>
             </ul>
@@ -89,15 +97,15 @@
         <div>
           <ul>
             <li><h3>Prodotti</h3></li>
-            <li><a href="#">Novità</a></li>
-            <li><a href="#">Manga</a></li>
-            <li><a href="#">Action Figure</a></li>
+            <li><a href="listaProdotti.php?cat=news">Novità</a></li>
+            <li><a href="listaProdotti.php?cat=manga">Manga</a></li>
+            <li><a href="listaProdotti.php?cat=actionFigure">Action Figure</a></li>
           </ul>
         </div>
         <div>
           <ul>
              <li><h3>Informazioni</h3></li>
-             <li><a href="#">Chi siamo</a></li>
+             <li><a href="informazioni.php">Chi siamo</a></li>
              <li><a href="#"> Cookies policy</a></li>
              <li><a href="#">Spedizioni e resi</a></li>
              <li><a href="#">Termini e condizioni </a></li>
