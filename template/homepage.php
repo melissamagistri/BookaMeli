@@ -25,7 +25,7 @@
   <div>
       <ul>
         <li><img class="imghome" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1"></li>
-        <li><a href="">Titolo</a></li>
+        <li><a href="prodotto.php">Titolo</a></li>
         <li><p>Prezzo</p></li>
         <li>
           <div>

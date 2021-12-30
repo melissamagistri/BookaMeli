@@ -309,6 +309,10 @@ body > main > form > ul > li > a:hover{
   width: 200px;
 }
 
+.imgprodotto{
+  width: 250px;
+}
+
 body > main > section > div{
   text-align: center;
   display: inline-block;
@@ -318,10 +322,24 @@ body > main > section > div{
 body > main > h1, body > main > section{
   text-align: center;
 }
+
+body > main > section > div:nth-of-type(2){
+  vertical-align: top;
+}
+
+body > main > section > div:nth-of-type(2) > ul > li{
+  margin: 35px 0;
+}
+
+body > main > section:nth-of-type(2){
+  padding: 30px 0;
+}
+
 .descrizioni{
   width: 80%;
   padding: 0 90px 0 110px;
 }
+
 
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{

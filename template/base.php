@@ -54,7 +54,7 @@
                     </span>
                     <div>
                         <ul>
-                            <li><a href="">Nome prodotto</a></li>
+                            <li><a href="prodotto.php">Nome prodotto</a></li>
                             <li> 
                                 <div class="quantityButton">-</div>
                                 <input class="inputnoborder" type="text">
