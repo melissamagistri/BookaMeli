@@ -66,7 +66,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="checkout">Procedi al Checkout</a>
+                    <a class="bluebutton" href="checkout">Procedi al Checkout</a>
                 </li>
                 
             </ul>
