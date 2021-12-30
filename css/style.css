@@ -37,7 +37,7 @@ body > footer > div:nth-of-type(3){
 body > footer > div > ul, body > footer > div > ul > li > div > ul{
   padding : 0;
 }
-div > ul > li:first-of-type > img{
+footer > div > ul > li:first-of-type > img{
   width: 100px;
   cursor: pointer;
 }
@@ -110,7 +110,7 @@ footer > div > ul > li{
   padding: 5px 0;
 }
 
-footer > div > ul > li > a, body > main > form > ul > li > a{
+footer > div > ul > li > a, body > main > form > ul > li > a, body > main > section > div > ul > li:nth-of-type(2) > a{
   text-decoration: inherit;
   padding: 5px 0;
   color: black;
@@ -228,7 +228,7 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > di
   display: inline-block;
 }
 
-body > header > div:nth-of-type(2) > ul > li:last-of-type > a, input[name="submit"]{
+.bluebutton, input[name="submit"]{
   background-color: lightblue;
   font-weight: 200;
   text-decoration: none;
@@ -238,7 +238,7 @@ body > header > div:nth-of-type(2) > ul > li:last-of-type > a, input[name="submi
   border: none;
 }
 /*tasto quando viene premuto*/
-body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover, input[name="submit"]:hover{
+.bluebutton:hover, input[name="submit"]:hover{
   background-color: rgb(93, 179, 225);
   color: white;
   font-weight: bold;
@@ -246,7 +246,7 @@ body > header > div:nth-of-type(2) > ul > li:last-of-type > a:hover, input[name=
   cursor: pointer;
 }
 
-body > main > form{
+body > main > form, body > main > section > h2{
   text-align: center;
 }
 
@@ -305,12 +305,25 @@ body > main > form > ul > li > a:hover{
   font-size: 20px;
 }
 
+.imghome{
+  width: 200px;
+}
+
+body > main > section > div > ul > li{
+  width: 30%;
+  text-align: center;
+}
+
+body > main > section > div {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
     }
 
-    body > header > nav > div:last-child>img{
+    body > header > nav > div:last-child > img{
       width: 100px;
     }
 
@@ -321,6 +334,9 @@ body > main > form > ul > li > a:hover{
       width: 100%; 
     }
 
+    .bluebutton{
+      width: 100%;
+    }
     body > footer > div:nth-of-type(2), body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
       float: none;
     }
