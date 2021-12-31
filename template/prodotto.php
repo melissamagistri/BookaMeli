@@ -6,21 +6,28 @@
     <div>
         <ul>
             <li><h1>Titolo</h1></li>
+            <li><p>Descrizione</p></li>
             <li><p>Prezzo</p></li>
             <li><p>Prezzo scontato</p></li>
-            <li>Edizione</li>
-            <li>Volume</li>
-            <li>Lingua</li>
         </ul>
     </div>
     
 </section>
 
 <section>
-
     <div>
-        <span>Avvisami</span>
-        <input type="submit">
-        <button class="bluebutton">Invia</button>
+        <?php
+            if(isset($_SESSION)):
+        ?> 
+        <button class="bluebutton">Notificami della disponibilita</button>
+        <?php
+            else:
+        ?> 
+        <button class="bluebutton">Aggiungi al carrello</button>
+
+        <?php
+            endif;
+        ?> 
+       
     </div>
 </section>
