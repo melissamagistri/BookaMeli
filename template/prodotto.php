@@ -19,11 +19,11 @@
         <?php
             if(isset($_SESSION)):
         ?> 
-        <button class="bluebutton">Notificami della disponibilita</button>
+        <a class="bluebutton" href="">Notificami della disponibilita</a>
         <?php
             else:
         ?> 
-        <button class="bluebutton">Aggiungi al carrello</button>
+        <a class="bluebutton" href="">Aggiungi al carrello</a>
 
         <?php
             endif;

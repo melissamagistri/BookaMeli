@@ -340,6 +340,9 @@ body > main > section:nth-of-type(2){
   padding: 0 90px 0 110px;
 }
 
+.border{
+  border-bottom: 2px;
+}
 
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
