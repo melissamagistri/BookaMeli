@@ -5,7 +5,7 @@
         $array = str_split('abcdefghijklmnopqrstuvwxyz'.'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
         $salt = '';
         for($i=0;$i<rand(5,10);$i++){
-            $salt= $salt.$array[rand(0,count($array)-1)];
+            $salt = $salt.$array[rand(0,count($array)-1)];
         }
 
         return $salt;

@@ -7,11 +7,20 @@
    </div>
 </div>
 
+<?php
+  if(isset($templateParams["immaginihome"]) && isset($templateParams["linkimmagine"]) && isset($templateParams["altimmagine"]) && (count($templateParams["immaginihome"]) == count($templateParams["linkimmagine"])) && (count($templateParams["immaginihome"]) == count($templateParams["altimmagine"]))):
+    for($i=0;$i<count($templateParams["linkimmagine"]);$i++):
+?>
 <div>
-  <a href="">
-    <img src="" alt="">
+  <a href="<?php echo $templateParams["linkimmagine"][$i]; ?>">
+    <img src="<?php echo $templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["altimmagine"][$i]; ?>">
   </a>
 </div>
+
+<?php
+    endfor;
+  endif;
+?>
 
 <div>
   <div class="dot">
