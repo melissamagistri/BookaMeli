@@ -4,8 +4,8 @@
             <li><h1>1.Informazioni Personali</h1></li>
             <li><p>Collegato come: <a href=""></a> <label for="">Nome cognome</label></p></li>
             <li><p>Cambia account <a href=""></a></p></li>
-            <li><input type="text" placeholder="Email"></li>
-            <li><input type="text" placeholder="Password"></li>
+            <li><input type="text" name="dati" placeholder="Email"></li>
+            <li><input type="text" name="dati" placeholder="Password"></li>
             <li><button class="bluebutton">Invia</button></li>
             <li><button class="bluebutton">Continua</button></li>
             <li><span class="fas fa-angle-down"></span></li>
@@ -29,8 +29,8 @@
             <li>
             <h3>Inserisci i dati della tua carta</h3>
                 <ul>
-                    <li><input type="text" placeholder="Numero"></li>
-                    <li><input type="text" placeholder="Proprietario"></li>
+                    <li><input type="text" name="dati" placeholder="Numero"></li>
+                    <li><input type="text" name="dati" placeholder="Proprietario"></li>
                     
                 </ul>
             </li>

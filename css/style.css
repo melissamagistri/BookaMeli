@@ -255,7 +255,7 @@ body > main > form > ul > li{
 }
 
 /*input di tutte le pagine*/
-body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search'], input[type='text']{
+body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search'], input[name='dati']{
   width: 300px;
   height: 40px;
   font-size: large;
