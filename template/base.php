@@ -66,7 +66,7 @@
                     </div>
                 </li>
                 <li>
-                    <button class="bluebutton" href="checkout">Procedi al Checkout</button>
+                <a class="bluebutton" href="checkout.php">Procedi al checkout</a>
                 </li>
                 
             </ul>
