@@ -255,9 +255,9 @@ body > main > form > ul > li{
 }
 
 /*input di tutte le pagine*/
-body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search']{
+body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search'], input[type='text']{
   width: 300px;
-  height: 50px;
+  height: 40px;
   font-size: large;
 }
 
@@ -335,6 +335,9 @@ body > main > section:nth-of-type(2){
   padding: 30px 0;
 }
 
+body > main > section > div > ul > li, body > main > section > div > ul > li > ul > li{
+  margin: 10px 10px;
+}
 .descrizioni{
   width: 80%;
   padding: 0 90px 0 110px;
