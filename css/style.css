@@ -309,6 +309,10 @@ body > main > form > ul > li > a:hover{
   width: 200px;
 }
 
+.imghomescroll{
+  width: 100%;
+  padding: 30px 0 10px 0;
+}
 .imgprodotto{
   width: 250px;
 }
@@ -345,6 +349,32 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
 
 .border{
   border-bottom: 2px;
+}
+
+.dot{
+  height: 15px;
+  width: 15px;
+  background-color: lightblue;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot:hover{
+  background-color: rgb(93, 179, 225);
+}
+.dot-active{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: rgb(93, 179, 225);
+}
+
+.dotdiv{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

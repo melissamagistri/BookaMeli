@@ -13,7 +13,7 @@
 ?>
 <div>
   <a href="<?php echo $templateParams["linkimmagine"][$i]; ?>">
-    <img src="<?php echo $templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["altimmagine"][$i]; ?>">
+    <img class="imghomescroll" src="<?php echo $templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["altimmagine"][$i]; ?>">
   </a>
 </div>
 
@@ -22,12 +22,18 @@
   endif;
 ?>
 
-<div>
-  <div class="dot">
-    <span></span>
-  </div>
-</div>
+<div  class="dotdiv">
+<?php 
+  if(isset($templateParams["immaginihome"]) && isset($templateParams["linkimmagine"]) && isset($templateParams["altimmagine"]) && (count($templateParams["immaginihome"]) == count($templateParams["linkimmagine"])) && (count($templateParams["immaginihome"]) == count($templateParams["altimmagine"]))):
+    for($i=0;$i<count($templateParams["linkimmagine"]);$i++):
+?>
+    <span class="dot"></span>
+  <?php
+    endfor;
+  endif;
+?>
 
+</div>
 
 <section>
   <h2>Novità</h2>
@@ -42,15 +48,6 @@
           </div>
         </li>
       </ul>
-
-    </div>   
-
-    <div>
-      <div class="dot">
-       <span></span>
-      </div>
-
-    </div>
 
   </div>
 </section>
@@ -69,17 +66,4 @@
         </li>
     </ul>
   </div>
-
-    <div>
-      <div class="dot">
-       <span></span>
-      </div>
-
-    </div>
-
-  </div>
 </section>
-
-
-
-
