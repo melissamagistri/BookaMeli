@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    if(getNumberImg()>1){
         showImage();
         changeImageWithTime();
         $(".dotdiv > span").click(function(){
@@ -12,6 +13,7 @@ $(document).ready(function(){
             $(".divimg > div:nth-of-type("+getCurrentDot()+")").addClass("current");
             showImage();
         });
+    }
 });
 
 function getSelectedDot($dot){
