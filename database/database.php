@@ -64,6 +64,16 @@ class database{
         //mette attivo a 1, per risolvere bisogna verificare l'account o cambiare password
     }
 
+    //controlla se nel db esiste gia un account con l'email inserita
+    public function checkEmail($email){
+        $query = "SELECT idaccount FROM account WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     
 }
 
