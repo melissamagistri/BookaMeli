@@ -6,22 +6,22 @@
      </button>
    </div>
 </div>
-
-<?php
-  if(isset($templateParams["immaginihome"]) && isset($templateParams["linkimmagine"]) && isset($templateParams["altimmagine"]) && (count($templateParams["immaginihome"]) == count($templateParams["linkimmagine"])) && (count($templateParams["immaginihome"]) == count($templateParams["altimmagine"]))):
-    for($i=0;$i<count($templateParams["linkimmagine"]);$i++):
-?>
-<div>
-  <a href="<?php echo $templateParams["linkimmagine"][$i]; ?>">
-    <img class="imghomescroll" src="<?php echo $templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["altimmagine"][$i]; ?>">
-  </a>
+<div class="divimg">
+  <?php
+    if(isset($templateParams["immaginihome"]) && isset($templateParams["linkimmagine"]) && isset($templateParams["altimmagine"]) && (count($templateParams["immaginihome"]) == count($templateParams["linkimmagine"])) && (count($templateParams["immaginihome"]) == count($templateParams["altimmagine"]))):
+      for($i=0;$i<count($templateParams["linkimmagine"]);$i++):
+  ?>
+  <div>
+    <a href="<?php echo $templateParams["linkimmagine"][$i]; ?>">
+      <img class="imghomescroll" src="<?php echo $templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["altimmagine"][$i]; ?>">
+    </a>
+  </div>
+      
+  <?php
+      endfor;
+    endif;
+  ?>
 </div>
-
-<?php
-    endfor;
-  endif;
-?>
-
 <div  class="dotdiv">
 <?php 
   if(isset($templateParams["immaginihome"]) && isset($templateParams["linkimmagine"]) && isset($templateParams["altimmagine"]) && (count($templateParams["immaginihome"]) == count($templateParams["linkimmagine"])) && (count($templateParams["immaginihome"]) == count($templateParams["altimmagine"]))):
