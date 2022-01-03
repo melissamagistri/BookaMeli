@@ -34,8 +34,8 @@
         <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><a href="listaProdotti.php?cat=manga">Manga</a></li>
-                <li><a href="listaProdotti.php?cat=actionFigure">Action Figure</a></li>
+                <li><a href="listaprodotti.php?cat=manga">Manga</a></li>
+                <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
                 <li><a href="informazioni.php">Informazioni</a></li>
                 <li><a href="login.php">Il tuo Account</a></li>
                 <li><a href="#">Chat e Notifiche</a></li>
@@ -57,7 +57,7 @@
                             <li><a href="prodotto.php">Nome prodotto</a></li>
                             <li> 
                                 <div class="quantityButton">-</div>
-                                <input class="inputnoborder" type="text">
+                                <input class="inputnoborder" type="text" value="1" name="quantitacarrello">
                                 <div class="quantityButton">+</div>
                             </li>
                             <li> <p> prezzo</p></li>
@@ -97,9 +97,9 @@
         <div>
           <ul>
             <li><h3>Prodotti</h3></li>
-            <li><a href="listaProdotti.php?cat=news">Novità</a></li>
-            <li><a href="listaProdotti.php?cat=manga">Manga</a></li>
-            <li><a href="listaProdotti.php?cat=actionFigure">Action Figure</a></li>
+            <li><a href="listaprodotti.php?cat=news">Novità</a></li>
+            <li><a href="listaprodotti.php?cat=manga">Manga</a></li>
+            <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
           </ul>
         </div>
         <div>
