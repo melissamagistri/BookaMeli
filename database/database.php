@@ -74,6 +74,17 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    //crea un nuovo account all'interno del db
+    public function createAccount($email, $password, $salt, $tentativoLogin, $venditore, $attivo){
+        $query = "INSERT INTO account (email, password, salt, tentativoLogin, venditore, attivo) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sssiii',$email, $password, $salt, $tentativoLogin, $venditore, $attivo);
+        $stmt->execute();
+        
+        return $stmt->insert_id;
+        
+    }
     
 }
 

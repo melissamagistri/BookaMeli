@@ -1,4 +1,4 @@
-<form action="index.php" method="POST">
+<form action="#" method="POST">
             <h1>Crea Account</h1>
             <?php if(isset($templateParams["errorelogin"])): ?>
             <p><?php echo $templateParams["errorelogin"]; ?></p>

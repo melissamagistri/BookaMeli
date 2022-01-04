@@ -19,4 +19,19 @@
     function registerLoggedUser($user){
         $_SESSION["idaccount"] = $user["idaccount"];
     }
+
+    function checkPassword(){
+        if(strlen($_POST["password"]) > 7){
+            return true;
+        }
+        return false;
+    }
+
+    function checkEmail(){
+        $check_result = $dbh->checkEmail($_POST["email"]);
+        if(count($check_result)==0){
+            return true;
+        }
+        return false;
+    }
 ?>
