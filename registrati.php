@@ -34,14 +34,25 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["email"]) &
     }
     else{
         //inserisci dati db
-
+        $salt = createSalt();
+        $pass = $salt.$_POST["password"].$salt;
+        $password = hash('sha256', $pass, false);
+        //(0,0,0) == (tentativoLogin,venditore,attivo)
+        $dbh->createAccount($_POST["email"], $password, $salt, 0, 0, 0, $_POST["nome"], $_POST["cognome"]);
         //manda mail
-        //fai vedere la pagina di conferma dell'email
-        $templateParams["titolo"] = "BookaMeli - Verifica Account";
-        $templateParams["nome"] = "template/verificaAccount.php";
-        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
-    
 
+        $msg = "Grazie per esserti iscritto a BookaMeli.
+        \n Per continuare con l'utilizzo del tuo account devi verificarlo.\n
+        Ti preghiamo di clickare sul link nell'email e di inserire le tue credenziali.\n 
+        Buon proseguimento.\n\n\n
+        \t\t http://localhost/BookaMeli/confermamail.php";
+        $msg = wordwrap($msg,70);
+        mail($_POST["email"],"Verifica account BookaMeli",$msg);
+
+        //fai vedere la pagina di conferma dell'email
+        $templateParams["titolo"] = "BookaMeli - Attiva Account";
+        $templateParams["nome"] = "template/attivaaccount.php";
+        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     }
 } else {
     $templateParams["titolo"] = "BookaMeli - Registrati";

@@ -76,10 +76,10 @@ class database{
     }
 
     //crea un nuovo account all'interno del db
-    public function createAccount($email, $password, $salt, $tentativoLogin, $venditore, $attivo){
-        $query = "INSERT INTO account (email, password, salt, tentativoLogin, venditore, attivo) VALUES (?, ?, ?, ?, ?, ?)";
+    public function createAccount($email, $password, $salt, $tentativoLogin, $venditore, $attivo, $nome, $cognome){
+        $query = "INSERT INTO account (email, password, salt, tentativoLogin, venditore, attivo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('sssiii',$email, $password, $salt, $tentativoLogin, $venditore, $attivo);
+        $stmt->bind_param('sssiii',$email, $password, $salt, $tentativoLogin, $venditore, $attivo, $nome, $cognome);
         $stmt->execute();
         
         return $stmt->insert_id;
