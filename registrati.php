@@ -47,11 +47,12 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["email"]) &
         Buon proseguimento.\n\n\n
         \t\t http://localhost/BookaMeli/confermamail.php";
         $msg = wordwrap($msg,70);
-        mail($_POST["email"],"Verifica account BookaMeli",$msg);
+        $headers='From: magistri.melissa@gmail.com'; 
+        mail($_POST["email"],"Verifica account BookaMeli",$msg, $headers);
 
         //fai vedere la pagina di conferma dell'email
         $templateParams["titolo"] = "BookaMeli - Attiva Account";
-        $templateParams["nome"] = "template/attivaaccount.php";
+        $templateParams["nome"] = "template/confermaemail.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     }
 } else {
