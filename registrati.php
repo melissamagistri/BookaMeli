@@ -12,7 +12,7 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["email"]) &
     
     }
     //controllo che la mail inserita non sia gia in uso
-    else if(!checkEmail()){
+    else if(count($dbh->checkEmail($_POST['email'])) > 0){
         $templateParams["titolo"] = "BookaMeli - Registrati";
         $templateParams["nome"] = "template/registrati.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js", "js/registrati.js");
