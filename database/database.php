@@ -24,13 +24,13 @@ class database{
     public function checkLogin($email, $password, $active){
         //prende l'id dell'account con la mail indicata
         $idaccount = $this->getId($email)[0]["idaccount"];
-        $query = "SELECT idaccount FROM account WHERE attivo= ? $active AND idaccount = ? and password = ?";
+        $query = "SELECT idaccount FROM account WHERE attivo= ? AND idaccount = ? and password = ?";
         $stmt = $this->db->prepare($query);
         //prende il salt dell'account con l'id trovato in precedenza
         $salt = $this->getSalt($idaccount)[0]["salt"];
         $pass = $salt.$password.$salt;
         $pass = hash('sha256', $pass, false);
-        $stmt->bind_param('is',$idaccount, $pass, $active);
+        $stmt->bind_param('iis', $active, $idaccount, $pass);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -39,7 +39,7 @@ class database{
 
     //prende il salt di un account passato in input
     public function getSalt($idaccount){
-        $query = "SELECT salt FROM account WHERE attivo=1 AND idaccount = ?";
+        $query = "SELECT salt FROM account WHERE idaccount = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idaccount);
         $stmt->execute();
