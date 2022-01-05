@@ -35,10 +35,8 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["email"]) &
     else{
         //inserisci dati db
         $salt = createSalt();
-        $pass = $salt.$_POST["password"].$salt;
-        $password = hash('sha256', $pass, false);
         //(0,0,0) == (tentativoLogin,venditore,attivo)
-        $dbh->createAccount($_POST["email"], $password, $salt, 0, 0, 0, $_POST["nome"], $_POST["cognome"]);
+        $dbh->createAccount($_POST["email"], $_POST["password"], $salt, 0, 0, 0, $_POST["nome"], $_POST["cognome"]);
         //manda mail
 
         $msg = "Grazie per esserti iscritto a BookaMeli.

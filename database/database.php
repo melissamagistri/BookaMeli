@@ -11,7 +11,7 @@ class database{
 
     //prende l'idaccount dell'account con email uguale a quella passata in input
     public function getId($email){
-        $query = "SELECT idaccount FROM account WHERE attivo=1 AND email = ?";
+        $query = "SELECT idaccount FROM account WHERE email = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s',$email);
         $stmt->execute();
@@ -21,16 +21,16 @@ class database{
     }
 
     //controlla se esiste un account che abbia idaccount e password uguali a quelle passate in input
-    public function checkLogin($email, $password){
+    public function checkLogin($email, $password, $active){
         //prende l'id dell'account con la mail indicata
         $idaccount = $this->getId($email)[0]["idaccount"];
-        $query = "SELECT idaccount FROM account WHERE attivo=1 AND idaccount = ? and password = ?";
+        $query = "SELECT idaccount FROM account WHERE attivo= ? $active AND idaccount = ? and password = ?";
         $stmt = $this->db->prepare($query);
         //prende il salt dell'account con l'id trovato in precedenza
         $salt = $this->getSalt($idaccount)[0]["salt"];
         $pass = $salt.$password.$salt;
         $pass = hash('sha256', $pass, false);
-        $stmt->bind_param('is',$idaccount, $pass);
+        $stmt->bind_param('is',$idaccount, $pass, $active);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -77,13 +77,23 @@ class database{
 
     //crea un nuovo account all'interno del db
     public function createAccount($email, $password, $salt, $tentativoLogin, $venditore, $attivo, $nome, $cognome){
+        $pass = $salt.$password.$salt;
+        $modifiedPassword = hash('sha256', $pass, false);
         $query = "INSERT INTO account (email, password, salt, tentativoLogin, venditore, attivo, nome, cognome) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('sssiiiss',$email, $password, $salt, $tentativoLogin, $venditore, $attivo, $nome, $cognome);
+        $stmt->bind_param('sssiiiss',$email, $modifiedPassword, $salt, $tentativoLogin, $venditore, $attivo, $nome, $cognome);
         $stmt->execute();
         
         return $stmt->insert_id;
         
+    }
+
+    public function activateAccount($email){
+        $query = "UPDATE account SET attivo=1 WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
     }
     
 }

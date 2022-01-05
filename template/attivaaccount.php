@@ -5,7 +5,7 @@
             <?php endif; ?>
             <ul>
                 <li>
-                    <input type="text"  name="Password" placeholder="Email" required/>
+                    <input type="text"  name="email" placeholder="Email" required/>
                 </li>
                 <li>
                     <input type="password"  name="password" placeholder="Password" required/>

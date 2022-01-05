@@ -17,7 +17,7 @@
     }
 
     function registerLoggedUser($user){
-        $_SESSION["idaccount"] = $user["idaccount"];
+        $_SESSION["idaccount"] = $user;
     }
 
     function checkPassword(){
