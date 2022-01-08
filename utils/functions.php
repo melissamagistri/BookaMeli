@@ -26,4 +26,18 @@
         }
         return false;
     }
+
+    function getHomeImages(){
+        return array("schermata_op.png","ciao.png");
+    }
+
+    function removeExtensions($file){
+        $x = substr($file, 0, strrpos($file, '.'));
+        return $x;
+    }
+
+    function getFileName($file){
+        $x = str_replace("_", " ", $file);
+        return $x;
+    }
 ?>

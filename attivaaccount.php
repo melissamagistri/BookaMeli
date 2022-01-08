@@ -10,9 +10,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         $templateParams["titolo"] = "BookaMeli - Homepage";
         $templateParams["nome"] = "template/homepage.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js", "js/homepage.js");
-        $templateParams["immaginihome"] = array(UPLOAD_DIR."schermataop.png",UPLOAD_DIR."ciao.png");
-        $templateParams["linkimmagine"] = array("#","#");
-        $templateParams["altimmagine"] = array("alt", "alt");
+        $templateParams["immaginihome"] = getHomeImages();
     } else{
         //caso in cui le credenziali non siano di un account da attivare
         $templateParams["errorelogin"] = "Le credenziali inserite sono sbagliate o non sono di un account da attivare";
