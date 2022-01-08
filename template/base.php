@@ -38,7 +38,7 @@
                 <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
                 <li><a href="informazioni.php">Informazioni</a></li>
                 <li><a href="login.php">Il tuo Account</a></li>
-                <li><a href="#">Chat e Notifiche</a></li>
+                <li><a href="chat-notifiche.php">Chat e Notifiche</a></li>
             </ul>
         </div>
 
