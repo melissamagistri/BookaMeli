@@ -106,9 +106,9 @@
           <ul>
              <li><h3>Informazioni</h3></li>
              <li><a href="informazioni.php">Chi siamo</a></li>
-             <li><a href="#"> Cookies policy</a></li>
-             <li><a href="#">Spedizioni e resi</a></li>
-             <li><a href="#">Termini e condizioni </a></li>
+             <li><a href="regole.php"> Cookies policy</a></li>
+             <li><a href="regole.php">Spedizioni e resi</a></li>
+             <li><a href="regole.php">Termini e condizioni </a></li>
          </ul>
         </div>
     </footer>
