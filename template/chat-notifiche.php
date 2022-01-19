@@ -5,14 +5,14 @@
         <ul>
             <li>
                 <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'bubble_chat.png'?>" alt="chat">
-                <a href="">Chat</a>
+                <a href="chat-home.php">Chat</a>
             </li>
             <li>
                 <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
                 <a href="">Notifiche</a>
             </li>
             <li>
-                <a href="">Esci</a>
+                <a href="home.php">Esci</a>
             </li>
         </ul>
     </div>
