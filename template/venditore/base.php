@@ -34,47 +34,15 @@
         <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><a href="listaprodotti.php?cat=manga">Manga</a></li>
-                <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
-                <li><a href="informazioni.php">Informazioni</a></li>
-                <li><a href="login.php">Il tuo Account</a></li>
-                <li><a href="chat-notifiche.php">Chat e Notifiche</a></li>
+                <li><a href="">Aggiungi prodotto</a></li>
+                <li><a href="">Elimina Prodotto</a></li>
+                <li><a href="">Modifica prodotto</a></li>
+                <li><a href="">Il tuo Account</a></li>
+                <li><a href="">Chat e Notifiche</a></li>
             </ul>
         </div>
 
-        <div class="sidenavcar" >
-            <div>
-                <img class="img" src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura">
-                <h1>Carrello</h1>
-            </div>
-            <ul>
-                <li>
-                    <span>
-                        <img class="imgcarrello" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1">
-                    </span>
-                    <div>
-                        <ul>
-                            <li><a href="prodotto.php">Nome prodotto</a></li>
-                            <li> 
-                                <div class="quantityButton">
-                                    <button>-</button>
-                                </div>
-                                <input class="inputnoborder" type="text" value="1" name="quantitacarrello">
-                                <div class="quantityButton">
-                                    <button>+</button>
-                                </div>
-                            </li>
-                            <li> <p> prezzo</p></li>
-                            <li><button class="button">Rimuovi</button></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                <a class="bluebutton" href="checkout.php">Procedi al checkout</a>
-                </li>
-                
-            </ul>
-        </div>
+        
     </header>
     <main>
     <?php
