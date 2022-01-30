@@ -12,8 +12,6 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         $templateParams["nome"] = "template/account.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     }
-}else{
-    $templateParams["errorelogin"] = "Errore!cciao";
 }
 
 

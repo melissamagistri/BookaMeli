@@ -44,9 +44,8 @@ if(isset($_POST["nome"]) && isset($_POST["cognome"]) && isset($_POST["email"]) &
         Ti preghiamo di clickare sul link nell'email e di inserire le tue credenziali.\n 
         Buon proseguimento.\n\n\n
         \t\t http://localhost/BookaMeli/confermamail.php";
-        $msg = wordwrap($msg,70);
-        $headers='From: magistri.melissa@gmail.com'; 
-        mail($_POST["email"],"Verifica account BookaMeli",$msg, $headers);
+
+        sendMail($_POST["email"], "Verifica account BookaMeli", $msg);
 
         //fai vedere la pagina di conferma dell'email
         $templateParams["titolo"] = "BookaMeli - Attiva Account";
