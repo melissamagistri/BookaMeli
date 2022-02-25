@@ -50,7 +50,16 @@ class database{
 
     //metodo che viene utilizzato quando il login fallisce, viene aggiunto 1 ai tentativi di login
     public function loginFailed($email){
-        $query = "UPDATE account SET tentativoLogin = tentativoLogin + 1 WHERE email = ?";
+        $query = "UPDATE account SET tentativoLogin = tentativoLogin + 1 WHERE email = ? AND attivo = 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
+    }
+
+    //va nella tabella e inserisce 0 ai tentativi di login
+    public function loginSucceed($email){
+        $query = "UPDATE account SET tentativoLogin = 0 WHERE email = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
         
@@ -68,10 +77,6 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function loginSucceed($idaccount){
-        //va nella tabella e inserisce 0 ai tentativi di login
-    }
-
     //metodo utilizzato per la disabilitazione temporanea di un account fino a che esso non cambia la password
     public function disableAccount($email){
         $query = "UPDATE account SET tentativoLogin = 0 AND attivo = 0 WHERE email = ?";
@@ -81,8 +86,13 @@ class database{
         return $stmt->execute();
     }
 
-    public function activeAccount($idaccount){
-        //mette attivo a 1, per risolvere bisogna verificare l'account o cambiare password
+    //metodo utilizzato per l'attivazione di un account, successivamente alla verifica o alla rimpostazione della password
+    public function activateAccount($email){
+        $query = "UPDATE account SET attivo=1 WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
     }
 
     //controlla se nel db esiste gia un account con l'email inserita
@@ -109,13 +119,7 @@ class database{
         
     }
 
-    public function activateAccount($email){
-        $query = "UPDATE account SET attivo=1 WHERE email = ?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s', $email);
-        
-        return $stmt->execute();
-    }
+    
     
 }
 
