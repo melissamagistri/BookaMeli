@@ -9,10 +9,10 @@
             </li>
             <li>
                 <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
-                <a href="">Notifiche</a>
+                <a href="notifihe-home.php">Notifiche</a>
             </li>
             <li>
-                <a href="home.php">Esci</a>
+                <a href="homepage.php">Esci</a>
             </li>
         </ul>
     </div>
