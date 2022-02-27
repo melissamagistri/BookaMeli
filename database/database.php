@@ -48,20 +48,51 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function loginFailed($idaccount){
-        //va nella tabella e inserisce +1 ai tentativi di login
+    //metodo che viene utilizzato quando il login fallisce, viene aggiunto 1 ai tentativi di login
+    public function loginFailed($email){
+        $query = "UPDATE account SET tentativoLogin = tentativoLogin + 1 WHERE email = ? AND attivo = 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
     }
 
-    public function loginSucceed($idaccount){
-        //va nella tabella e inserisce 0 ai tentativi di login
+    //va nella tabella e inserisce 0 ai tentativi di login
+    public function loginSucceed($email){
+        $query = "UPDATE account SET tentativoLogin = 0 WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
     }
 
-    public function disableAccount($idaccount){
-        //mette attivo a 0, per risolvere bisogna cambiare password
+    //metodo per controllare i tentativi di accesso eseguiti da un utente.
+    public function getLoginAttemps($email){
+        $query = "SELECT tentativoLogin FROM account WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s',$email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function activeAccount($idaccount){
-        //mette attivo a 1, per risolvere bisogna verificare l'account o cambiare password
+    //metodo utilizzato per la disabilitazione temporanea di un account fino a che esso non cambia la password
+    public function disableAccount($email){
+        $query = "UPDATE account SET tentativoLogin = 0 AND attivo = 0 WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
+    }
+
+    //metodo utilizzato per l'attivazione di un account, successivamente alla verifica o alla rimpostazione della password
+    public function activateAccount($email){
+        $query = "UPDATE account SET attivo=1 WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
     }
 
     //controlla se nel db esiste gia un account con l'email inserita
@@ -88,13 +119,7 @@ class database{
         
     }
 
-    public function activateAccount($email){
-        $query = "UPDATE account SET attivo=1 WHERE email = ?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s', $email);
-        
-        return $stmt->execute();
-    }
+    
     
 }
 
