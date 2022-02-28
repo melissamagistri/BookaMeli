@@ -1,19 +1,30 @@
 <section>
     <h1>Chat e Notifiche</h1>
 
-    <div>
-        <ul>
-            <li>
-                <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'bubble_chat.png'?>" alt="chat">
-                <a href="chat-home.php">Chat</a>
+    <div class="vertical-items">
+        <ul class="center-ul">
+
+            <li class="menu-chat-notifiche-margin">
+               <a href="chat-home.php">
+               <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'bubble_chat.png'?>" alt="chat">
+                <p>Chat</p>
+               </a>
             </li>
-            <li>
-                <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
-                <a href="notifihe-home.php">Notifiche</a>
+
+            <li class="menu-chat-notifiche-margin">
+                <a href="notifiche-home.php">
+                    <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
+                    <p>Notifiche</p> 
+                </a>
             </li>
-            <li>
-                <a href="homepage.php">Esci</a>
+
+            <li class="menu-chat-notifiche-margin">
+                <a href="index.php">
+                    <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'undo.png'?>" alt="esci">    
+                    <p>Esci</p> 
+                </a>
             </li>
+
         </ul>
     </div>
 

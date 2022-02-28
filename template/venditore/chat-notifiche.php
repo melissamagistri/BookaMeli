@@ -12,7 +12,7 @@
                 <a href="">Notifiche</a>
             </li>
             <li>
-                <a href="home.php">Esci</a>
+                <a href="homepage.php">Esci</a>
             </li>
         </ul>
     </div>

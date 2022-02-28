@@ -48,8 +48,8 @@ body > header > nav > div{
 }
 
 body > header > div:nth-of-type(2) > ul > li{
-margin: 0 20px;
-padding: 20px 0;
+  margin: 0 20px;
+  padding: 20px 0;
 }
 
 body > header > div:nth-of-type(2) > ul > li > span{
@@ -81,7 +81,7 @@ body > header > nav > div:nth-child(2){
 body > header >div:nth-of-type(2) > ul > li:first-child > h3{
 text-align: center;
 }
-ul > li {
+ul > li , .base-list-style{
   list-style: none;
 }
 
@@ -313,7 +313,7 @@ body > main > form > ul > li > a:hover{
 }
 
 .imgdatichat{
-  width: 100px;
+  width: 60px;
 }
 
 .imghomescroll{
@@ -349,6 +349,7 @@ body > main > section:nth-of-type(2){
 body > main > section > div > ul > li, body > main > section > div > ul > li > ul > li{
   margin: 10px 10px;
 }
+
 .descrizioni{
   width: 80%;
   padding: 0 90px 0 110px;
@@ -456,6 +457,27 @@ body > main > section > div > ul > li > a:hover{
   color:  rgb(93, 179, 225);
 }
 
+body > main > section > div > ul > li > a:hover > img{
+  border: 0;
+  background: rgb(93, 179, 225);
+}
+.center-ul{    
+  display: inline-block;
+  font-family: Arial, Verdana;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.menu-chat-notifiche-margin{
+  margin: 10px 50px;
+  display: block;
+  float: left;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
@@ -476,6 +498,14 @@ body > main > section > div > ul > li > a:hover{
     }
     footer > div {
       margin: 0 auto;
+    }
+
+    .center-ul{
+      text-align: center;
+    }
+
+    .vertical-items{
+      text-align: center;
     }
 }
 

@@ -18,12 +18,19 @@
         <ul>
             <li><h1>2.Pagamento</h1></li>
             <li>
-                <form action="">
-                <input type="radio" id="contanti" name="contanti" value="Contanti">
-                <label for="contanti">Contanti</label>
-                <input type="radio" id="carta" name="carta" value="Carta di credito">
-                <label for="carta">Carta di credito</label>
-                
+                <ul>
+                    <form action="">
+                        <li class="base-list-style">
+                            <input type="radio" id="contanti" name="contanti" value="Contanti">
+                            <label for="contanti">Contanti</label>
+                        </li>
+
+                        <li class="base-list-style">
+                            <input type="radio" id="carta" name="carta" value="Carta di credito">
+                            <label for="carta">Carta di credito</label>
+                        </li>
+                </ul>
+       
             </li>
 
             <li>
