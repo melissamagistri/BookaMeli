@@ -24,7 +24,7 @@ class database{
     public function checkLogin($email, $password, $active){
         //prende l'id dell'account con la mail indicata
         $idaccount = $this->getId($email)[0]["idaccount"];
-        $query = "SELECT idaccount FROM account WHERE attivo= ? AND idaccount = ? and password = ?";
+        $query = "SELECT idaccount FROM account WHERE attivo= ? AND idaccount = ? AND password = ?";
         $stmt = $this->db->prepare($query);
         //prende il salt dell'account con l'id trovato in precedenza
         $salt = $this->getSalt($idaccount)[0]["salt"];
@@ -68,7 +68,7 @@ class database{
 
     //metodo per controllare i tentativi di accesso eseguiti da un utente.
     public function getLoginAttemps($email){
-        $query = "SELECT tentativoLogin FROM account WHERE email = ?";
+        $query = "SELECT tentativoLogin FROM account WHERE idaccount=5";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s',$email);
         $stmt->execute();
@@ -91,6 +91,17 @@ class database{
         $query = "UPDATE account SET attivo=1 WHERE email = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
+        
+        return $stmt->execute();
+    }
+
+    //metodo chiamato quando si reimposta la password, fornisce un nuovo salt e inserisce la nuova password nel db
+    public function changePassword($email, $password, $salt){
+        $pass = $salt.$password.$salt;
+        $modifiedPassword = hash('sha256', $pass, false);
+        $query = "UPDATE account SET password=?, salt=? WHERE email = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sss', $modifiedPassword, $salt, $email);
         
         return $stmt->execute();
     }
