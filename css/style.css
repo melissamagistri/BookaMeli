@@ -78,9 +78,10 @@ body > header > nav > div:nth-child(2){
   float: left;
 }
 
-body > header >div:nth-of-type(2) > ul > li:first-child > h3{
+body > header >div:nth-of-type(2) > ul > li:first-child > h3, .base-list-style{
 text-align: center;
 }
+
 ul > li , .base-list-style{
   list-style: none;
 }
