@@ -68,7 +68,7 @@ class database{
 
     //metodo per controllare i tentativi di accesso eseguiti da un utente.
     public function getLoginAttemps($email){
-        $query = "SELECT tentativoLogin FROM account WHERE idaccount=5";
+        $query = "SELECT tentativoLogin FROM account WHERE email = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s',$email);
         $stmt->execute();
