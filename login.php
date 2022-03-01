@@ -9,9 +9,9 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         //aggiunge 1 ai tentativi di login
         $dbh->loginFailed($_POST["email"]);
         //login failed e disable account funzionano, mi da errori con getLoginAttemps
-        
+        $templateParams["errorelogin"] = $dbh->getLoginAttemps($_POST["email"]);
         //dopo 3 tentativi di login falliti la password deve essere cambiata e l'account viene disabilitato temporaneamente
-       /* if($dbh->getLoginAttemps($_POST["email"])[0]>2){
+        if($dbh->getLoginAttemps($_POST["email"])[0]["tentativoLogin"]>2){
             //invia la mail per cambiare la password, disabilita temporaneamente l'account
             $dbh->disableAccount($_POST["email"]);
             //invia la mail per il cambio password
@@ -22,7 +22,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
             \t\t http://localhost/BookaMeli/attivaaccount.php";
 
             sendMail($_POST["email"], "Verifica account BookaMeli", $msg);
-        }*/
+        }
     }
     else{
         $dbh->loginSucceed($_POST["email"]);
