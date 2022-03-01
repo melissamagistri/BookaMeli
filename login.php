@@ -18,7 +18,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
             \n Per continuare con l'utilizzo del tuo account devi modificare la password.\n
             Ti preghiamo di clickare sul link nell'email e di inserire le tue nuove credenziali.\n 
             Buon proseguimento.\n\n\n
-            \t\t http://localhost/BookaMeli/attivaaccount.php";
+            \t\t http://localhost/BookaMeli/conferma-password.php";
 
             sendMail($_POST["email"], "Verifica account BookaMeli", $msg);
         }
