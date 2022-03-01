@@ -21,12 +21,12 @@
                 <ul>
                     <form action="">
                         <li class="base-list-style">
-                            <input type="radio" id="contanti" name="contanti" value="Contanti">
+                            <input type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
                             <label for="contanti">Contanti</label>
                         </li>
 
                         <li class="base-list-style">
-                            <input type="radio" id="carta" name="carta" value="Carta di credito">
+                            <input type="radio" id="carta" name="metodo_pagamento" value="Carta di credito">
                             <label for="carta">Carta di credito</label>
                         </li>
                 </ul>
