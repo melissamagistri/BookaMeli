@@ -79,7 +79,7 @@ class database{
 
     //metodo utilizzato per la disabilitazione temporanea di un account fino a che esso non cambia la password
     public function disableAccount($email){
-        $query = "UPDATE account SET tentativoLogin = 0 AND attivo = 0 WHERE email = ?";
+        $query = "UPDATE account SET tentativoLogin = 0 , attivo = 0 WHERE email = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $email);
         
