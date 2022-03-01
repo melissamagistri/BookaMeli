@@ -11,7 +11,7 @@
                     <input type="password"  name="password" placeholder="Password" required/>
                 </li>
                 <li>
-                    <input type="password"  name="Conferma password" placeholder="Ripeti la Password" required/>
+                    <input type="password"  name="confermapassword" placeholder="Ripeti la Password" required/>
                 </li>
                 <li>
                     <input type="submit" name="submit" value="Invia" />

@@ -34,6 +34,10 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 
 if(isUserLoggedIn()){
     //aggiumgere template visualizzazione info dell'account
+    $templateParams["titolo"] = "BookaMeli - Il tuo account";
+    $templateParams["nome"] = "template/info-account.php";
+    $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+
 } else {
     $templateParams["titolo"] = "BookaMeli - Login";
     $templateParams["nome"] = "template/accedi.php";
