@@ -1,17 +1,28 @@
 <section>
 
-<ul>
-    <li>
-        <a href="">Disponibilità</a>
-    </li>
+<div class="custom-select">
+    <select> 
+            <option value="0"><a href="">Rilevanza</a></option>
+            <option value="1"><a href="">Dalla meno recente</a></option>
+            <option value="2"><a href="">Alla più recente</a></option>
+    </select>
+</div>
 
-    <li>
-        <a href="">Stato Ordini</a>
-    </li>
+<div class="custom-select">
+    <ul>
+        <li class="border-radius">
+            <p>Contenuto Notifica</p>
+        </li>
 
-    <li>
-        <a href="">Altre Notifiche</a>
-    </li>
-</ul>
+        <li class="border-radius">
+            <p>Contenuto Notifica</p>
+        </li>
+
+        <li class="border-radius">
+            <p>Contenuto Notifica</p>
+        </li>
+    </ul>
+</div>
+
 
 </section>

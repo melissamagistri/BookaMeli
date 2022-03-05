@@ -7,14 +7,14 @@
             <li class="menu-chat-notifiche-margin">
                <a href="chat-home.php">
                <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'bubble_chat.png'?>" alt="chat">
-                <p>Chat</p>
+                <p>Chat e Notifiche</p>
                </a>
             </li>
 
             <li class="menu-chat-notifiche-margin">
                 <a href="notifiche-home.php">
                     <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
-                    <p>Notifiche</p> 
+                    <p>Dati Personali</p> 
                 </a>
             </li>
 
