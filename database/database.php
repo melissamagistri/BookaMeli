@@ -66,6 +66,17 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione per la verifica che l'utente che ha fatto il login sia un cliente o un venditore
+    public function userIsClient($idaccount){
+        $query = "SELECT venditore FROM account WHERE idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     //metodo per controllare i tentativi di accesso eseguiti da un utente.
     public function getLoginAttemps($email){
         $query = "SELECT tentativoLogin FROM account WHERE email = ?";

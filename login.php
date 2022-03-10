@@ -25,18 +25,27 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     }
     else{
         $dbh->loginSucceed($_POST["email"]);
+        registerLoggedUser($dbh->getId($_POST['email']));
         $templateParams["titolo"] = "BookaMeli - Il tuo account";
         $templateParams["nome"] = "template/account.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     }
 }
 
-
+//controlla se l'user è loggato
 if(isUserLoggedIn()){
-    //aggiumgere template visualizzazione info dell'account
-    $templateParams["titolo"] = "BookaMeli - Il tuo account";
-    $templateParams["nome"] = "template/info-account.php";
-    $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+    //controlla se l'user loggato è un cliente o un venditore
+    if($dbh->userIsClient($_SESSION['idaccount'][0]['idaccount'])[0]['venditore'] == 0){
+        //in questo caso l'utente è un cliente
+        $templateParams["titolo"] = "BookaMeli - Il tuo account";
+        $templateParams["nome"] = "template/info-account.php";
+        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+    } else{
+        //in questo caso l'utente è il venditore
+        $templateParams["titolo"] = "BookaMeli - Il tuo account";
+        $templateParams["nome"] = "template/venditore/account.php";
+        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+    }
 
 } else {
     $templateParams["titolo"] = "BookaMeli - Login";
