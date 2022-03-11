@@ -398,9 +398,9 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
   border-radius: 5px;
 }
 
-body > main > section > div > ul{
+/*body > main > section > div > ul{
   padding: 20px 0 0 20px;
-}
+}*/
 
 .container {
   border: 2px solid #dedede;
@@ -463,20 +463,12 @@ body > main > section > div > ul > li > a:hover > img{
   border: 0;
   color: rgb(93, 179, 225);
 }
-.center-ul{    
+
+.vertical-items ul li{
   display: inline-block;
-  font-family: Arial, Verdana;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
 }
 
-.menu-chat-notifiche-margin{
-  margin: 10px 50px;
-  display: block;
-  float: left;
+.vertical-items{
   text-align: center;
 }
 
@@ -488,6 +480,10 @@ body > main > section > div > ul > li > a:hover > img{
   height: 70%;
 }
 
+.no-padding{
+  padding: 0;
+}
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
@@ -497,25 +493,25 @@ body > main > section > div > ul > li > a:hover > img{
       width: 100px;
     }
 
-    .topnav .search-container {
-      float: none;
-    }
     .open{
       width: 100%; 
     }
-    body > footer > div:nth-of-type(2), body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
+    body > footer > div:nth-of-type(2), .topnav .search-container, 
+    body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
       float: none;
     }
+    
     footer > div {
       margin: 0 auto;
     }
 
-    .center-ul{
-      text-align: center;
+    .vertical-items{
+      display: block;
     }
 
-    .vertical-items{
-      text-align: center;
+    .vertical-items ul li{
+      width: 100%;
+      margin: 0;
     }
 }
 
