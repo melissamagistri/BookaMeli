@@ -398,10 +398,6 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
   border-radius: 5px;
 }
 
-/*body > main > section > div > ul{
-  padding: 20px 0 0 20px;
-}*/
-
 .container {
   border: 2px solid #dedede;
   background-color: #f1f1f1;
@@ -446,7 +442,7 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
 }
 
 body > main > section > div > ul > li > a {
-  margin: 30px 30px;
+  margin: 0px 30px;
   padding: 8px 8px 8px 10px;
   text-decoration: none;
   font-size: 25px;
