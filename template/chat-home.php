@@ -1,15 +1,19 @@
 <section>
-<div>
-<ul>
-    <li>
-        <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'user.png'?>" alt="user-chat">
-    </li>
+    <div>
+        <p>Venditore</p>
+    </div>
 
-    <li>
-        <a href="">Nome chat</a>
-    </li>
-</ul>
-</div>
+    <div>
+        <p>Testo1</p>
+        <p>Testo2</p>
+    </div>
+
+    <div>
+        <input type="text" placeHolder="Scrivi un messaggio..." label = "Inserimento del messaggio">
+        <a href="">
+            <img src="<?php echo UPLOAD_DIR.'send.png'?>" alt="Invio">
+        </a>
+    </div>
 
 
 </section>

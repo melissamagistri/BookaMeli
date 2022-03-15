@@ -40,5 +40,19 @@
         ?> 
        
     </div>
+
+    <div>
+
+        <p>Recensioni di questo prodotto</p>
+        <ul>
+            <li>
+                <p>Titolo</p>
+                <p> Testo</p>
+
+                <p>Stelle</p>
+
+            </li>
+        </ul>
+    </div>
 </section>
 <?php endif; ?>

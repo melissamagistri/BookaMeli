@@ -19,6 +19,13 @@
             </li>
 
             <li>
+                <a href="notifiche-home.php">
+                    <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'order-delivery.png'?>" alt="notifiche">
+                    <p>I miei Ordini</p> 
+                </a>
+            </li>
+
+            <li>
                 <a href="index.php">
                     <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'undo.png'?>" alt="esci">    
                     <p>Esci</p> 
