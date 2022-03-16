@@ -19,7 +19,7 @@
             </li>
 
             <li>
-                <a href="notifiche-home.php">
+                <a href="ordini.php">
                     <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'order-delivery.png'?>" alt="notifiche">
                     <p>I miei Ordini</p> 
                 </a>

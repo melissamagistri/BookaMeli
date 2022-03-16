@@ -325,7 +325,7 @@ body > main > form > ul > li > a:hover{
   width: 250px;
 }
 
-body > main > section > div{
+body > main > section > div, .display-inline{
   text-align: center;
   display: inline-block;
 
@@ -464,7 +464,7 @@ body > main > section > div > ul > li > a:hover > img{
   display: inline-block;
 }
 
-.vertical-items{
+.vertical-items, .center{
   text-align: center;
 }
 
