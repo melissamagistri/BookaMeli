@@ -15,7 +15,7 @@
                         <span>Data ordine</span>
                         <span>Totale</span>
                         <ul>
-                            <li>PRodotti che sono in un ordine (prendere il file prodotto?)</li>
+                            <li>Prodotti che sono in un ordine (prendere il file prodotto?)</li>
                         </ul>
                     </li>
 

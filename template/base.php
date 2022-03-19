@@ -54,18 +54,20 @@
                     </span>
                     <div>
                         <ul>
-                            <li><a href="prodotto.php">Nome prodotto</a></li>
+                            <li><a class="hover" href="prodotto.php">Nome prodotto</a></li>
                             <li> 
                                 <div class="quantityButton">
-                                    <button>-</button>
+                                    <button class="button">-</button>
                                 </div>
-                                <input class="inputnoborder" type="text" value="1" name="quantitacarrello">
+
+                                <label for="quantita prodotto nel carrello"></label>
+                                <input class="inputnoborder" type="text" value="1" name="quantitacarrello" disabled>
                                 <div class="quantityButton">
-                                    <button>+</button>
+                                    <button class="button">+</button>
                                 </div>
                             </li>
                             <li> <p> prezzo</p></li>
-                            <li><button class="button">Rimuovi</button></li>
+                            <li><button class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>

@@ -1,5 +1,6 @@
 <div class="wrap">
    <div class="search">
+      <label for="Cosa stai cercando?"></label>
       <input type="text" class="searchTerm" placeholder="Che cosa stai cercando?">
       <button type="submit" class="searchButton">
         <span class="fa fa-search"></span>

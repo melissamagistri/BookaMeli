@@ -1,22 +1,25 @@
+<h1>Accedi</h1>
 <form action="#" method="POST">
-            <h1>Accedi</h1>
+            
             <?php if(isset($templateParams["errorelogin"])): ?>
             <p><?php echo $templateParams["errorelogin"]; ?></p>
             <?php endif; ?>
-            <ul>
-                <li>
-                    <input type="text"  name="email" placeholder="Email" required/>
+            <ul class="no-padding">
+                <li class="display-block">
+                    <label class="label" for="email">Email:</label>
+                    <input type="text"  name="email" id="email" required/>
                 </li>
                 <li>
-                    <input type="password"  name="password" placeholder="Password" required/>
+                    <label class="label" for="password">Password:</label>
+                    <input  type="password"  name="password" id="password" required/>
                 </li>
-                <li>
-                    <input type="submit" name="submit" value="Accedi" />
+                <li class="text-center">
+                    <input type="submit" name="submit" value="Accedi" id="tasto accedi"/>
                 </li>
-                <li>
+                <li class="text-center">
                     <a href="">Password dimenticata?</a>
                 </li>
-                <li>
+                <li class="text-center">
                     <a href="registrati.php">Non hai un account? Registrati!</a>
                 </li>
             </ul>

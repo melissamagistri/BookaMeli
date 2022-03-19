@@ -33,8 +33,15 @@
             <li>
             <h3>Inserisci i dati della tua carta</h3>
                 <ul>
-                    <li><input type="text" name="dati" placeholder="Numero"></li>
-                    <li><input type="text" name="dati" placeholder="Proprietario"></li>
+                    <li>
+                        <label for="Numero carta">Numero Carta:</label>
+                        <input type="text" name="dati" placeholder="Numero">
+                    </li>
+
+                    <li>
+                        <label for="Nome PRoprietario">Nome proprietario:</label>
+                        <input type="text" name="dati" placeholder="Proprietario">
+                    </li>
                     
                 </ul>
             </li>
