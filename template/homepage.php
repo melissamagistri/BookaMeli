@@ -36,13 +36,20 @@
 
 </div>
 
+<?php if(count($templateParams['prodottinuovi'])!=0):?>
 <section>
   <h2>Novità</h2>
+  <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
   <div>
       <ul>
-        <li><img class="imghome" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1"></li>
-        <li><a href="prodotto.php">Titolo</a></li>
-        <li><p>Prezzo</p></li>
+        <a href="<?php echo $templateParams['prodottinuovi'][$i]['nome']?>">
+          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
+          <li><?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?></li>
+        </a>
+        <li><p><?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
+        <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
+                <li><p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+          <?php endif; ?>
         <li>
           <div>
           <a class="bluebutton" href="">Aggiungi al carrello</a>
@@ -51,7 +58,9 @@
       </ul>
 
   </div>
+  <?php endfor;?>
 </section>
+<?php endif;?>
 
 <section>
   <h2>Popolari</h2>

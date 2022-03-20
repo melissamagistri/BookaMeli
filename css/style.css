@@ -97,7 +97,7 @@ ul > li , .base-list-style{
 
 footer{
   display: inline-block;
-  margin: 20px 0;
+  margin: 20px 0 0;
   width: 100%;
   background-color: lightblue;
   text-align: center;

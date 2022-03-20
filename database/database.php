@@ -142,10 +142,10 @@ class database{
     }
 
     //funzione per prendere tutte le informazioni rigurdanti un determinato prodotto
-    public function getProductInfos($idprodotto){
-        $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità FROM prodotti WHERE idprodotto = ?";
+    public function getProductInfos($foto){
+        $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità, idprodotto FROM prodotti WHERE foto = ?";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('i',$idprodotto);
+        $stmt->bind_param('s',$foto);
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -155,6 +155,17 @@ class database{
     //funzione per ottenere tutte le recensioni di un prodotto
     public function getProductReviews($idprodotto){
         $query = "SELECT voto, testorecensione, titolorecensione FROM recensioni WHERE idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che ritorna i 3 nuovi prodotti inseriti
+    public function getNewProducts(){
+        $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità FROM prodotti ORDER BY datainserimento desc limit 3";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idprodotto);
         $stmt->execute();
