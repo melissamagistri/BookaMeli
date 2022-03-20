@@ -7,6 +7,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+    //funzione per l'invio delle mail
     function sendMail($emailDestinatario, $subject, $testo){
         $mail = new PHPMailer(true);
         try {
@@ -31,6 +32,7 @@ require 'PHPMailer/src/SMTP.php';
             echo 'Messaggio non inviato. Mailer Error: ', $mail->ErrorInfo;
         }
     }
+
     //genera una stringa random di lunghezza da 5 a 10 caratteri
     function createSalt(){
         $array = str_split('abcdefghijklmnopqrstuvwxyz'.'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
@@ -43,14 +45,17 @@ require 'PHPMailer/src/SMTP.php';
 
     }
 
+    //funzione per il controllo del login da parte dell'utente
     function isUserLoggedIn(){
         return !empty($_SESSION['idaccount']);
     }
 
+    //funzione per la creazione della sessione
     function registerLoggedUser($user){
         $_SESSION["idaccount"] = $user;
     }
 
+    //funzione per il check della password inserita
     function checkPassword(){
         if(strlen($_POST["password"]) > 7){
             return true;
@@ -58,17 +63,9 @@ require 'PHPMailer/src/SMTP.php';
         return false;
     }
 
+    //funzione che restituisce un array contenente le immagini che si vedono scorrere nella homepage
     function getHomeImages(){
         return array("schermata_op.png","ciao.png");
     }
 
-    function removeExtensions($file){
-        $x = substr($file, 0, strrpos($file, '.'));
-        return $x;
-    }
-
-    function getFileName($file){
-        $x = str_replace("_", " ", $file);
-        return $x;
-    }
 ?>

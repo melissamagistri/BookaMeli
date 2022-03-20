@@ -13,8 +13,8 @@
       for($i=0;$i<count($templateParams["immaginihome"]);$i++):
   ?>
   <div>
-    <a href="<?php echo removeExtensions($templateParams["immaginihome"][$i]); ?>">
-      <img class="imghomescroll" src="<?php echo UPLOAD_DIR.$templateParams["immaginihome"][$i]; ?>" alt="<?php echo getFileName(removeExtensions($templateParams["immaginihome"][$i])); ?>">
+    <a href="<?php echo $templateParams["immaginihome"][$i]; ?>">
+      <img class="imghomescroll" src="<?php echo UPLOAD_DIR.$templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["immaginihome"][$i]; ?>">
     </a>
   </div>
       
@@ -42,7 +42,7 @@
   <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
   <div>
       <ul>
-        <a href="<?php echo $templateParams['prodottinuovi'][$i]['nome']?>">
+        <a href="prodotto.php?foto=".<?php echo $templateParams['prodottinuovi'][$i]['foto']?>>
           <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
           <li><?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?></li>
         </a>
