@@ -42,11 +42,11 @@
   <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
   <div>
       <ul>
-        <a href="prodotto.php?foto=".<?php echo $templateParams['prodottinuovi'][$i]['foto']?>>
+        <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
           <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
-          <li><?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?></li>
+          <li><?php echo $templateParams['prodottinuovi'][$i]['nome']?></li>
         </a>
-        <li><p><?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
+        <li><p><?php echo $templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
         <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
                 <li><p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
           <?php endif; ?>

@@ -167,7 +167,6 @@ class database{
     public function getNewProducts(){
         $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità FROM prodotti ORDER BY datainserimento desc limit 3";
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('i',$idprodotto);
         $stmt->execute();
         $result = $stmt->get_result();
 
