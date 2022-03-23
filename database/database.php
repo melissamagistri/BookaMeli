@@ -173,6 +173,16 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che ritorna i 3 prodotti piu popolari nell'ultimo mese
+    public function getPopularProducts(){
+        $query = "SELECT prodotti.nome, prodotti.descrizione, prodotti.prezzo, prodotti.sconto, prodotti.foto, prodotti.quantità from ordini o, prodottiordinati p, prodotti prodotti where o.idordine = p.idordine and p.idprodotto = prodotti.idprodotto and o.dataordine BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() group by prodotti.idprodotto,prodotti.nome ORDER BY count(*) desc LIMIT 3";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     
     
 }

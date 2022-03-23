@@ -52,7 +52,18 @@
           <?php endif; ?>
         <li>
           <div>
-          <a class="bluebutton" href="">Aggiungi al carrello</a>
+          <?php
+            if($templateParams['prodottinuovi'][$i]['quantità']==0):
+        ?> 
+        <a class="bluebutton" href="">Notificami della disponibilita</a>
+        <?php
+            else:
+        ?> 
+        <a class="bluebutton" href="">Aggiungi al carrello</a>
+
+        <?php
+            endif;
+        ?> 
           </div>
         </li>
       </ul>
@@ -63,17 +74,40 @@
 <?php endif;?>
 
 <section>
-  <h2>Popolari</h2>
+<?php if(count($templateParams['prodottipopolari'])!=0):?>
+<section>
+  <h2>Novità</h2>
+  <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
   <div>
-    <ul>
-        <li><img class="imghome" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1"></li>
-        <li><a href="">Titolo</a></li>
-        <li><p>Prezzo</p></li>
+      <ul>
+        <a href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
+          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>"></li>
+          <li><?php echo $templateParams['prodottipopolari'][$i]['nome']?></li>
+        </a>
+        <li><p><?php echo $templateParams['prodottipopolari'][$i]['prezzo']?></p></li>
+        <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
+                <li><p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+          <?php endif; ?>
         <li>
           <div>
-              <a class="bluebutton" href="">Aggiungi al carrello</a>
+          <?php
+            if($templateParams['prodottipopolari'][$i]['quantità']==0):
+        ?> 
+        <a class="bluebutton" href="">Notificami della disponibilita</a>
+        <?php
+            else:
+        ?> 
+        <a class="bluebutton" href="">Aggiungi al carrello</a>
+
+        <?php
+            endif;
+        ?> 
           </div>
         </li>
-    </ul>
+      </ul>
+
   </div>
+  <?php endfor;?>
+</section>
+<?php endif;?>
 </section>

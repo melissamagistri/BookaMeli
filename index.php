@@ -7,6 +7,8 @@ $templateParams["nome"] = "homepage.php";
 $templateParams["immaginihome"] = getHomeImages();
 //template per l'inserimento dei prodotti nuovi
 $templateParams['prodottinuovi'] = $dbh->getNewProducts();
+////template per l'inserimento dei prodotti popolari
+$templateParams['prodottipopolari'] = $dbh->getPopularProducts();
 $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js", "js/homepage.js");
 
 require_once 'template/base.php';
