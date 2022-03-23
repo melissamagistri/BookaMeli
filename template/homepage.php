@@ -37,7 +37,7 @@
 </div>
 
 <?php if(count($templateParams['prodottinuovi'])!=0):?>
-<section>
+<section class='novita'>
   <h2>Novità</h2>
   <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
   <div>
@@ -75,8 +75,8 @@
 
 <section>
 <?php if(count($templateParams['prodottipopolari'])!=0):?>
-<section>
-  <h2>Novità</h2>
+<section class='popolari'>
+  <h2>Popolari</h2>
   <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
   <div>
       <ul>
