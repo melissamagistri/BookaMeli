@@ -1,10 +1,9 @@
+<h1>Storico Ordini</h1>
 <section>
-    <h1>Storico Ordini</h1>
-        <ul>
-
+        <ul class="no-padding">
             <li>
             <div class="display-inline">
-                <ul>
+                <ul class="no-padding">
                     <li class="center"><label for="">Num ordini effettuati</label></li>
                     <li>
                         <p>
@@ -23,7 +22,7 @@
             </li>
 
             <li>
-            <div class="display-inline">
+            <div>
                 <p>Scegli una valutazione al prodotto:</p>
 
                 <div>
@@ -40,7 +39,7 @@
                 </div>
 
                 <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Inserisci la tua recensione">
+                    <textarea class="textareadimension"  placeholder="Inserisci la tua recensione"></textarea> 
                     <button class="bluebutton">Invia</button>
                 </div>    
 

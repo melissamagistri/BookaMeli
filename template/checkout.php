@@ -16,7 +16,7 @@
         <ul>
             <li><h1>2.Pagamento</h1></li>
             <li>
-                <ul>
+                <ul class="no-padding">
                         <li class="base-list-style">
                             <input type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
                             <label for="contanti">Contanti</label>
@@ -32,7 +32,7 @@
 
             <li>
             <h3>Inserisci i dati della tua carta</h3>
-                <ul>
+                <ul class="no-padding">
                     <li>
                         <label for="Numero carta">Numero Carta:</label>
                         <input type="text" name="dati" placeholder="Numero">

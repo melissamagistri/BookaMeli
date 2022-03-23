@@ -2,6 +2,13 @@ body, header, h3, img, a{
   margin: 0;
   padding: 0;
   font-family: "Helvetica", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.textareadimension {
+  width: 50%;
+  height: 150px;
 }
 
 .hover{
@@ -300,7 +307,7 @@ body > main > form > ul > li > input:not(input[type="submit"]),  input[name='sea
   color: black;
 }
 
-body > main > form > ul > li > a:hover{
+body > main > form > ul > li > a:hover, a:hover{
   color: rgb(93, 179, 225);
   transition: 0.3s;
 }

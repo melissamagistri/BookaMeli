@@ -19,41 +19,44 @@
             <?php if($prodotto['sconto']!=0): ?>
                 <li><p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
             <?php endif; ?>
+
+            <li>
+                <div>
+                <?php
+                    if($prodotto['quantità']==0):
+                ?> 
+                <a class="bluebutton" href="">Notificami della disponibilita</a>
+                <?php
+                    else:
+                ?> 
+                <a class="bluebutton" href="">Aggiungi al carrello</a>
+
+                <?php
+                    endif;
+                ?> 
+        
+                </div>
+            </li>
         </ul>
     </div>
-    
+
 </section>
 
 <section>
-    <div>
-        <?php
-            if($prodotto['quantità']==0):
-        ?> 
-        <a class="bluebutton" href="">Notificami della disponibilita</a>
-        <?php
-            else:
-        ?> 
-        <a class="bluebutton" href="">Aggiungi al carrello</a>
+    <?php endif; ?>
+    <?php if(count($templateParams["recensioni"])!=0): ?>
+        <div>
+            <p>Recensioni di questo prodotto</p>
+            <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
+            <ul>
+                <li>
+                    <p><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
+                    <p><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
+                    <p><?php echo $templateParams['recensioni'][$i]['voto'] ?></p>
 
-        <?php
-            endif;
-        ?> 
-       
-    </div>
-<?php endif; ?>
-<?php if(count($templateParams["recensioni"])!=0): ?>
-    <div>
-        <p>Recensioni di questo prodotto</p>
-        <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
-        <ul>
-            <li>
-                <p><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
-                <p><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
-                <p><?php echo $templateParams['recensioni'][$i]['voto'] ?></p>
-
-            </li>
-        </ul>
-        <?php endfor; ?>
-    </div>
+                </li>
+            </ul>
+            <?php endfor; ?>
+        </div>
 </section>
 <?php endif; ?>
