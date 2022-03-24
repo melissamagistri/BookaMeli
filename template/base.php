@@ -47,35 +47,52 @@
                 <img class="img" src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura">
                 <h1>Carrello</h1>
             </div>
+            <?php if(isUserLoggedIn()):?>
             <ul>
+                <?php if(count($templateParams['prodottiCarrello'])!=0):?>
+                    <?php foreach($templateParams['prodottiCarrello'] as $prodotto):?>
                 <li>
                     <span>
-                        <img class="imgcarrello" src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one-piece-vol-1">
+                        <img class="imgcarrello" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto']?>">
                     </span>
                     <div>
                         <ul>
-                            <li><a class="hover" href="prodotto.php">Nome prodotto</a></li>
+                            <li><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
                             <li> 
                                 <div class="quantityButton">
                                     <button class="button">-</button>
                                 </div>
 
                                 <label for="quantita prodotto nel carrello"></label>
-                                <input class="inputnoborder" type="text" value="1" name="quantitacarrello" disabled>
+                                <input class="inputnoborder" type="text" value="<?php echo $prodotto['quantita']?>" name="quantitacarrello" disabled>
                                 <div class="quantityButton">
                                     <button class="button">+</button>
                                 </div>
                             </li>
-                            <li> <p> prezzo</p></li>
+                            <?php //sconto non appare //////////////////////////////////////////////////////////////////////////?>
+                            <li><p <?php echo ($prodotto['sconto'] != 0) ?"style : 'text-decoration:line-through;'" : '';?>> <?php echo $prodotto['prezzo']?></p></li>
+                            <?php if($prodotto['sconto'] != 0):?>
+                                <li><p><?php round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+                            <?php endif; ?>
                             <li><button class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>
+                <?php endforeach;?>
                 <li>
                 <a class="bluebutton" href="checkout.php">Procedi al checkout</a>
                 </li>
-                
+                <?php else:?>
+                    <li><p>Non hai nessun prodotto nel carrello.</p></li>
+                <?php endif;?>
             </ul>
+            <?php else:?>
+                <ul>
+                    <li><p>Per visualizzare il carrello devi accedere al tuo account</p></li>
+                    <li><a class="bluebutton" href="login.php">Accedi o Registrati</a></li>
+                </ul>
+            <?php endif; ?>
+                
         </div>
     </header>
     <main>

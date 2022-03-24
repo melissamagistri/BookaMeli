@@ -183,6 +183,16 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che restituisce tutti gli articoli che un utente ha nel carrello
+    public function getUserCart($idaccount){
+        $query = "SELECT prodotti.nome, prodotti.prezzo, prodotti.sconto, prodotti.foto, p.quantita from carrello c, prodottinelcarrello p, prodotti prodotti where c.idcarrello = p.idcarrello and p.idprodotto = prodotti.idprodotto and c.idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     
     
 }
