@@ -185,7 +185,7 @@ class database{
 
     //funzione che restituisce tutti gli articoli che un utente ha nel carrello
     public function getUserCart($idaccount){
-        $query = "SELECT prodotti.nome, prodotti.prezzo, prodotti.sconto, prodotti.foto, p.quantita from carrello c, prodottinelcarrello p, prodotti prodotti where c.idcarrello = p.idcarrello and p.idprodotto = prodotti.idprodotto and c.idaccount = ?";
+        $query = "SELECT prodotti.nome, prodotti.prezzo, prodotti.sconto, prodotti.foto, p.quantita from prodottinelcarrello p, prodotti prodotti where p.idprodotto = prodotti.idprodotto and p.idaccount = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idaccount);
         $stmt->execute();
