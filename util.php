@@ -13,4 +13,19 @@ if(isUserLoggedIn()){
 } else {
     $templateParams['prodottiCarrello'] = [];
 }
+if(isset($_GET['rimuovi'])){
+    $dbh->removeProductFromCart($_SESSION['idaccount'][0]['idaccount'], (int)$_GET['rimuovi'][0]);
+    //refresha la pagina per la corretta visualizzazione del carrello
+    $url = $_SERVER['REQUEST_URI'];
+    $suburl = explode('?', $url);
+    $url = '';
+    for($i=0;$i<count($suburl)-1;$i++){
+        $url = $url.$suburl[$i];
+    }
+    ob_start();
+    header('Location: '.$url);
+    ob_end_flush();
+    die();
+}
+
 ?>

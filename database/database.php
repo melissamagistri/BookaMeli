@@ -185,13 +185,20 @@ class database{
 
     //funzione che restituisce tutti gli articoli che un utente ha nel carrello
     public function getUserCart($idaccount){
-        $query = "SELECT prodotti.nome, prodotti.prezzo, prodotti.sconto, prodotti.foto, p.quantita from prodottinelcarrello p, prodotti prodotti where p.idprodotto = prodotti.idprodotto and p.idaccount = ?";
+        $query = "SELECT prodotti.idprodotto, prodotti.nome, prodotti.prezzo, prodotti.sconto, prodotti.foto, p.quantita from prodottinelcarrello p, prodotti prodotti where p.idprodotto = prodotti.idprodotto and p.idaccount = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idaccount);
         $stmt->execute();
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function removeProductFromCart($idaccount, $idprodotto){
+        $query = 'DELETE FROM prodottinelcarrello WHERE idaccount = ? AND idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$idaccount, $idprodotto);
+        return $stmt->execute();
     }
     
     

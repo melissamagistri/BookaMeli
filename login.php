@@ -29,6 +29,11 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         $templateParams["titolo"] = "BookaMeli - Il tuo account";
         $templateParams["nome"] = "template/account.php";
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+        //refresha la pagina per visualizzare correttamente i prodotti all'interno del carrello
+        ob_start();
+        header('Refresh:0');
+        ob_end_flush();
+        die();
     }
 }
 
