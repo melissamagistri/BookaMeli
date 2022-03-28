@@ -59,15 +59,9 @@
                         <ul>
                             <li><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
                             <li> 
-                                <div class="quantityButton">
-                                    <button class="button">-</button>
-                                </div>
-
-                                <label for="quantita prodotto nel carrello"></label>
-                                <input class="inputnoborder" type="text" value="<?php echo $prodotto['quantita']?>" name="quantitacarrello" disabled>
-                                <div class="quantityButton">
-                                    <button class="button">+</button>
-                                </div>
+                            <label for="quantità">Quantità del prodotto:</label>
+                                <input type="number" id="quantità" name="quantità prodotto" placeholder = "1"
+                                                min="0" max="100">
                             </li>
                             <li><p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo']?></p></li>
                             <?php if($prodotto['sconto'] != 0):?>
