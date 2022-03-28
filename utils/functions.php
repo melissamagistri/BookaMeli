@@ -67,6 +67,5 @@ require 'PHPMailer/src/SMTP.php';
     function getHomeImages(){
         return array("schermata_op.png","ciao.png");
     }
-    
 
 ?>

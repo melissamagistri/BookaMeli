@@ -13,6 +13,8 @@ if(isUserLoggedIn()){
 } else {
     $templateParams['prodottiCarrello'] = [];
 }
+
+//funzione per la rimozione di un prodotto dal carrello
 if(isset($_GET['rimuovi'])){
     $dbh->removeProductFromCart($_SESSION['idaccount'][0]['idaccount'], (int)$_GET['rimuovi'][0]);
     //refresha la pagina per la corretta visualizzazione del carrello
@@ -26,6 +28,25 @@ if(isset($_GET['rimuovi'])){
     header('Location: '.$url);
     ob_end_flush();
     die();
+}
+
+//funzione per l'inserimento di un prodotto nel carrello
+if(isset($_GET['carrello'])){
+    //contollo se il prodotto inserito è disponibile non funziona
+    if($dbh->getProductQuantity($_GET['carrello'][0]) != 0){
+        $dbh->addProductToCart($_SESSION['idaccount'][0]['idaccount'], $_GET['carrello'][0]);
+        //refresha la pagina per la corretta visualizzazione del carrello
+        $url = $_SERVER['REQUEST_URI'];
+        $suburl = explode('?', $url);
+        $url = '';
+        for($i=0;$i<count($suburl)-1;$i++){
+            $url = $url.$suburl[$i];
+        }
+        ob_start();
+        header('Location: '.$url);
+        ob_end_flush();
+        die();
+    }
 }
 
 ?>

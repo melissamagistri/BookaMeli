@@ -59,7 +59,7 @@
         <?php
             else:
         ?> 
-        <a class="bluebutton" href="">Aggiungi al carrello</a>
+        <a class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</a>
 
         <?php
             endif;
@@ -97,7 +97,7 @@
         <?php
             else:
         ?> 
-        <a class="bluebutton" href="">Aggiungi al carrello</a>
+        <a class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</a>
 
         <?php
             endif;

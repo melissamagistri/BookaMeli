@@ -165,7 +165,7 @@ class database{
 
     //funzione che ritorna i 3 nuovi prodotti inseriti
     public function getNewProducts(){
-        $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità FROM prodotti ORDER BY datainserimento desc limit 3";
+        $query = "SELECT idprodotto, nome, descrizione, prezzo, sconto, foto, quantità FROM prodotti ORDER BY datainserimento desc limit 3";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -175,7 +175,7 @@ class database{
 
     //funzione che ritorna i 3 prodotti piu popolari nell'ultimo mese
     public function getPopularProducts(){
-        $query = "SELECT prodotti.nome, prodotti.descrizione, prodotti.prezzo, prodotti.sconto, prodotti.foto, prodotti.quantità from ordini o, prodottiordinati p, prodotti prodotti where o.idordine = p.idordine and p.idprodotto = prodotti.idprodotto and o.dataordine BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() group by prodotti.idprodotto,prodotti.nome ORDER BY count(*) desc LIMIT 3";
+        $query = "SELECT prodotti.idprodotto, prodotti.nome, prodotti.descrizione, prodotti.prezzo, prodotti.sconto, prodotti.foto, prodotti.quantità from ordini o, prodottiordinati p, prodotti prodotti where o.idordine = p.idordine and p.idprodotto = prodotti.idprodotto and o.dataordine BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() group by prodotti.idprodotto,prodotti.nome ORDER BY count(*) desc LIMIT 3";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -194,13 +194,31 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione per la rimozione di un prodotto dal carrello
     public function removeProductFromCart($idaccount, $idprodotto){
         $query = 'DELETE FROM prodottinelcarrello WHERE idaccount = ? AND idprodotto = ?';
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ii',$idaccount, $idprodotto);
         return $stmt->execute();
     }
+
+    //funzione per l'inserimento di un prodotto nel carrello
+    public function addProductToCart($idaccount, $idprodotto){
+        $query = 'INSERT INTO prodottinelcarrello(quantita,idprodotto,idaccount) VALUES(1,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$idprodotto, $idaccount);
+        return $stmt->execute();
+    }
     
+    public function getProductQuantity($idprodotto){
+        $query = "SELECT quantità from prodotti where idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     
 }
 
