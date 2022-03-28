@@ -59,11 +59,15 @@
                         <ul>
                             <li><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
                             <li> 
-                            <label for="quantità">Quantità del prodotto:</label>
-                                <input type="number" id="quantità" name="quantità prodotto" placeholder = "1"
-                                                min="0" max="100">
+                            <select name="" id="">
+                                    <?php $quantity = $dbh->getProductQuantity($prodotto['idprodotto'])[0]['quantità']; ?>
+                                    <?php for($i=1; $i <= (($quantity > 10) ? 10 : $quantity); $i++):?>
+                                        <option value=" <?php echo $i?>"><?php echo $i ?> </option>
+                                        <?php endfor?>
+
+                                </select>
                             </li>
-                            <li><p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo']?></p></li>
+                            <li><p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p></li>
                             <?php if($prodotto['sconto'] != 0):?>
                                 <li><p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
                             <?php endif; ?>

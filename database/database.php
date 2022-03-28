@@ -210,10 +210,22 @@ class database{
         return $stmt->execute();
     }
     
+    //funzione che ritorna la quantità per ciascun prodotto
     public function getProductQuantity($idprodotto){
         $query = "SELECT quantità from prodotti where idprodotto = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che ritorna la quantità di prodotti nel carrello di uno specifico account
+    public function getQuantityProductInCart($idaccount){
+        $query = "SELECT quantita from prodottinelcarrello where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
         $stmt->execute();
         $result = $stmt->get_result();
 
