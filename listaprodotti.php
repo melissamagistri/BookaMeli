@@ -5,5 +5,7 @@ $templateParams["titolo"] = "BookaMeli - Prodotti";
 $templateParams["nome"] = "template/listaprodotti.php";
 $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
 
+$templateParams['prodotti'] = $dbh->getProducts($_GET['cerca']);
+
 require_once 'template/base.php';
 ?>

@@ -1,10 +1,10 @@
 <div class="wrap">
    <div class="search">
-     <form action="">
-        <label for="Cosa stai cercando?"></label>
-        <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50">
+     <form action="listaprodotti.php" method="get">
+        <label for="cerca"></label>
+        <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50" id='cerca' name='cerca'>
         <button type="submit" class="searchButton">
-          <img class="imgsearch" src="<?php echo UPLOAD_DIR."loupe.png"; ?>" alt="">
+          <img class="imgsearch" src="<?php echo UPLOAD_DIR."loupe.png"; ?>" alt="Cerca">
         </button>
      </form>
    </div>

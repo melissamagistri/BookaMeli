@@ -232,11 +232,23 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     
+    //funzione che aggiunge l'utente alla lista delle notifiche di un dato prodotto
     public function addUserToNotifyList($idaccount, $idprodotto){
         $query = 'INSERT INTO avvisi(idprodotto,idaccount) VALUES(?,?)';
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ii',$idprodotto, $idaccount);
         return $stmt->execute();
+    }
+
+    //funzione che ritorna tutti i prodotti con un nome simile a quello inserito nella ricerca
+    public function getProducts($name){
+        $query = "SELECT idprodotto, nome, descrizione, prezzo, sconto, foto, quantità from prodotti where nome like %?%";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s',$name);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 
