@@ -232,6 +232,12 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     
+    public function addUserToNotifyList($idaccount, $idprodotto){
+        $query = 'INSERT INTO avvisi(idprodotto,idaccount) VALUES(?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$idprodotto, $idaccount);
+        return $stmt->execute();
+    }
 }
 
 ?>

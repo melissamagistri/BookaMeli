@@ -61,10 +61,14 @@
           <?php endif; ?>
           <div>
           <?php if($templateParams['prodottinuovi'][$i]['quantità']==0):?> 
-            <button class="bluebutton" href="">Notificami della disponibilita</button>
-        <?php else:?> 
-          <button class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</button>
-        <?php endif;?> 
+            <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>"> 
+              <button class="bluebutton">Notificami della disponibilita</button>
+            </a>
+          <?php else:?> 
+            <a href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">
+              <button class="bluebutton" >Aggiungi al carrello</button>
+            </a>
+          <?php endif;?> 
           </div>
           </div>
         </li>
@@ -86,6 +90,7 @@
       <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
 
         <li class="no-margin textcenter">
+        <div>
         <a style="    display: flex;
           flex-direction: column;
             align-items: center;"
@@ -100,13 +105,17 @@
           <div>
           <?php
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
-        ?> 
-          <button class="bluebutton" href="">Notificami della disponibilita</button>
-  
+        ?>
+          <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>"> 
+            <button class="bluebutton">Notificami della disponibilita</button>
+          </a>
         <?php else:?> 
-          <button class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</button>
+          <a href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">
+            <button class="bluebutton" >Aggiungi al carrello</button>
+          </a>
         <?php endif;?> 
           </div>
+        </div>
         </li>
         <?php endfor;?>
       </ul>

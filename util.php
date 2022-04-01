@@ -46,4 +46,20 @@ if(isset($_GET['carrello']) && ($dbh->getProductQuantity($_GET['carrello'][0])[0
     die();
 }
 
+//funzione per l'inserimento del cliente nella lista dei clienti da avvisare quando un prodotto torna disponibile
+if(isset($_GET['notifica']) && ($dbh->getProductQuantity($_GET['notifica'][0])[0]['quantità'] == 0)){
+    $dbh->addUserToNotifyList($_SESSION['idaccount'][0]['idaccount'], $_GET['notifica'][0]);
+    //refresha la pagina per la corretta visualizzazione del carrello
+    $url = $_SERVER['REQUEST_URI'];
+    $suburl = explode('?', $url);
+    $url = '';
+    for($i=0;$i<count($suburl)-1;$i++){
+        $url = $url.$suburl[$i];
+    }
+    ob_start();
+    header('Location: '.$url);
+    ob_end_flush();
+    die();
+}
+
 ?>
