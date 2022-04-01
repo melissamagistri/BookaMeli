@@ -44,6 +44,7 @@
   <h2>Novità</h2>
   
   <div>
+<<<<<<< HEAD
       <ul class="no-padding displayflex">
       <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
         <li class="no-margin textcenter">
@@ -57,6 +58,16 @@
 
           <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
                 <p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+=======
+      <ul>
+        <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
+          <li><img class="imghome <?php echo $templateParams['prodottinuovi'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
+          <li><?php echo $templateParams['prodottinuovi'][$i]['nome']?></li>
+        </a>
+        <li><p><?php echo $templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
+        <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
+                <li><p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+>>>>>>> 30326b5fed80787aab61460b6c1286104eb4fb14
           <?php endif; ?>
 
           <div>
@@ -90,6 +101,7 @@
   <h2>Popolari</h2>
   
   <div>
+<<<<<<< HEAD
       <ul class="no-padding displayflex">
       <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
 
@@ -100,6 +112,12 @@
             href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
           <img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>">
           <div style="width:100%"><?php echo $templateParams['prodottipopolari'][$i]['nome']?></div>
+=======
+      <ul>
+        <a href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
+          <li><img class="imghome <?php echo $templateParams['prodottipopolari'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>"></li>
+          <li><?php echo $templateParams['prodottipopolari'][$i]['nome']?></li>
+>>>>>>> 30326b5fed80787aab61460b6c1286104eb4fb14
         </a>
           <p><?php echo $templateParams['prodottipopolari'][$i]['prezzo']?></p>
         <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>

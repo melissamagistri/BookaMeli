@@ -246,7 +246,6 @@ input[name='quantitacarrello']{
   background: #ccc;
 }
 
-
 .search-container button {
   padding: 6px 10px;
   margin-top: 8px;
@@ -266,6 +265,10 @@ img[alt~='chiusura']{
   width: 20px;
   float: right;
   padding: 0 0 20px 0;
+}
+
+.imgGray{
+  filter: grayscale(100%);
 }
 
 body > header > div:nth-of-type(2) > ul > li > div{
