@@ -103,14 +103,9 @@
         ?> 
           <button class="bluebutton" href="">Notificami della disponibilita</button>
   
-        <?php
-            else:
-        ?> 
+        <?php else:?> 
           <button class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</button>
-
-        <?php
-            endif;
-        ?> 
+        <?php endif;?> 
           </div>
         </li>
         <?php endfor;?>
