@@ -14,17 +14,17 @@ $(document).ready(function(){
             showImage();
         });
     }
-
-    //parte per mettere la barra sul prezzo vecchio se c'è lo sconto.
+  
+    //parte per mettere la barra sul prezzo vecchio se c'è lo sconto. non funziona
     for(let i = 1; i<=$('.novita>div>ul>li>div').length;i++){
-        if($($(".novita>div>ul>li:nth-of-type("+i+")>div")).children().length == 4){
-            $(".novita>div>ul>li:nth-of-type("+i+")>div>p:nth-of-type(1)").css('text-decoration','line-through');
+        if($($(".novita>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)")).children().length == 2){
+            $(".novita>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)>p:nth-of-type(1)").css('text-decoration','line-through');
         };
     }
 
     for(let i = 1; i<=$('.popolari>div').length;i++){
-        if($($(".popolari>div>ul>li:nth-of-type("+i+")>div")).children().length == 4){
-            $(".popolari>div>ul>li:nth-of-type("+i+")>div>p:nth-of-type(1)").css('text-decoration','line-through');
+        if($($(".popolari>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)")).children().length == 2){
+            $(".popolari>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)>p:nth-of-type(1)").css('text-decoration','line-through');
         };
     }
     
