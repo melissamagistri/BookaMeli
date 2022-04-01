@@ -43,7 +43,7 @@
   <div>
       <ul>
         <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
-          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
+          <li><img class="imghome <?php echo $templateParams['prodottinuovi'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
           <li><?php echo $templateParams['prodottinuovi'][$i]['nome']?></li>
         </a>
         <li><p><?php echo $templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
@@ -81,7 +81,7 @@
   <div>
       <ul>
         <a href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
-          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>"></li>
+          <li><img class="imghome <?php echo $templateParams['prodottipopolari'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>"></li>
           <li><?php echo $templateParams['prodottipopolari'][$i]['nome']?></li>
         </a>
         <li><p><?php echo $templateParams['prodottipopolari'][$i]['prezzo']?></p></li>
