@@ -1,12 +1,15 @@
 <div class="wrap">
    <div class="search">
-      <label for="Cosa stai cercando?"></label>
-      <input type="text" class="searchTerm" placeholder="Che cosa stai cercando?">
-      <button type="submit" class="searchButton">
-        <span class="fa fa-search"></span>
-     </button>
+     <form action="">
+        <label for="Cosa stai cercando?"></label>
+        <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50">
+        <button type="submit" class="searchButton">
+          <img class="imgsearch" src="<?php echo UPLOAD_DIR."loupe.png"; ?>" alt="">
+        </button>
+     </form>
    </div>
 </div>
+
 <div class="divimg">
   <?php
     if(isset($templateParams["immaginihome"])):
@@ -39,37 +42,45 @@
 <?php if(count($templateParams['prodottinuovi'])!=0):?>
 <section class='novita'>
   <h2>Novità</h2>
-  <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
+  
   <div>
-      <ul>
-        <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
-          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>"></li>
-          <li><?php echo $templateParams['prodottinuovi'][$i]['nome']?></li>
-        </a>
-        <li><p><?php echo $templateParams['prodottinuovi'][$i]['prezzo']?></p></li>
-        <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
-                <li><p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+      <ul class="no-padding displayflex">
+      <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
+        <li class="no-margin textcenter">
+          <div>
+          <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
+            <img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>">
+            <div><?php echo $templateParams['prodottinuovi'][$i]['nome']?></div>
+          </a>
+
+          <p><?php echo $templateParams['prodottinuovi'][$i]['prezzo']?></p>
+
+          <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
+                <p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
           <?php endif; ?>
-        <li>
+
           <div>
           <?php
             if($templateParams['prodottinuovi'][$i]['quantità']==0):
         ?> 
-        <a class="bluebutton" href="">Notificami della disponibilita</a>
+        <button class="bluebutton" href="">Notificami della disponibilita</button>
         <?php
             else:
         ?> 
-        <a class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</a>
-
+          <button class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</button>
         <?php
             endif;
         ?> 
           </div>
+
+
+          </div>
         </li>
+        <?php endfor;?>
       </ul>
 
   </div>
-  <?php endfor;?>
+  
 </section>
 <?php endif;?>
 
@@ -77,37 +88,44 @@
 <?php if(count($templateParams['prodottipopolari'])!=0):?>
 <section class='popolari'>
   <h2>Popolari</h2>
-  <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
+  
   <div>
-      <ul>
-        <a href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
-          <li><img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>"></li>
-          <li><?php echo $templateParams['prodottipopolari'][$i]['nome']?></li>
+      <ul class="no-padding displayflex">
+      <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
+
+        <li class="no-margin textcenter">
+        <a style="    display: flex;
+          flex-direction: column;
+            align-items: center;"
+            href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
+          <img class="imghome" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>">
+          <div style="width:100%"><?php echo $templateParams['prodottipopolari'][$i]['nome']?></div>
         </a>
-        <li><p><?php echo $templateParams['prodottipopolari'][$i]['prezzo']?></p></li>
+          <p><?php echo $templateParams['prodottipopolari'][$i]['prezzo']?></p>
         <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
-                <li><p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
+                <p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
           <?php endif; ?>
-        <li>
           <div>
           <?php
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
         ?> 
-        <a class="bluebutton" href="">Notificami della disponibilita</a>
+          <button class="bluebutton" href="">Notificami della disponibilita</button>
+  
         <?php
             else:
         ?> 
-        <a class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</a>
+          <button class="bluebutton" href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">Aggiungi al carrello</button>
 
         <?php
             endif;
         ?> 
           </div>
         </li>
+        <?php endfor;?>
       </ul>
 
   </div>
-  <?php endfor;?>
+  
 </section>
 <?php endif;?>
 </section>

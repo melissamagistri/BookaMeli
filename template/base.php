@@ -71,13 +71,13 @@
                             <?php if($prodotto['sconto'] != 0):?>
                                 <li><p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
                             <?php endif; ?>
-                            <li><a href='?rimuovi=<?php echo $prodotto['idprodotto']?>' class="bluebutton">Rimuovi</a></li>
+                            <li><button href='?rimuovi=<?php echo $prodotto['idprodotto']?>' class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>
                 <?php endforeach;?>
                 <li>
-                <a class="bluebutton" href="checkout.php">Procedi al checkout</a>
+                <button class="bluebutton" href="checkout.php">Procedi al checkout</button>
                 </li>
                 <?php else:?>
                     <li><p>Non hai nessun prodotto nel carrello.</p></li>

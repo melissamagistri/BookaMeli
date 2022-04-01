@@ -1,13 +1,14 @@
 <h1>Storico Ordini</h1>
 <section>
-        <ul class="no-padding">
+        <ul class="no-padding displayflex" style="flex-direction: column;
+    align-items: center;">
             <li>
             <div class="display-inline">
-                <ul class="no-padding">
-                    <li class="center"><label for="">Num ordini effettuati</label></li>
+                <ul class="no-padding" >
+                    <li class="center"><p>Num ordini effettuati</p></li>
                     <li>
                         <p>
-                            Ordine numero <label for="">num</label>
+                            Ordine numero 
                         </p>
                             
                         <span>Ordine effettuato il:</span>
@@ -25,7 +26,7 @@
             <div>
                 <p>Scegli una valutazione al prodotto:</p>
 
-                <div>
+                <div class="valutazione">
                 <input type="radio" id="star1" name="rate" value="5" />
                 <label for="star1" title="text">1 stella</label>
                 <input type="radio" id="star2" name="rate" value="4" />

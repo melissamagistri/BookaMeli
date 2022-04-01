@@ -1,9 +1,51 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  overflow-x: hidden;
+}
+
 body, header, h3, img, a{
   margin: 0;
   padding: 0;
   font-family: "Helvetica", sans-serif;
   list-style: none;
   text-decoration: none;
+}
+
+section, h2{
+  margin: 20px 0;
+}
+
+.no-margin{
+  margin: 0;
+}
+
+/* aggiungee questa classe a tutti i prezzi con socnto e metterli in un div*/
+.display-flex{
+  display: flex;
+}
+
+/* cambia nome classe e cambialo a tutte le pagine!*/
+.displayflex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.displayproduct{
+  display: flex;
+  gap: 5em;
+}
+
+.flexcolumn{
+  flex-direction: column;
+}
+
+.h1product{
+  text-align: inherit;
 }
 
 .textareadimension {
@@ -29,7 +71,7 @@ body > header > nav{
   background-color: lightblue;
 }
 
-body > header, body > footer{
+body > header, body > footer, .textcenter{
   text-align: center;
 }
 
@@ -261,12 +303,11 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > di
 .bluebutton:hover, input[name="submit"]:hover{
   background-color: rgb(93, 179, 225);
   color: white;
-  font-weight: bold;
   transition: 0.2s;
   cursor: pointer;
 }
 
- body > main > section > h2{
+ h2{
   text-align: center;
 }
 
@@ -316,17 +357,18 @@ body > main > form > ul > li > a:hover, a:hover{
 
 .search {
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
 }
 
+.search form{
+  display: flex;
+}
+
 .searchTerm {
-  width: 50%;
   border: 3px solid lightblue;
   border-right: none;
   padding: 5px;
-  height: 20px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: black;
@@ -346,6 +388,10 @@ body > main > form > ul > li > a:hover, a:hover{
   font-size: 20px;
 }
 
+.imgsearch{
+  width: 85%;
+}
+
 .imghome{
   width: 200px;
 }
@@ -362,13 +408,13 @@ body > main > form > ul > li > a:hover, a:hover{
   width: 250px;
 }
 
-body > main > section > div, .display-inline{
+.display-inline{
   text-align: center;
   display: inline-block;
 
 }
 
-body > main > h1, body > main > section{
+body > main > h1, h1{
   text-align: center;
 }
 
@@ -665,6 +711,10 @@ main footer a{
 	display:inline-block;
 }
 
+.valutazione{
+  padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
   body > header >div:nth-of-type(2) > ul > li:first-child > h3{
     text-align: left;
@@ -677,6 +727,7 @@ main footer a{
     .open{
       width: 100%; 
     }
+
     body > footer > div:nth-of-type(2), .topnav .search-container, 
     body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
       float: none;
@@ -694,6 +745,23 @@ main footer a{
       width: 100%;
       margin: 0;
     }
+
+    ul.displayflex{
+      flex-wrap: wrap;
+    }
+
+    .displaycenter{
+      margin: auto;
+      width: fit-content;
+    }
+
+    .search form{
+      justify-content: center;
+    }
+
+    .search form > input{
+      width: 80%;
+    } 
 }
 
 

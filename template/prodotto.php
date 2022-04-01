@@ -1,43 +1,44 @@
 <?php if(count($templateParams["prodotto"])==0): ?>
         <div>
             <p>Articolo non presente</p>
-    </div>
+        </div>
     <?php 
             else:
                 $prodotto = $templateParams["prodotto"][0];
         ?>
-<section>
-    <div>
+<section class="displayproduct">
+    <div class="displaycenter">
         <img class="imgprodotto" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
     </div>
 
-    <div>
-        <ul>
-            <li><h1><?php echo $prodotto['nome']?></h1></li>
-            <li><p><?php echo $prodotto['descrizione']?></p></li>
-            <li><p><?php echo $prodotto['prezzo'].'€'?></p></li>
-            <?php if($prodotto['sconto']!=0): ?>
-                <li><p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
-            <?php endif; ?>
+    <div class="displaycenter displayproduct flexcolumn">
+        
+            <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
+            <p><?php echo $prodotto['descrizione']?></p>
+            <div class="display-flex">
+                <p><?php echo $prodotto['prezzo'].'€'?></p>
+                <?php if($prodotto['sconto']!=0): ?>
+                    <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                <?php endif; ?>
 
-            <li>
+            </div>
+   
                 <div>
                 <?php
                     if($prodotto['quantità']==0):
                 ?> 
-                <a class="bluebutton" href="">Notificami della disponibilita</a>
+                <button class="bluebutton" >Notificami della disponibilita</button>
                 <?php
                     else:
                 ?> 
-                <a class="bluebutton" href="">Aggiungi al carrello</a>
+                <button class="bluebutton">Aggiungi al carrello</button>
 
                 <?php
                     endif;
                 ?> 
         
                 </div>
-            </li>
-        </ul>
+         
     </div>
 
 </section>
@@ -45,18 +46,20 @@
 <section>
     <?php endif; ?>
     <?php if(count($templateParams["recensioni"])!=0): ?>
-        <div>
+        <div class="displaycenter">
             <p>Recensioni di questo prodotto</p>
-            <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
+            
             <ul>
+                <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
                 <li>
                     <p><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
                     <p><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
                     <p><?php echo $templateParams['recensioni'][$i]['voto'] ?></p>
 
                 </li>
+                <?php endfor; ?>
             </ul>
-            <?php endfor; ?>
+            
         </div>
 </section>
 <?php endif; ?>
