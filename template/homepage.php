@@ -53,12 +53,14 @@
             <div><?php echo $templateParams['prodottinuovi'][$i]['nome']?></div>
           </a>
 
-          <p><?php echo $templateParams['prodottinuovi'][$i]['prezzo'].'€'?></p>
+          <div class="displayflex">
+            <p><?php echo $templateParams['prodottinuovi'][$i]['prezzo'].'€'?></p>
+                  <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
+                  <p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                  <?php endif; ?>
+          </div>
 
-          <?php if($templateParams['prodottinuovi'][$i]['sconto']!=0): ?>
-                <p><?php echo round($templateParams['prodottinuovi'][$i]['prezzo'] - ($templateParams['prodottinuovi'][$i]['prezzo']*$templateParams['prodottinuovi'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
-
-          <?php endif; ?>
+          
           <div>
           <?php if($templateParams['prodottinuovi'][$i]['quantità']==0):?> 
             <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>"> 
@@ -91,17 +93,18 @@
 
         <li class="no-margin textcenter">
         <div>
-        <a style="    display: flex;
-          flex-direction: column;
-            align-items: center;"
+        <a class="flex-a"
             href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
           <img class="imghome <?php echo $templateParams['prodottipopolari'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>">
           <div style="width:100%"><?php echo $templateParams['prodottipopolari'][$i]['nome']?></div>
         </a>
+        <div class="displayflex">
           <p><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
-        <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
-                <p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
-          <?php endif; ?>
+          <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
+                  <p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+            <?php endif; ?>
+        </div>
+          
           <div>
           <?php
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
