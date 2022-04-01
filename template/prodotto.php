@@ -15,7 +15,7 @@
         
             <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
             <p><?php echo $prodotto['descrizione']?></p>
-            <div class="display-flex">
+            <div class="displayflex">
                 <p><?php echo $prodotto['prezzo'].'€'?></p>
                 <?php if($prodotto['sconto']!=0): ?>
                     <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>

@@ -65,12 +65,16 @@
                                         <option value=" <?php echo $i?>"><?php echo $i ?> </option>
                                         <?php endfor?>
 
-                                </select>
+                            </select>
+
                             </li>
-                            <li><p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p></li>
+                            <li>
+                                <div class="displayflex">
+                                <p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
                             <?php if($prodotto['sconto'] != 0):?>
-                                <li><p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p></li>
-                            <?php endif; ?>
+                                <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                            <?php endif; ?> </div>
+                            </li>
                             <li><a href="?rimuovi=<?php echo $prodotto['idprodotto']?>"><button class="bluebutton">Rimuovi</button></a></li>
                         </ul>
                     </div>

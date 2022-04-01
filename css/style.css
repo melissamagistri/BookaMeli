@@ -25,9 +25,7 @@ section, h2{
 }
 
 /* aggiungee questa classe a tutti i prezzi con socnto e metterli in un div*/
-.display-flex{
-  display: flex;
-}
+
 
 /* cambia nome classe e cambialo a tutte le pagine!*/
 .displayflex{
@@ -38,6 +36,12 @@ section, h2{
 .displayproduct{
   display: flex;
   gap: 5em;
+}
+
+.flex-a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flexcolumn{
