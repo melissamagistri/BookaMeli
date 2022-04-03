@@ -274,6 +274,17 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    //funzione che restituisce i dati relativi all'account
+    public function getAccountInfo($idaccount){
+        $query = "SELECT nome, cognome, email from account where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
