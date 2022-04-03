@@ -12,7 +12,7 @@
             </li>
 
             <li>
-                <a href="notifiche-home.php">
+                <a href="dati-personali.php">
                     <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'notification.png'?>" alt="notifiche">
                     <p>Dati Personali</p> 
                 </a>

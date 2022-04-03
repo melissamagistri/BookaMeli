@@ -231,7 +231,7 @@ right: 0;
   color: black;
 }
 
-.sidenav ul:first-child img, .sidenavcar ul:first-child img{
+.sidenavcar ul:first-child img{
   width: 20px;
   padding: 0 20px 20px 0;
 }
@@ -268,7 +268,7 @@ body > header > div:nth-of-type(2) > div{
 img[alt~='chiusura']{
   width: 20px;
   float: right;
-  padding: 0 0 20px 0;
+  margin: 10px;
 }
 
 .imgGray{
