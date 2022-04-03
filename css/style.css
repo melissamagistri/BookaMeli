@@ -387,6 +387,7 @@ body > main > form > ul > li > a:hover, a:hover{
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   background: lightblue;
+  outline-color: transparent;
 }
 
 .select > option{
