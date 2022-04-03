@@ -69,13 +69,11 @@
           
           <div>
           <?php if($templateParams['prodottinuovi'][$i]['quantità']==0):?> 
-            <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>"> 
-              <button class="bluebutton">Notificami della disponibilita</button>
-            </a>
+            
+              <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilita</button>
           <?php else:?> 
-            <a href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>">
-              <button class="bluebutton" >Aggiungi al carrello</button>
-            </a>
+            
+              <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>';" >Aggiungi al carrello</button>
           <?php endif;?> 
           </div>
           </div>
@@ -115,13 +113,9 @@
           <?php
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
         ?>
-          <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>"> 
-            <button class="bluebutton">Notificami della disponibilita</button>
-          </a>
+            <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilità</button>
         <?php else:?> 
-          <a href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>">
-            <button class="bluebutton" >Aggiungi al carrello</button>
-          </a>
+            <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>';">Aggiungi al carrello</button>
         <?php endif;?> 
           </div>
         </div>

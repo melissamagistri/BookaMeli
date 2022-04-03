@@ -75,13 +75,13 @@
                                 <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
                             <?php endif; ?> </div>
                             </li>
-                            <li><a href="?rimuovi=<?php echo $prodotto['idprodotto']?>"><button class="bluebutton">Rimuovi</button></a></li>
+                            <li><button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>
                 <?php endforeach;?>
                 <li>
-                <button class="bluebutton" href="checkout.php">Procedi al checkout</button>
+                <button class="bluebutton" onclick="window.location.href='checkout.php';">Procedi al checkout</button>
                 </li>
                 <?php else:?>
                     <li><p>Non hai nessun prodotto nel carrello.</p></li>
@@ -90,7 +90,7 @@
             <?php else:?>
                 <ul>
                     <li><p>Per visualizzare il carrello devi accedere al tuo account</p></li>
-                    <li><a class="bluebutton" href="login.php">Accedi o Registrati</a></li>
+                    <li><button class="bluebutton" onclick="window.location.href='login.php';">Accedi o Registrati</button></li>
                 </ul>
             <?php endif; ?>
                 
@@ -121,9 +121,8 @@
         <div>
           <ul>
             <li><h3>Prodotti</h3></li>
-            <li><a href="listaprodotti.php?cat=news">Novità</a></li>
-            <li><a href="listaprodotti.php?cat=manga">Manga</a></li>
-            <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
+            <li><a href="listaprodotti.php?cat=manga&cerca=">Manga</a></li>
+            <li><a href="listaprodotti.php?cat=action+figure&cerca=">Action Figure</a></li>
           </ul>
         </div>
         <div>

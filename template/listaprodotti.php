@@ -25,13 +25,9 @@
                     <?php endif; ?>
                 </div>
                 <?php if($templateParams['prodotti'][$i]['quantità']==0):?>
-                <a href="<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>"> 
-                <button class="bluebutton">Notificami della disponibilita</button>
-                </a>
+                <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilita</button>
                 <?php else:?> 
-                <a href="<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>">
-                <button class="bluebutton" >Aggiungi al carrello</button>
-                </a>
+                <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>';">Aggiungi al carrello</button>
                 <?php endif;?>
             </li>
             <?php endfor;?>

@@ -61,7 +61,7 @@
 <h1>Preordini</h1>
 
 <div class="descrizioni">
-    <p>uTutti i prodotti acquistati nella sezione Preordini saranno spediti 
+    <p>Tutti i prodotti acquistati nella sezione Preordini saranno spediti 
         dal giorno dell'uscita del prodotto preordinato in 24/48 ore lavorative. Nei periodi che seguono l'uscita di un prodotto molto richiesto alcune 
         spedizioni potrebbero subire ritardi fino a 7 giorni lavorativi.
 
