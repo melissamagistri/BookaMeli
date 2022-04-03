@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    if($("div>ul>li:nth-of-type(4)>p").text()!=''){
-        $('div>ul>li:nth-of-type(3)>p').css({'text-decoration': 'line-through', 'font-size':'10px'});
+    if($(".display-inlineflex").children().length == 2){
+        $('.display-inlineflex>p:nth-of-type(1)').css({'text-decoration': 'line-through', 'font-size':'10px'});
     };
 });
