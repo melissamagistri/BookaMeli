@@ -241,10 +241,24 @@ class database{
     }
 
     //funzione che ritorna tutti i prodotti con un nome simile a quello inserito nella ricerca
-    public function getProducts($name){
-        $query = "SELECT idprodotto, nome, descrizione, prezzo, sconto, foto, quantità from prodotti where nome like %?%";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s',$name);
+    public function getProducts($name, $cathegory, $selector){
+        //ricerca per nome e categoria
+        if($selector == 1){
+            $query = "SELECT p.idprodotto, p.nome, p.descrizione, p.prezzo, p.sconto, p.foto, p.quantità from prodotti p, categorie c where c.nomecategoria = ? and p.nome like %?% and c.idprodotto = p.idprodotto";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ss',$cathegory, $name);
+        //ricerca per nome
+        } else if($selector == 2){
+            $query = "SELECT idprodotto, nome, descrizione, prezzo, sconto, foto, quantità from prodotti where nome like '%".'?'."%'";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s',$name);
+        //ricerca per categoria
+        } else if($selector == 3){
+            $query = "SELECT p.idprodotto, p.nome, p.descrizione, p.prezzo, p.sconto, p.foto, p.quantità from prodotti p, categorie c where c.nomecategoria = ? and c.idprodotto = p.idprodotto";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('s',$cathegory);
+        }
+        
         $stmt->execute();
         $result = $stmt->get_result();
 
