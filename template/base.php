@@ -34,8 +34,8 @@
         <div class="sidenav">
             <ul>
                 <li><img src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura"></li>
-                <li><a href="listaprodotti.php?cat=manga">Manga</a></li>
-                <li><a href="listaprodotti.php?cat=actionFigure">Action Figure</a></li>
+                <li><a href="listaprodotti.php?cat=manga&cerca=">Manga</a></li>
+                <li><a href="listaprodotti.php?cat=action+figure&cerca=">Action Figure</a></li>
                 <li><a href="informazioni.php">Informazioni</a></li>
                 <li><a href="login.php">Il tuo Account</a></li>
                 <li><a href="chat-notifiche.php">Chat e Notifiche</a></li>

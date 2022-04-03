@@ -1,10 +1,12 @@
 <div class="wrap">
    <div class="search">
-     <select name="" id="">
-       <option value="tutte la categorie">Tutte le categorie</option>
-       <option value="robe php">rove php</option>
-     </select>
      <form action="listaprodotti.php" method="get">
+        <select name="cat" id="cat">
+          <option value="tutte le categorie">Tutte le categorie</option>
+          <?php for($i=0;$i<count($templateParams['categorie']);$i++):?>
+            <option value="<?php echo $templateParams['categorie'][$i]['nomecategoria']?>"><?php echo $templateParams['categorie'][$i]['nomecategoria']?></option>
+          <?php endfor;?>
+        </select>
         <label for="cerca"></label>
         <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50" id='cerca' name='cerca'>
         <button type="submit" class="searchButton">

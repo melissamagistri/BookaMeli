@@ -264,6 +264,16 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    //funziona che ritorna tutte le categorie presenti nel db
+    public function getCathegories(){
+        $query = "SELECT nomecategoria from categorie group by nomecategoria";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
