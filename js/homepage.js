@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     for(let i = 1; i<=$('.popolari>div').length;i++){
         if($($(".popolari>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)")).children().length == 2){
-            $(".popolari>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)>p:nth-of-type(1)").css('text-decoration','line-through');
+            $(".popolari>div>ul>li:nth-of-type("+i+")>div >div:nth-of-type(1)>p:nth-of-type(1)").css({'text-decoration': 'line-through', 'font-size':'10px'});
         };
     }
     
