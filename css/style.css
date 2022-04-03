@@ -373,13 +373,24 @@ body > main > form > ul > li > a:hover, a:hover{
 }
 
 .searchTerm {
-  border: 3px solid lightblue;
+  border: 2px solid lightblue;
   border-right: none;
   padding: 5px;
-  border-radius: 5px 0 0 5px;
   outline: none;
   color: black;
   font-size: large;
+}
+
+.select{
+  border: 2px solid lightblue;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: lightblue;
+}
+
+.select > option{
+  background: white;
 }
 
 
