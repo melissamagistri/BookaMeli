@@ -1,5 +1,9 @@
 <div class="wrap">
    <div class="search">
+     <select name="" id="">
+       <option value="tutte la categorie">Tutte le categorie</option>
+       <option value="robe php">rove php</option>
+     </select>
      <form action="listaprodotti.php" method="get">
         <label for="cerca"></label>
         <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50" id='cerca' name='cerca'>
