@@ -16,15 +16,7 @@
             <input  type="text"  name="email" id="email" placeholder="<?php echo $templateParams['info'][0]['email'];?>"/>
          </li>
          <li>
-            <label class="label" for="password">Password:</label>
-            <input  type="password"  name="password" id="password"/>
-         </li>
-         <li>
-            <label class="label" for="nuova-password">Nuova Password:</label>
-            <input  type="password"  name="nuova password" id="nuova-password"/>
-         </li>
-         <li>
-            <input type="submit" name="submit" value="Salva" id="tasto salva"/>
+            <input type="submit" name="submit" value="Cambia Password" id="tasto cambia password"/>
          </li>
        
     </ul>

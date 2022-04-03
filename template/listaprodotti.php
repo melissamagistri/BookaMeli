@@ -18,7 +18,7 @@
                     <img class="imghome <?php echo $templateParams['prodotti'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodotti'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodotti'][$i]['nome']?>">
                     <div style="width:100%"><?php echo $templateParams['prodotti'][$i]['nome']?></div>
                 </a>
-                <div class="displayflex">
+                <div class="display-inlineflex">
                     <p><?php echo $templateParams['prodotti'][$i]['prezzo'].'€'?></p>
                     <?php if($templateParams['prodotti'][$i]['sconto']!=0): ?>
                     <p><?php echo round($templateParams['prodotti'][$i]['prezzo'] - ($templateParams['prodotti'][$i]['prezzo']*$templateParams['prodotti'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
