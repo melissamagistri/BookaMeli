@@ -8,10 +8,14 @@
         </select>
     <?php var_dump($templateParams['prodotti']); ?>
         <ul>
-            <li><a href="">titolo</a></li>
-            <li><img class="imghome"src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one piece 1"></li>
-            <li><p>prezzo</p></li>
-            <li><a href="" class="bluebutton">Aggiugi al carrello</a></li>
+            <li>
+            <a href="">
+                <img class="imghome"src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="one piece 1">
+                <p>Titotlo</p>
+            </a>
+            <p>prezzo</p>
+            <button href="" class="bluebutton">Aggiugi al carrello</button>
+            </li>
         </ul>
     </div>
 </section>
