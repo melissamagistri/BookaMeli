@@ -1,10 +1,13 @@
 <h1>Crea Account</h1>
 <form action="#" method="POST">
         
-            <?php if(isset($templateParams["errorelogin"])): ?>
-            <p><?php echo $templateParams["errorelogin"]; ?></p>
-            <?php endif; ?>
-            <ul>
+            
+    <ul>
+                <li>
+                    <?php if(isset($templateParams["errorelogin"])): ?>
+                    <p><?php echo $templateParams["errorelogin"]; ?></p>
+                    <?php endif; ?>
+                </li>
                 <li>
                     <label for="Nome">Nome:</label>
                     <input type="text"  name="nome" required/>

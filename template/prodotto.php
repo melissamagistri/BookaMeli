@@ -43,7 +43,7 @@
 
 </section>
 
-<section>
+<section class="displayproduct">
     <?php endif; ?>
     <?php if(count($templateParams["recensioni"])!=0): ?>
         <div class="displaycenter">

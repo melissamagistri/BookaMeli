@@ -1,10 +1,13 @@
 <h1>Conferma Nuovi Dati</h1>
 <form action="#" method="POST">
             
-            <?php if(isset($templateParams["errorelogin"])): ?>
-            <p><?php echo $templateParams["errorelogin"]; ?></p>
-            <?php endif; ?>
+            
             <ul>
+                <li>
+                    <?php if(isset($templateParams["errorelogin"])): ?>
+                    <p><?php echo $templateParams["errorelogin"]; ?></p>
+                    <?php endif; ?>
+                </li>
                 <li>
                     <label for="Email">Email:</label>
                     <input type="text"  name="email" required/>

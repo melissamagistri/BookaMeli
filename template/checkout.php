@@ -1,6 +1,6 @@
 <section class="border">
     <div >
-        <ul>
+        <ul class="textcenter">
             <li><h1>1.Informazioni Personali</h1></li>
             <li><p>Nome:<a href=""></a> <label for="">Nome</label></p></li>
             <li><p>Cognome:<a href=""></a> <label for="">Cognome</label></p></li>
@@ -12,8 +12,8 @@
 </section>
 
 <section class="border">
-    <div >
-        <ul>
+    <div>
+        <ul class="textcenter">
             <li><h1>2.Pagamento</h1></li>
             <li>
                 <ul class="no-padding">

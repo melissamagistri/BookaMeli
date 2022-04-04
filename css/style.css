@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.p-padding{
+  padding: 20px 0;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -24,6 +28,11 @@ section, h2{
   margin: 0;
 }
 
+.displayflexcenter{
+  display: flex;
+  justify-content: center;
+}
+
 /* aggiungee questa classe a tutti i prezzi con socnto e metterli in un div*/
 
 
@@ -41,6 +50,7 @@ section, h2{
 .displayproduct{
   display: flex;
   gap: 5em;
+  justify-content: center;
 }
 
 .flex-a{
@@ -786,6 +796,10 @@ main footer a{
     .search form > input{
       width: 80%;
     } 
+
+    .displayproduct{
+      display: block;
+    }
 }
 
 
