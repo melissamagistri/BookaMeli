@@ -9,7 +9,7 @@
  
     <p class="p-padding">Email: <?php echo $templateParams['info'][0]['email'];?></p>
     
-    <button class="bluebutton">Cambia Password</button>
+    <button class="bluebutton" onclick="window.location.href='conferma-password.php'">Cambia Password</button>
 
 </div>
 

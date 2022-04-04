@@ -4,31 +4,22 @@ require_once 'util.php';
 if(isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confermapassword"])){
     $result = $dbh->getId($_POST["email"]);
     if(count($result) > 0){
-        //caso in cui le credenziali siano di un account da attivare
+        //caso in cui le credenziali siano giuste
         //se la password va bene continuo se no errore
         if(($_POST["password"] == $_POST["confermapassword"]) && checkPassword($_POST["password"])){
             $dbh->activateAccount($_POST["email"]);
-            registerLoggedUser($result[0]["idaccount"]);
             $salt = createSalt();
             $dbh->changePassword($_POST["email"], $_POST["password"], $salt);
-            $templateParams["titolo"] = "BookaMeli - Homepage";
-            $templateParams["nome"] = "template/homepage.php";
-            $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js", "js/homepage.js");
-            $templateParams["immaginihome"] = getHomeImages();
+            $dbh->loginSucceed($_POST["email"]);
+            registerLoggedUser($dbh->getId($_POST['email']));
+            header('Location: index.php');
         } else{
-            $templateParams["errorelogin"] = "La password non soddisfa i requisiti o non le due inserite non corrispondono";
+            $templateParams["errorelogin"] = "La password non soddisfa i requisiti o le due inserite non corrispondono";
             $templateParams["titolo"] = "BookaMeli - Modifica Password";
             $templateParams["nome"] = "template/conferma-password.php";
             $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
         }
-    } else{
-        //caso in cui le credenziali non siano di un account da attivare
-        $templateParams["errorelogin"] = "Le credenziali inserite sono sbagliate";
-        $templateParams["titolo"] = "BookaMeli - Modifica Password";
-        $templateParams["nome"] = "template/conferma-password.php";
-        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     }
-
 } else{
     $templateParams["titolo"] = "BookaMeli - Conferma Account";
     $templateParams["nome"] = "template/conferma-password.php";

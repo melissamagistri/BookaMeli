@@ -285,6 +285,7 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
 }
 
 ?>

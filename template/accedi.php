@@ -19,7 +19,7 @@
             <input type="submit" name="submit" value="Accedi" id="tasto accedi"/>
         </li>
          <li class="text-center">
-            <a href="">Password dimenticata?</a>
+            <a href="emailpassword.php">Password dimenticata?</a>
         </li>
         <li class="text-center">
             <a href="registrati.php">Non hai un account? Registrati!</a>

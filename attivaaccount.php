@@ -7,10 +7,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
         //caso in cui le credenziali siano di un account da attivare
         $dbh->activateAccount($_POST["email"]);
         registerLoggedUser($result[0]["idaccount"]);
-        $templateParams["titolo"] = "BookaMeli - Homepage";
-        $templateParams["nome"] = "template/homepage.php";
-        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js", "js/homepage.js");
-        $templateParams["immaginihome"] = getHomeImages();
+        header('Location: index.php');
     } else{
         //caso in cui le credenziali non siano di un account da attivare
         $templateParams["errorelogin"] = "Le credenziali inserite sono sbagliate o non sono di un account da attivare";
