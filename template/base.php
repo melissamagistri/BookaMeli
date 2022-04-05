@@ -64,7 +64,6 @@
                                     <?php for($i=1; $i <= (($quantity > 10) ? 10 : $quantity); $i++):?>
                                         <option value=" <?php echo $i?>"><?php echo $i ?> </option>
                                         <?php endfor?>
-
                             </select>
 
                             </li>

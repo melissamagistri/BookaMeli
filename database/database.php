@@ -288,6 +288,7 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che ritorna tutti gli ordini fatti da un utente
     public function getOrders($idaccount){
         $query = "SELECT idordine, stato, prezzo, dataordine from ordini where idaccount = ?";
         $stmt = $this->db->prepare($query);
@@ -298,10 +299,30 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //fuzione che ritorna tutti i prodotti facenti parti di un ordine
     public function getProductsInOrder($idordine){
         $query = "SELECT p.quantita, p.idprodotto, p.costo, pr.nome, pr.foto from prodottiordinati p, prodotti pr where p.idordine = ? and p.idprodotto = pr.idprodotto";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che inserisce una recensione di un utente nel database
+    public function addReview($idaccount, $idprodotto, $titolo, $testo, $voto){
+        $query = 'INSERT INTO recensioni(voto,testorecensione, titolorecensione, idprodotto, idaccount) VALUES(?,?,?,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('issii',$voto, $testo, $titolo, $idprodotto, $idaccount);
+        return $stmt->execute();
+    }
+
+    //funzione che restituisce l'id di un prodotto dato il nome
+    public function getProductIdFromName($name){
+        $query = "SELECT idprodotto from prodotti where nome = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s',$name);
         $stmt->execute();
         $result = $stmt->get_result();
 
