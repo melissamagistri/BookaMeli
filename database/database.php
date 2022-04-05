@@ -288,6 +288,26 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getOrders($idaccount){
+        $query = "SELECT idordine, stato, prezzo, dataordine from ordini where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getProductsInOrder($idordine){
+        $query = "SELECT p.quantita, p.idprodotto, p.costo, pr.nome, pr.foto from prodottiordinati p, prodotti pr where p.idordine = ? and p.idprodotto = pr.idprodotto";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idordine);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
 }
 
 ?>

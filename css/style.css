@@ -442,6 +442,10 @@ body > main > form > ul > li > a:hover, a:hover{
   width: 250px;
 }
 
+.imgordini{
+  width: 100px;
+}
+
 .display-inline{
   text-align: center;
   display: inline-block;
@@ -747,6 +751,11 @@ main footer a{
 
 .valutazione{
   padding: 20px;
+}
+
+.divlistaProdotti{
+  background-color: lightblue;
+  margin: 0 10px 5px;
 }
 
 @media screen and (max-width: 768px) {
