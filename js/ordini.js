@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //non funziona
     $('.radiobuttonattivo').attr('checked','true');
 
     $('.recensione').hide();
