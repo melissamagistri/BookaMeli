@@ -35,14 +35,18 @@ $(document).ready(function(){
             testorecensione: $('#recensione').val(),
             voto: $('input[name="rate"]:checked').val()
         };
-        $.ajax({
-            type: 'POST',
-            url: 'aggiungirecensione.php',
-            data: recensione
+        $.post('aggiungirecensione.php',{
+            recensione: recensione
+        }, function(data,status){
+            if(status == 'success'){
+                $('.selected').hide();
+                $('.selected').next().html('<p>Grazie per il tuo feedback!</p>');
+            } else {
+                $('.selected').next().html('<p>Si è stato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
+            }
         });
             
-        $('.selected').hide();
-        $('.selected').next().html('<p>Grazie per il tuo feedback!</p>');
+        
     });
 });
 

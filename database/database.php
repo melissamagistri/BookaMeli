@@ -329,6 +329,25 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che restituisce tutte le recensioni di un utente
+    public function getUserReviews($idaccount){
+        $query = "SELECT voto, testorecensione, titolorecensione, idprodotto from recensioni where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che elimina una determinata recensione
+    public function deleteReview($idaccount, $idprodotto){
+        $query = 'DELETE FROM recensioni WHERE idaccount = ? AND idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$idaccount, $idprodotto);
+        return $stmt->execute();
+    }
+
 }
 
 ?>
