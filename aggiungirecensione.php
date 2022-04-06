@@ -12,4 +12,9 @@ if(isset($_POST['recensione'])){
     $dbh->addReview($_SESSION['idaccount'][0]['idaccount'], $idprodotto, $_POST['recensione']['titolorecensione'], $_POST['recensione']['testorecensione'], $_POST['recensione']['voto']);
 
 }
+
+if(isset($_POST['elimina'])){
+    $idprodotto = $dbh->getProductIdFromName($_POST['elimina']['nomeprodotto'])[0]['idprodotto'];
+    $dbh->deleteReview($_SESSION['idaccount'][0]['idaccount'], $idprodotto);
+}
 ?>

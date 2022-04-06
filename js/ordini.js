@@ -48,6 +48,24 @@ $(document).ready(function(){
             
         
     });
+
+    $(".elimina").click(function(){
+        var recensione = {
+            nomeprodotto: $('.selected').siblings('.image').find('.imgordini').attr("alt")
+        };
+        $.post('aggiungirecensione.php',{
+            elimina: recensione
+        }, function(data,status){
+            if(status == 'success'){
+                $('.selected').hide();
+                $('.selected').next().html('<p>La recensione è stata eliminata con successo!</p>');
+            } else {
+                $('.selected').next().html('<p>Si è stato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
+            }
+        });
+            
+        
+    });
 });
 
 function hideElement(element, string){
