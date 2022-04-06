@@ -44,25 +44,33 @@
                             <button class="bluebutton invia">Invia</button>
                         </div>
                     <?php else:?>
+                        <?php foreach($templateParams['recensioniuser'] as $recensione): ?>
+                            <?php if($recensione['idprodotto'] == $ordine['idprodotto']):?>
+                                <?php $rec = $recensione ?>
+                                <?php break ?>
+                            <?php endif;?>
+                        <?php endforeach;?>
+
                         <button class='bluebutton bottonerecensione'>Modifica recensione</button>
                         <div class='recensione'>
                         <p>Scegli una valutazione al prodotto:</p>
                         <div class="valutazione">
-                            <input type="radio" id="star1" name="rate" value="1"/>
+                            
+                            <input type="radio" id="star1" name="rate" value="1" class='<?php echo ($rec['voto']==1) ? 'radiobuttonattivo' : '' ?>'/>
                             <label for="star1" title="text">1 stella</label>
-                            <input type="radio" id="star2" name="rate" value="2" />
+                            <input type="radio" id="star2" name="rate" value="2" class='<?php echo ($rec['voto']==2) ? 'radiobuttonattivo' : '' ?>'/>
                             <label for="star2" title="text">2 stelle</label>
-                            <input type="radio" id="star3" name="rate" value="3" />
+                            <input type="radio" id="star3" name="rate" value="3" class='<?php echo ($rec['voto']==3) ? 'radiobuttonattivo' : '' ?>'/>
                             <label for="star3" title="text">3 stelle</label>
-                            <input type="radio" id="star4" name="rate" value="4" />
+                            <input type="radio" id="star4" name="rate" value="4" class='<?php echo ($rec['voto']==4) ? 'radiobuttonattivo' : '' ?>'/>
                             <label for="star4" title="text">4 stelle</label>
-                            <input type="radio" id="star5" name="rate" value="5" />
+                            <input type="radio" id="star5" name="rate" value="5" class='<?php echo ($rec['voto']==5) ? 'radiobuttonattivo' : '' ?>'/>
                             <label for="star5" title="text">5 stelle</label>
                         </div>
                         <div class="search">
                             <label for="titolo">Titolo:</label>
-                            <input type="text" value='' placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
-                            <textarea class="textareadimension" value='' placeholder="Inserisci la tua recensione" id='recensione'></textarea> 
+                            <input type="text" value='<?php echo $rec['titolorecensione']?>' placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
+                            <textarea class="textareadimension" placeholder="Inserisci la tua recensione" id='recensione'><?php echo $rec['testorecensione']?></textarea> 
                             <button class="bluebutton invia">Invia</button>
                             <button class='bluebutton elimina'>Elimina recensione</button>
                         </div>

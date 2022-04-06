@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('.radiobuttonattivo').attr('checked','true');
+
     $('.recensione').hide();
     $('.listaProdotti').hide();
     
