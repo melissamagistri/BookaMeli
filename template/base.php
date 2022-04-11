@@ -79,6 +79,9 @@
                         </ul>
                     </div>
                 </li>
+                <li>
+                    <p>Totale: </p>
+                </li>
                 <?php endforeach;?>
                 <li>
                 <button class="bluebutton" onclick="window.location.href='checkout.php';">Procedi al checkout</button>
