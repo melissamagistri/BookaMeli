@@ -57,21 +57,22 @@
                     </span>
                     <div>
                         <ul>
-                            <li><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
+                            <li class='titolo'><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
                             <li> 
                             <select name="" id="">
                                     <?php $quantity = $dbh->getProductQuantity($prodotto['idprodotto'])[0]['quantità']; ?>
+                                    <?php $val = $dbh->getProductInCartQuantity($_SESSION['idaccount'][0]['idaccount'], $prodotto['idprodotto'])[0]['quantita'] ?>
                                     <?php for($i=1; $i <= (($quantity > 10) ? 10 : $quantity); $i++):?>
-                                        <option value=" <?php echo $i?>"><?php echo $i ?> </option>
+                                        <option <?php echo ($i==$val) ? "selected = 'selected'" : ''?> value=" <?php echo $i?>"><?php echo $i ?> </option>
                                         <?php endfor?>
                             </select>
 
                             </li>
                             <li>
                                 <div class="displayflex">
-                                <p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
+                                <p class='prezzo'style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
                             <?php if($prodotto['sconto'] != 0):?>
-                                <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                                <p class='prezzo'><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
                             <?php endif; ?> </div>
                             </li>
                             <li><button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>

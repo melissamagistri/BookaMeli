@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    //non funziona
     $('.radiobuttonattivo').attr('checked','true');
 
     $('.recensione').hide();
@@ -34,9 +33,9 @@ $(document).ready(function(){
     $(".invia").click(function(){
         var recensione = {
             nomeprodotto: $('.selected').siblings('.image').find('.imgordini').attr("alt"),
-            titolorecensione: $('#titolo').val(),
-            testorecensione: $('#recensione').val(),
-            voto: $('input[name="rate"]:checked').val()
+            titolorecensione: $('.selected + div > div > #titolo').val(),
+            testorecensione: $('.selected + div > div > #recensione').val(),
+            voto: $('.selected + div > div > form > input[name="rate"]:checked').val()
         };
         $.post('aggiungirecensione.php',{
             recensione: recensione
@@ -45,7 +44,7 @@ $(document).ready(function(){
                 $('.selected').hide();
                 $('.selected').next().html('<p>Grazie per il tuo feedback!</p>');
             } else {
-                $('.selected').next().html('<p>Si è stato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
+                $('.selected').next().html('<p>Si è verificato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
             }
         });
             

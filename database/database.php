@@ -348,6 +348,28 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione per aggiornare il numero di prodotti nel carrello
+    public function updateQuantityProductInCart($idaccount, $idprodotto, $quantita){
+        $query = "UPDATE prodottinelcarrello SET quantita = ? WHERE idaccount = ? and idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iii', $quantita, $idaccount, $idprodotto);
+        
+        return $stmt->execute();
+    }
+
+    //funzione che ritorna la quantità di un prodotto nel carrello di un utente
+    public function getProductInCartQuantity($idaccount, $idprodotto){
+        $query = "SELECT quantita from prodottinelcarrello where idaccount = ? and idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$idaccount, $idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    
+
 }
 
 ?>

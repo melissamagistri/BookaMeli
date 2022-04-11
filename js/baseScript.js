@@ -30,7 +30,20 @@ $(document).ready(function(){
         else if($(e.target).is("img[alt~='chiusura']") && document.getElementsByClassName('sidenav')[0].classList.contains('open')){
             closeNav($('.sidenav'));
         }
-    });  
+    });
+    
+    //chiamata ajax che si occupa dell'aggiornamento della quantità dei prodotti nel carrello
+    $('select').on('change', function() {
+        $(this).addClass('changed');
+        var aggiornaquantita = {
+            nomeprodotto: $('.changed').parent().siblings('.titolo').find('.hover').text(),
+            quantita: this.value
+        };
+        $.post('aggiornaQuantitàProdotto.php',{
+            aggiornaquantita: aggiornaquantita
+        });
+        $(this).removeClass('changed');
+    });
    
 });
 
