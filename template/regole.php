@@ -1,10 +1,11 @@
-<section>
+<section class="sectionpadding">
 <h1>Cookies Policy</h1>
 
 <div class="descrizioni">
-    <p>Questo documento contiene informazioni in merito alle tecnologie che consentono a mangayo.it di raggiungere gli scopi descritti di seguito. 
-        Tali tecnologie permettono al Titolare di raccogliere e salvare informazioni (per esempio tramite l’utilizzo di Cookie) o di utilizzare risorse 
-        (per esempio eseguendo uno script) sul dispositivo dell’Utente quando quest’ultimo interagisce con BookaMeli.it.
+    <p class="textalingjustify">
+    Questo documento contiene informazioni in merito alle tecnologie che consentono a mangayo.it di raggiungere gli scopi descritti di seguito. 
+    Tali tecnologie permettono al Titolare di raccogliere e salvare informazioni (per esempio tramite l’utilizzo di Cookie) o di utilizzare risorse 
+    (per esempio eseguendo uno script) sul dispositivo dell’Utente quando quest’ultimo interagisce con BookaMeli.it.
 
     Per semplicità, in questo documento tali tecnologie sono sinteticamente definite “Strumenti di Tracciamento”, salvo vi sia ragione di differenziare.
     Per esempio, sebbene i Cookie possano essere usati in browser sia web sia mobili, sarebbe fuori luogo parlare di Cookie nel contesto di applicazioni per 
@@ -19,11 +20,11 @@
 
 </section>
 
-<section>
+<section class="sectionpadding">
 <h1>Spedizioni e resi</h1>
 
-<div class="descrizioni">
-    <p>Le nostre spedizioni vengono effettuate da GLS Espresso al prezzo standard di 5,50€ e vengono 
+<div class="descrizioni no-padding">
+    <p class="textalingjustify">Le nostre spedizioni vengono effettuate da GLS Espresso al prezzo standard di 5,50€ e vengono 
         consegnate in 24/48 ore lavorative, dal momento in cui ricevi l'avviso di consegna in corso.
 
     Nel prezzo di spedizione è incluso il servizio Protezione Perfetta che prevede un imballaggio 
@@ -41,11 +42,11 @@
 
 </section>
 
-<section>
+<section class="sectionpadding">
 <h1>Prezzi e sconti</h1>
 
 <div class="descrizioni">
-    <p>Tutti i prezzi sul sito di BookaMeli! includono le tasse vigenti. Come previsto per legge, 
+    <p class="textalingjustify">Tutti i prezzi sul sito di BookaMeli! includono le tasse vigenti. Come previsto per legge, 
         la massima scontistica su libri e fumetti è di massimo 5%, salvo possibili rari casi 
         giustificati dalla stessa.
 
@@ -58,10 +59,13 @@
     </p>
 </div>
 
+</section>
+
+<section class="sectionpadding">
 <h1>Preordini</h1>
 
 <div class="descrizioni">
-    <p>Tutti i prodotti acquistati nella sezione Preordini saranno spediti 
+    <p class="textalingjustify">Tutti i prodotti acquistati nella sezione Preordini saranno spediti 
         dal giorno dell'uscita del prodotto preordinato in 24/48 ore lavorative. Nei periodi che seguono l'uscita di un prodotto molto richiesto alcune 
         spedizioni potrebbero subire ritardi fino a 7 giorni lavorativi.
 

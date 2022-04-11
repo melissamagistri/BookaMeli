@@ -11,11 +11,11 @@
         <img class="imgprodotto" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
     </div>
 
-    <div class="displaycenter displayproduct flexcolumn">
+    <div class="displaycenter displayproduct flexcolumn width50 inlineprodotto">
         
             <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
-            <p><?php echo $prodotto['descrizione']?></p>
-            <div class="display-inlineflex">
+            <p class="textalingjustify"><?php echo $prodotto['descrizione']?></p>
+            <div class="inlineflex">
                 <p><?php echo $prodotto['prezzo'].'€'?></p>
                 <?php if($prodotto['sconto']!=0): ?>
                     <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
@@ -47,15 +47,15 @@
     <?php endif; ?>
     <?php if(count($templateParams["recensioni"])!=0): ?>
         <div class="displaycenter">
-            <p>Recensioni di questo prodotto</p>
+            <p>Recensioni di questo prodotto: </p>
             
             <ul>
                 <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
                 <li>
-                    <p><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
+                    <p>Autore</p>
+                    <p><?php echo $templateParams['recensioni'][$i]['voto'] ?> su 5</p>
+                    <p class="boldtext"><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
                     <p><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
-                    <p><?php echo $templateParams['recensioni'][$i]['voto'] ?></p>
-
                 </li>
                 <?php endfor; ?>
             </ul>

@@ -8,6 +8,18 @@
   padding: 20px 0;
 }
 
+.sectionpadding{
+  padding: 30px 0;
+}
+
+.textalingjustify{
+  text-align: justify;
+}
+
+.boldtext{
+  font-weight: bold;
+}
+
 body{
   overflow-x: hidden;
 }
@@ -28,15 +40,15 @@ section, h2{
   margin: 0;
 }
 
+.inlineflex{
+  display: inline-flex;
+}
+
 .displayflexcenter{
   display: flex;
   justify-content: center;
 }
 
-/* aggiungee questa classe a tutti i prezzi con socnto e metterli in un div*/
-
-
-/* cambia nome classe e cambialo a tutte le pagine!*/
 .displayflex{
   display: flex;
   justify-content: space-evenly;
@@ -74,6 +86,10 @@ section, h2{
 
 .hover{
   text-decoration: none;
+}
+
+.width50{
+  width: 50%;
 }
 
 .label{
@@ -809,6 +825,14 @@ main footer a{
     .displayproduct{
       display: block;
     }
+
+    .inlineprodotto{
+      display: flex;
+      gap: 2em;
+      padding: 40px;
+    }
+
+
 }
 
 
