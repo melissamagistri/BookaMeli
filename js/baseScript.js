@@ -41,6 +41,10 @@ $(document).ready(function(){
         };
         $.post('aggiornaQuantitàProdotto.php',{
             aggiornaquantita: aggiornaquantita
+        }, function(data, success){
+            if(success){
+                $('.totale').text(data); 
+            }
         });
         $(this).removeClass('changed');
     });

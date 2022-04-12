@@ -31,22 +31,26 @@ $(document).ready(function(){
     });
 
     $(".invia").click(function(){
-        var recensione = {
-            nomeprodotto: $('.selected').siblings('.image').find('.imgordini').attr("alt"),
-            titolorecensione: $('.selected + div > div > #titolo').val(),
-            testorecensione: $('.selected + div > div > #recensione').val(),
-            voto: $('.selected + div > div > form > input[name="rate"]:checked').val()
-        };
-        $.post('aggiungirecensione.php',{
-            recensione: recensione
-        }, function(data,status){
-            if(status == 'success'){
-                $('.selected').hide();
-                $('.selected').next().html('<p>Grazie per il tuo feedback!</p>');
-            } else {
-                $('.selected').next().html('<p>Si è verificato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
-            }
-        });
+        if($('.selected + div > div > #titolo').val() != '' && $('.selected + div > div > #recensione').val() != '' && $('.selected + div > div > form > input[name="rate"]:checked').val()){
+            var recensione = {
+                nomeprodotto: $('.selected').siblings('.image').find('.imgordini').attr("alt"),
+                titolorecensione: $('.selected + div > div > #titolo').val(),
+                testorecensione: $('.selected + div > div > #recensione').val(),
+                voto: $('.selected + div > div > form > input[name="rate"]:checked').val()
+            };
+            $.post('aggiungirecensione.php',{
+                recensione: recensione
+            }, function(data,status){
+                if(status == 'success'){
+                    $('.selected').hide();
+                    $('.selected').next().html('<p>Grazie per il tuo feedback!</p>');
+                } else {
+                    $('.selected').next().html('<p>Si è verificato un problema con il server, la preghiamo di riprovare piu tardi.</p>');
+                }
+            });
+        } else {
+            alert('Per aggiungere o modificare una recensione devi compilare tutti i campi!');
+        }
             
         
     });

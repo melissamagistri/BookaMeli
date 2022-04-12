@@ -154,7 +154,7 @@ class database{
 
     //funzione per ottenere tutte le recensioni di un prodotto
     public function getProductReviews($idprodotto){
-        $query = "SELECT voto, testorecensione, titolorecensione FROM recensioni WHERE idprodotto = ?";
+        $query = "SELECT voto, testorecensione, titolorecensione, nome, cognome FROM recensioni r, account a WHERE idprodotto = ? and r.idaccount = a.idaccount";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idprodotto);
         $stmt->execute();

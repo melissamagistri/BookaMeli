@@ -50,6 +50,7 @@
             <?php if(isUserLoggedIn()):?>
             <ul>
                 <?php if(count($templateParams['prodottiCarrello'])!=0):?>
+                    <?php $totale = 0 ?>
                     <?php foreach($templateParams['prodottiCarrello'] as $prodotto):?>
                 <li>
                     <span>
@@ -70,19 +71,19 @@
                             </li>
                             <li>
                                 <div class="displayflex">
-                                <p class='prezzo'style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
+                                <p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
+                                <?php $totale = $totale + ((float)$prodotto['prezzo'] * (int)$val)?>
                             <?php if($prodotto['sconto'] != 0):?>
-                                <p class='prezzo'><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                                <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+                                <?php $totale = ($totale - ((float)$prodotto['prezzo'] * (int)$val)) + (round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP) * $val)?>
                             <?php endif; ?> </div>
                             </li>
                             <li><button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <p>Totale: </p>
-                </li>
                 <?php endforeach;?>
+                <li> <p class='totale'>Totale: <?php echo $totale ?></p></li>
                 <li>
                 <button class="bluebutton" onclick="window.location.href='checkout.php';">Procedi al checkout</button>
                 </li>
