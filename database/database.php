@@ -368,6 +368,17 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che ritorna tutte le notifiche di un user
+    public function getUserNotifications($idaccount){
+        $query = "SELECT idnotifica, contenuto, anteprima, letto, datanotifica, idaccount from notifiche where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     
 
 }
