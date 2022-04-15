@@ -68,4 +68,6 @@ require 'PHPMailer/src/SMTP.php';
         return array("schermata_op.png","ciao.png");
     }
 
+    
+
 ?>

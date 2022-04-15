@@ -43,7 +43,7 @@ $(document).ready(function(){
             aggiornaquantita: aggiornaquantita
         }, function(data, success){
             if(success){
-                $('.totale').text(data); 
+                $('.totale').text(data+'€'); 
             }
         });
         $(this).removeClass('changed');

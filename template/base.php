@@ -83,7 +83,7 @@
                     </div>
                 </li>
                 <?php endforeach;?>
-                <li> <p class='totale'>Totale: <?php echo $totale ?></p></li>
+                <li> <p class='totale'>Totale: <?php echo $totale.'€' ?></p></li>
                 <li>
                 <button class="bluebutton" onclick="window.location.href='checkout.php';">Procedi al checkout</button>
                 </li>
