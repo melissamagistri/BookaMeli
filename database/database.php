@@ -20,6 +20,17 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che restituisce l'email dell'user dato l'idaccount
+    public function getUserEmail($idaccount){
+        $query = "SELECT email FROM account WHERE idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     //controlla se esiste un account che abbia idaccount e password uguali a quelle passate in input
     public function checkLogin($email, $password, $active){
         //prende l'id dell'account con la mail indicata
@@ -377,6 +388,76 @@ class database{
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che permette l'inserimento della notifica nel account dell'utente
+    public function insertUserNotification($idaccount, $contenuto, $anteprima){
+        $query = 'INSERT INTO notifiche(contenuto,anteprima, idaccount) VALUES(?,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssi',$contenuto, $anteprima, $idaccount);
+        return $stmt->execute();
+    }
+
+    //funzione che permette la diminuzione della quantità di un prodotto dopo che viene acquistato
+    public function decreaseProductQuantity($idprodotto, $quantita){
+        $query = "UPDATE prodotti SET quantita = quantita - ? WHERE idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii', $quantita, $idprodotto);
+        
+        return $stmt->execute();
+    }
+
+    //funzione che restituisce l'idaccount del venditore
+    public function getSellerId(){
+        $query = "SELECT idaccount from account where venditore = 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che rimuove da tutti i carrelli un determinato prodotto
+    public function removeProductFromCarts($idprodotto){
+        $query = 'DELETE FROM prodottinelcarrello WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idprodotto);
+        return $stmt->execute();
+    }
+
+    //funzione per ottenere il numero di ordine che verrà effettuato
+    public function getLastOrderId(){
+        $query = "SELECT idordine from ordini order by idordine desc limit 1";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che permette l'inserimento di un nuovo ordine
+    public function insertNewOrder($idordine, $stato, $prezzo, $idaccount){
+        $query = 'INSERT INTO ordini(idordine,stato, prezzo, idaccount) VALUES(?,?,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iidi',$idordine, $stato, $prezzo, $idaccount);
+        return $stmt->execute();
+    }
+
+    //funzione che inserisce i prodotti nella tabllea prodottiordinati
+    public function insertProductInOrder($idordine, $quantita, $idprodotto, $costo){
+        $query = 'INSERT INTO prodottiordinati(idordine,quantita, idprodotto, costo) VALUES(?,?,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiid',$idordine,$quantita, $idprodotto, $costo);
+        return $stmt->execute();
+    }
+
+    //funzione che aggiorna la data di ultimo acquisto del prodotto passato in input
+    public function changeLastBuyDate($idprodotto){
+        $query = "UPDATE prodotti SET dataUltimoAcquisto = NOW() WHERE idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idprodotto);
+        
+        return $stmt->execute();
     }
 
     

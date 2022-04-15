@@ -9,6 +9,7 @@
             <div class='displayflex divlistaProdotti'>
                 <p>Ordine effettuato il: <?php echo $templateParams['ordini'][$i]['dataordine']?></p>
                 <p>Totale: <?php echo $templateParams['ordini'][$i]['prezzo'].'€'?></p>
+                <p>Stato: <?php echo ($templateParams['ordini'][$i]['stato']) == 0 ? 'Non ancora spedito' : 'Consegnato'?></p>
                 <p>Ordine numero: <?php echo $templateParams['ordini'][$i]['idordine']?></p>
                 <img src="<?php echo UPLOAD_DIR.'arrowDown.png'?>" alt="slider">
             </div>
