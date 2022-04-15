@@ -1,30 +1,34 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.p-padding{
+.p-padding {
   padding: 20px 0;
 }
 
-.sectionpadding{
+.sectionpadding {
   padding: 30px 0;
 }
 
-.textalingjustify{
+.textalingjustify {
   text-align: justify;
 }
 
-.boldtext{
+.boldtext {
   font-weight: bold;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
-body, header, h3, img, a{
+body,
+header,
+h3,
+img,
+a {
   margin: 0;
   padding: 0;
   font-family: "Helvetica", sans-serif;
@@ -32,51 +36,63 @@ body, header, h3, img, a{
   text-decoration: none;
 }
 
-section, h2{
+section,
+h2 {
   margin: 20px 0;
 }
 
-.no-margin{
+.no-margin {
   margin: 0;
 }
 
-.inlineflex{
+.inlineflex {
   display: inline-flex;
 }
 
-.displayflexcenter{
+.displayflexcenter {
   display: flex;
   justify-content: center;
 }
 
-.displayflex{
+.displayflex {
   display: flex;
   justify-content: space-evenly;
 }
 
-.display-inlineflex{
+.display-inlineflex {
   display: inline-flex;
   justify-content: space-evenly;
 }
 
-.displayproduct{
+.displayproduct {
   display: flex;
   gap: 5em;
   justify-content: center;
 }
 
-.flex-a{
+.flex-a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.flexcolumn{
+.flexcolumn {
   flex-direction: column;
 }
 
-.h1product{
+.h1product {
   text-align: inherit;
+}
+
+.h1checkout {
+  width: 20%;
+  display: inline-block;
+}
+
+.sectioncheckout {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 .textareadimension {
@@ -84,15 +100,15 @@ section, h2{
   height: 150px;
 }
 
-.hover{
+.hover {
   text-decoration: none;
 }
 
-.width50{
+.width50 {
   width: 50%;
 }
 
-.label{
+.label {
   width: 100%;
 }
 
@@ -101,85 +117,89 @@ body {
   color: black;
 }
 
-body > header > nav{
+body > header > nav {
   margin: 0 0 20px 0;
   background-color: lightblue;
 }
 
-body > header, body > footer, .textcenter{
+body > header,
+body > footer,
+.textcenter {
   text-align: center;
 }
 
-
-body > footer > div:first-of-type{
+body > footer > div:first-of-type {
   float: left;
   width: 35%;
 }
 
-body > footer > div:nth-of-type(2){
+body > footer > div:nth-of-type(2) {
   float: left;
   width: 30%;
 }
 
-body > footer > div:nth-of-type(3){
+body > footer > div:nth-of-type(3) {
   float: left;
   width: 30%;
 }
 
-body > footer > div > ul, body > footer > div > ul > li > div > ul{
-  padding : 0;
+body > footer > div > ul,
+body > footer > div > ul > li > div > ul {
+  padding: 0;
 }
 
-footer > div > ul > li:first-of-type > img{
+footer > div > ul > li:first-of-type > img {
   width: 100px;
   cursor: pointer;
 }
 
-body > header > nav > div{
+body > header > nav > div {
   display: inline-block;
   padding: 10px 20px;
 }
 
-body > header > div:nth-of-type(2) > ul > li{
+body > header > div:nth-of-type(2) > ul > li {
   margin: 0 20px;
   padding: 20px 0;
 }
 
-body > header > div:nth-of-type(2) > ul > li > span{
+body > header > div:nth-of-type(2) > ul > li > span {
   float: left;
 }
 
-body > header > div:nth-of-type(2) > ul > li > div > ul{
+body > header > div:nth-of-type(2) > ul > li > div > ul {
   text-align: center;
 }
 
-body > header > div:nth-of-type(2) > ul > li > div > ul > li:first-of-type{
+body > header > div:nth-of-type(2) > ul > li > div > ul > li:first-of-type {
   text-align: center;
   padding: 10px;
 }
 
-body > header > nav > div:last-child>img{
+body > header > nav > div:last-child > img {
   width: 200px;
   cursor: pointer;
 }
 
-body > header > nav > div:first-child{
+body > header > nav > div:first-child {
   float: right;
 }
 
-body > header > nav > div:nth-child(2){
+body > header > nav > div:nth-child(2) {
   float: left;
 }
 
-body > header >div:nth-of-type(2) > ul > li:first-child > h3, .base-list-style{
-text-align: center;
+body > header > div:nth-of-type(2) > ul > li:first-child > h3,
+.base-list-style {
+  text-align: center;
 }
 
-ul > li , .base-list-style{
+ul > li,
+.base-list-style {
   list-style: none;
 }
 
-footer{
+footer {
   display: inline-block;
   margin: 20px 0 0;
   width: 100%;
@@ -187,64 +207,67 @@ footer{
   text-align: center;
 }
 
-.imgcarrello{
+.imgcarrello {
   width: 100px;
 }
-footer > div > ul > li:last-of-type > div > ul > li > img{
+footer > div > ul > li:last-of-type > div > ul > li > img {
   width: 50px;
   cursor: pointer;
 }
 
-footer > div > ul > li:last-of-type > div > ul > li{
+footer > div > ul > li:last-of-type > div > ul > li {
   display: inline-block;
   padding: 5px 5px;
 }
 
-footer > div > ul > li{
+footer > div > ul > li {
   padding: 5px 0;
 }
 
-footer > div > ul > li > a, body > main > form > ul > li > a, body > main > section > div > ul > li:nth-of-type(2) > a{
+footer > div > ul > li > a,
+body > main > form > ul > li > a,
+body > main > section > div > ul > li:nth-of-type(2) > a {
   text-decoration: inherit;
   padding: 5px 0;
   color: black;
 }
 
-footer > div > ul > li > a:hover{
+footer > div > ul > li > a:hover {
   color: white;
   transition: 0.3s;
 }
 
-.sidenav , .sidenavcar{
+.sidenav,
+.sidenavcar {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
-  background-color: white; 
+  background-color: white;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.sidenavcar{
-right: 0;
+.sidenavcar {
+  right: 0;
 }
 
-.background{
+.background {
   opacity: 0.5;
 }
 
-.open{
+.open {
   width: 400px;
 }
 
-.disable{
+.disable {
   pointer-events: none;
   cursor: default;
 }
 
-.sidenav{
-  left:0;
+.sidenav {
+  left: 0;
 }
 
 /* The navigation menu links */
@@ -258,23 +281,26 @@ right: 0;
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .hover{
+.sidenav a:hover,
+.hover {
   color: black;
 }
 
-.sidenavcar ul:first-child img{
+.sidenavcar ul:first-child img {
   width: 20px;
   padding: 0 20px 20px 0;
 }
 
-.sidenav ul, .sidenavcar ul{
-    padding: 0;
+.sidenav ul,
+.sidenavcar ul {
+  padding: 0;
 }
-.sidenav ul li:first-of-type, .sidenavcar ul li:first-of-type{
+.sidenav ul li:first-of-type,
+.sidenavcar ul li:first-of-type {
   text-align: right;
 }
 
-input[name='quantitacarrello']{
+input[name="quantitacarrello"] {
   width: 15px;
 }
 .search-container button:hover {
@@ -291,27 +317,26 @@ input[name='quantitacarrello']{
   cursor: pointer;
 }
 
-body > header > div:nth-of-type(2) > div{
+body > header > div:nth-of-type(2) > div {
   padding: 10px 10px;
 }
 
-
-img[alt~='chiusura']{
+img[alt~="chiusura"] {
   width: 20px;
   float: right;
   margin: 10px;
 }
 
-.imgGray{
+.imgGray {
   filter: grayscale(100%);
 }
 
-body > header > div:nth-of-type(2) > ul > li > div{
+body > header > div:nth-of-type(2) > ul > li > div {
   padding: 0 0 30px 0;
   border-bottom: 1px solid #f4f4f4;
 }
 
-.button{
+.button {
   background-color: white;
   border-radius: 10px;
   color: black;
@@ -319,16 +344,26 @@ body > header > div:nth-of-type(2) > ul > li > div{
   cursor: pointer;
 }
 
-.inputnoborder{
+.inputnoborder {
   width: 10%;
   border: none;
 }
 
-body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > div{
+body
+  > header
+  > div:nth-of-type(2)
+  > ul
+  > li
+  > div
+  > ul
+  > li:nth-of-type(2)
+  > div,
+.inline-block {
   display: inline-block;
 }
 
-.bluebutton, input[name="submit"]{
+.bluebutton,
+input[name="submit"] {
   background-color: lightblue;
   font-weight: 200;
   text-decoration: none;
@@ -338,55 +373,58 @@ body > header > div:nth-of-type(2) > ul > li > div > ul > li:nth-of-type(2) > di
   border: none;
 }
 /*tasto quando viene premuto*/
-.bluebutton:hover, input[name="submit"]:hover{
+.bluebutton:hover,
+input[name="submit"]:hover {
   background-color: rgb(93, 179, 225);
   color: white;
   transition: 0.2s;
   cursor: pointer;
 }
 
- h2{
+h2 {
   text-align: center;
 }
 
-body > main > form{
+body > main > form {
   display: flex;
   justify-content: center;
 }
 
-body > main > form > ul{
+body > main > form > ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-body > main > form > ul > li{
+body > main > form > ul > li {
   display: flex;
   align-items: center;
-  
 }
 
-.text-center{
+.text-center {
   margin: auto;
 }
 
-body > main > form > ul > li:not(:last-of-type) > input{
+body > main > form > ul > li:not(:last-of-type) > input {
   margin-left: auto;
 }
 
 /*input di tutte le pagine*/
-body > main > form > ul > li > input:not(input[type="submit"]),  input[name='search'], input[name='dati']{
+body > main > form > ul > li > input:not(input[type="submit"]),
+input[name="search"],
+input[name="dati"] {
   width: 300px;
   height: 40px;
   font-size: large;
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
   font-size: large;
   color: black;
 }
 
-body > main > form > ul > li > a:hover, a:hover{
+body > main > form > ul > li > a:hover,
+a:hover {
   color: rgb(93, 179, 225);
   transition: 0.3s;
 }
@@ -399,7 +437,7 @@ body > main > form > ul > li > a:hover, a:hover{
   justify-content: center;
 }
 
-.search form{
+.search form {
   display: flex;
 }
 
@@ -412,7 +450,7 @@ body > main > form > ul > li > a:hover, a:hover{
   font-size: large;
 }
 
-.select{
+.select {
   border: 2px solid lightblue;
   border-right: none;
   border-top-left-radius: 5px;
@@ -421,10 +459,9 @@ body > main > form > ul > li > a:hover, a:hover{
   outline-color: transparent;
 }
 
-.select > option{
+.select > option {
   background: white;
 }
-
 
 .searchButton {
   width: 40px;
@@ -438,66 +475,67 @@ body > main > form > ul > li > a:hover, a:hover{
   font-size: 20px;
 }
 
-.imgsearch{
+.imgsearch {
   width: 85%;
 }
 
-.imghome{
+.imghome {
   width: 200px;
 }
 
-.imgdatichat{
+.imgdatichat {
   width: 60px;
 }
 
-.imghomescroll{
+.imghomescroll {
   width: 100%;
   padding: 30px 0 10px 0;
 }
-.imgprodotto{
+.imgprodotto {
   width: 250px;
 }
 
-.imgordini{
+.imgordini {
   width: 100px;
 }
 
-.display-inline{
+.display-inline {
   text-align: center;
   display: inline-block;
-
 }
 
-body > main > h1, h1{
+body > main > h1,
+h1 {
   text-align: center;
 }
 
-body > main > section > div:nth-of-type(2){
+body > main > section > div:nth-of-type(2) {
   vertical-align: top;
 }
 
-body > main > section > div:nth-of-type(2) > ul > li{
+body > main > section > div:nth-of-type(2) > ul > li {
   margin: 35px 0;
 }
 
-body > main > section:nth-of-type(2){
+body > main > section:nth-of-type(2) {
   padding: 30px 0;
 }
 
-body > main > section > div > ul > li, body > main > section > div > ul > li > ul > li{
+body > main > section > div > ul > li,
+body > main > section > div > ul > li > ul > li {
   margin: 10px 10px;
 }
 
-.descrizioni{
+.descrizioni {
   width: 80%;
   margin: auto;
 }
 
-.border{
+.border {
   border-bottom: 2px;
 }
 
-.dot{
+.dot {
   height: 15px;
   width: 15px;
   background-color: lightblue;
@@ -506,10 +544,10 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
   cursor: pointer;
 }
 
-.dot:hover{
+.dot:hover {
   background-color: rgb(93, 179, 225);
 }
-.dot-active{
+.dot-active {
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -517,18 +555,18 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
   background-color: rgb(93, 179, 225);
 }
 
-.dotdiv{
+.dotdiv {
   text-align: center;
   display: inline-block;
   width: 100%;
 }
 
-.custom-select{
+.custom-select {
   position: relative;
   width: 50%;
 }
 
-.custom-select select{
+.custom-select select {
   background-color: lightblue;
   padding: 10px 8px;
   border: none;
@@ -565,7 +603,7 @@ body > main > section > div > ul > li, body > main > section > div > ul > li > u
 .container img.right {
   float: right;
   margin-left: 20px;
-  margin-right:0;
+  margin-right: 0;
 }
 
 .time-right {
@@ -588,251 +626,251 @@ body > main > section > div > ul > li > a {
   transition: 0.3s;
 }
 
-body > main > section > div > ul > li > a:hover{
-  color:  rgb(93, 179, 225);
+body > main > section > div > ul > li > a:hover {
+  color: rgb(93, 179, 225);
 }
 
-body > main > section > div > ul > li > a:hover > img{
+body > main > section > div > ul > li > a:hover > img {
   border: 0;
   color: rgb(93, 179, 225);
 }
 
-.vertical-items ul li{
+.vertical-items ul li {
   display: inline-block;
 }
 
-.vertical-items, .center{
+.vertical-items,
+.center {
   text-align: center;
 }
 
-.border-radius{
+.border-radius {
   border-radius: 25px;
   border: 2px solid rgb(93, 179, 225);
-  padding: 10px; 
+  padding: 10px;
   width: 100%;
   height: 70%;
 }
 
-.no-padding{
+.no-padding {
   padding: 0;
 }
 
 /*css della chat da sistemare*/
-#container{
-	width:750px;
-	height:800px;
-	background:#eff3f7;
-	margin:0 auto;
-	font-size:0;
-	border-radius:5px;
-	overflow:hidden;
+#container {
+  width: 750px;
+  height: 800px;
+  background: #eff3f7;
+  margin: 0 auto;
+  font-size: 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.status{
-	width:8px;
-	height:8px;
-	border-radius:50%;
-	display:inline-block;
-	margin-right:7px;
+.status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 7px;
 }
-.green{
-	background-color:#58b666;
+.green {
+  background-color: #58b666;
 }
-.orange{
-	background-color:#ff725d;
+.orange {
+  background-color: #ff725d;
 }
-.blue{
-	background-color:#6fbced;
-	margin-right:0;
-	margin-left:7px;
-}
-
-main header{
-	height:110px;
-	padding:30px 20px 30px 40px;
-}
-main header > *{
-	display:inline-block;
-	vertical-align:top;
-}
-main header img:first-child{
-	border-radius:50%;
-}
-main header img:last-child{
-	width:24px;
-	margin-top:8px;
-}
-main header div{
-	margin-left:10px;
-	margin-right:145px;
-}
-main header h2{
-	font-size:16px;
-	margin-bottom:5px;
-}
-main header h3{
-	font-size:14px;
-	font-weight:normal;
-	color:#7e818a;
+.blue {
+  background-color: #6fbced;
+  margin-right: 0;
+  margin-left: 7px;
 }
 
-#chat{
-	padding-left:0;
-	margin:0;
-	list-style-type:none;
-	overflow-y:scroll;
-	height:535px;
-	border-top:2px solid #fff;
-	border-bottom:2px solid #fff;
+main header {
+  height: 110px;
+  padding: 30px 20px 30px 40px;
 }
-#chat li{
-	padding:10px 30px;
+main header > * {
+  display: inline-block;
+  vertical-align: top;
 }
-#chat h2,#chat h3{
-	display:inline-block;
-	font-size:13px;
-	font-weight:normal;
+main header img:first-child {
+  border-radius: 50%;
 }
-#chat h3{
-	color:#bbb;
+main header img:last-child {
+  width: 24px;
+  margin-top: 8px;
 }
-#chat .entete{
-	margin-bottom:5px;
+main header div {
+  margin-left: 10px;
+  margin-right: 145px;
 }
-#chat .message{
-	padding:20px;
-	color:#fff;
-	line-height:25px;
-	max-width:90%;
-	display:inline-block;
-	text-align:left;
-	border-radius:5px;
+main header h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
-#chat .me{
-	text-align:right;
-}
-#chat .you .message{
-	background-color:#58b666;
-}
-#chat .me .message{
-	background-color:#6fbced;
-}
-#chat .triangle{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 10px 10px 10px;
-}
-#chat .you .triangle{
-		border-color: transparent transparent #58b666 transparent;
-		margin-left:15px;
-}
-#chat .me .triangle{
-		border-color: transparent transparent #6fbced transparent;
-		margin-left:375px;
+main header h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #7e818a;
 }
 
-main footer{
-	height:155px;
-	padding:20px 30px 10px 20px;
+#chat {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 535px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
-main footer textarea{
-	resize:none;
-	border:none;
-	display:block;
-	width:100%;
-	height:80px;
-	border-radius:3px;
-	padding:20px;
-	font-size:13px;
-	margin-bottom:13px;
+#chat li {
+  padding: 10px 30px;
 }
-main footer textarea::placeholder{
-	color:#ddd;
+#chat h2,
+#chat h3 {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
 }
-main footer img{
-	height:30px;
-	cursor:pointer;
+#chat h3 {
+  color: #bbb;
 }
-main footer a{
-	text-decoration:none;
-	text-transform:uppercase;
-	font-weight:bold;
-	color:#6fbced;
-	vertical-align:top;
-	margin-left:333px;
-	margin-top:5px;
-	display:inline-block;
+#chat .entete {
+  margin-bottom: 5px;
+}
+#chat .message {
+  padding: 20px;
+  color: #fff;
+  line-height: 25px;
+  max-width: 90%;
+  display: inline-block;
+  text-align: left;
+  border-radius: 5px;
+}
+#chat .me {
+  text-align: right;
+}
+#chat .you .message {
+  background-color: #58b666;
+}
+#chat .me .message {
+  background-color: #6fbced;
+}
+#chat .triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+}
+#chat .you .triangle {
+  border-color: transparent transparent #58b666 transparent;
+  margin-left: 15px;
+}
+#chat .me .triangle {
+  border-color: transparent transparent #6fbced transparent;
+  margin-left: 375px;
 }
 
-.valutazione{
+main footer {
+  height: 155px;
+  padding: 20px 30px 10px 20px;
+}
+main footer textarea {
+  resize: none;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 80px;
+  border-radius: 3px;
+  padding: 20px;
+  font-size: 13px;
+  margin-bottom: 13px;
+}
+main footer textarea::placeholder {
+  color: #ddd;
+}
+main footer img {
+  height: 30px;
+  cursor: pointer;
+}
+main footer a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #6fbced;
+  vertical-align: top;
+  margin-left: 333px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.valutazione {
   padding: 20px;
 }
 
-.divlistaProdotti{
+.divlistaProdotti {
   background-color: lightblue;
   margin: 0 10px 5px;
 }
 
 @media screen and (max-width: 768px) {
-  body > header >div:nth-of-type(2) > ul > li:first-child > h3{
+  body > header > div:nth-of-type(2) > ul > li:first-child > h3 {
     text-align: left;
-    }
+  }
 
-    body > header > nav > div:last-child > img{
-      width: 100px;
-    }
+  body > header > nav > div:last-child > img {
+    width: 100px;
+  }
 
-    .open{
-      width: 100%; 
-    }
+  .open {
+    width: 100%;
+  }
 
-    body > footer > div:nth-of-type(2), .topnav .search-container, 
-    body > footer > div:first-of-type, body > footer > div:nth-of-type(3){
-      float: none;
-    }
-    
-    footer > div {
-      margin: 0 auto;
-    }
+  body > footer > div:nth-of-type(2),
+  .topnav .search-container,
+  body > footer > div:first-of-type,
+  body > footer > div:nth-of-type(3) {
+    float: none;
+  }
 
-    .vertical-items{
-      display: block;
-    }
+  footer > div {
+    margin: 0 auto;
+  }
 
-    .vertical-items ul li{
-      width: 100%;
-      margin: 0;
-    }
+  .vertical-items {
+    display: block;
+  }
 
-    ul.displayflex{
-      flex-wrap: wrap;
-    }
+  .vertical-items ul li {
+    width: 100%;
+    margin: 0;
+  }
 
-    .displaycenter{
-      margin: auto;
-      width: fit-content;
-    }
+  ul.displayflex {
+    flex-wrap: wrap;
+  }
 
-    .search form{
-      justify-content: center;
-    }
+  .displaycenter {
+    margin: auto;
+    width: fit-content;
+  }
 
-    .search form > input{
-      width: 80%;
-    } 
+  .search form {
+    justify-content: center;
+  }
 
-    .displayproduct{
-      display: block;
-    }
+  .search form > input {
+    width: 80%;
+  }
 
-    .inlineprodotto{
-      display: flex;
-      gap: 2em;
-      padding: 40px;
-    }
+  .displayproduct {
+    display: block;
+  }
 
-
+  .inlineprodotto {
+    display: flex;
+    gap: 2em;
+    padding: 40px;
+  }
 }
-
-

@@ -1,52 +1,40 @@
-<section class="border">
-    <div >
-        <ul class="textcenter">
-            <li><h1>1.Informazioni Personali</h1></li>
-            <li><p>Nome:<a href=""></a> <label for="">Nome</label></p></li>
-            <li><p>Cognome:<a href=""></a> <label for="">Cognome</label></p></li>
-            <li><p>Indirizzo:<a href=""></a> <label for="">Indirizzo</label></p></li>
-            <li><button class="bluebutton">Continua</button></li>
-            <li><span class="fas fa-angle-down"></span></li>
-        </ul>
-    </div>
+<section class="border sectioncheckout">
+    
+            <h1 class="h1checkout">1.Informazioni Personali</h1>
+            <div class="inline-block">
+                <p>Nome:  <?php echo $templateParams["userinfo"][0]["nome"]; ?> </p>
+                <p>Cognome: <?php echo $templateParams["userinfo"][0]["cognome"]; ?></p>
+                <p>Email: <?php echo $templateParams["userinfo"][0]["email"]; ?> </p>
+            </div>
+    
 </section>
 
-<section class="border">
-    <div>
-        <ul class="textcenter">
-            <li><h1>2.Pagamento</h1></li>
-            <li>
-                <ul class="no-padding">
-                        <li class="base-list-style">
-                            <input type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
-                            <label for="contanti">Contanti</label>
-                        </li>
+<section class="border displayflexcenter">
+    <h1 class="h1checkout">2.Pagamento</h1>
+    <div class="textcenter no-padding inline-block">
+        
+        <div class="base-list-style">
+            <input type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
+            <label for="contanti">Contanti</label>
+        </div> 
+                            
+        <div class="base-list-style">
+            <input type="radio" id="carta" name="metodo_pagamento" value="Carta di credito">
+            <label for="carta">Carta di credito</label>
+        </div>
 
-                        <li class="base-list-style">
-                            <input type="radio" id="carta" name="metodo_pagamento" value="Carta di credito">
-                            <label for="carta">Carta di credito</label>
-                        </li>
-                </ul>
-       
-            </li>
+        <h3>Inserisci i dati della tua carta</h3>
+        <div>
+            <label for="Numero carta">Numero Carta:</label>
+            <input type="text" name="dati" placeholder="Numero">
+        </div>
 
-            <li>
-            <h3>Inserisci i dati della tua carta</h3>
-                <ul class="no-padding">
-                    <li>
-                        <label for="Numero carta">Numero Carta:</label>
-                        <input type="text" name="dati" placeholder="Numero">
-                    </li>
-
-                    <li>
-                        <label for="Nome PRoprietario">Nome proprietario:</label>
-                        <input type="text" name="dati" placeholder="Proprietario">
-                    </li>
-                    
-                </ul>
-            </li>
-            <li><button class="bluebutton">Continua</button></li>
-            <li><span class="fas fa-angle-down"></span></li>
-        </ul>
+        <div>
+            <label for="Nome PRoprietario">Nome proprietario:</label>
+            <input type="text" name="dati" placeholder="Proprietario">
+        </div>
+                
+        <div><button class="bluebutton">Continua</button></div>
     </div>
+    
 </section>
