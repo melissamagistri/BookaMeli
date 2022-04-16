@@ -3,15 +3,15 @@
 <div class="custom-select">
     <ul>
         <li class="border-radius">
-            <p>Contenuto Notifica</p>
-        </li>
+            <div class="">
+                <p>Anteprima</p>
+                <p>Data</p>
+            </div>
 
-        <li class="border-radius">
-            <p>Contenuto Notifica</p>
-        </li>
-
-        <li class="border-radius">
-            <p>Contenuto Notifica</p>
+            <div class="contenutoNotifica">
+                <p>Contenuto</p>
+            </div>
+            
         </li>
     </ul>
 </div>
