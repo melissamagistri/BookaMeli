@@ -2,17 +2,18 @@
 
 <div class="custom-select">
     <ul>
-        <li class="border-radius">
-            <div class="">
-                <p>Anteprima</p>
-                <p>Data</p>
-            </div>
+        <?php foreach($templateParams['notifiche'] as $notifica):?>
+            <li class="border-radius notifica">
+                <div class="">
+                    <p><?php echo $notifica['anteprima']?></p>
+                    <p><?php echo $notifica['datanotifica']?></p>
+                </div>
 
-            <div class="contenutoNotifica">
-                <p>Contenuto</p>
-            </div>
-            
-        </li>
+                <div class="contenutoNotifica">
+                    <p><?php echo $notifica['contenuto']?></p>
+                </div>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </div>
 
