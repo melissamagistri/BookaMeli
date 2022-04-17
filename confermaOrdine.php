@@ -27,7 +27,7 @@ if(isUserLoggedIn()){
             }
         }
         $messaggio.='è stato ricevuto, per conoscerne lo stato consulta la schermata "I miei ordini" nel tuo profilo.';
-        //sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
+        sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
         //manda notifica cliente di ordine ricevuto
         $dbh->insertUserNotification($_SESSION['idaccount'][0]['idaccount'], $messaggio, 'Conferma di ricevuto ordine');
         //diminuisci quantità dei prodotti nel carrello
@@ -36,7 +36,7 @@ if(isUserLoggedIn()){
         }
         //invia mail e notifica al venditore per dire che un acquisto è avvenuto
         $dbh->insertUserNotification($dbh->getSellerId()[0]['idaccount'], $notifica, 'Ordine ricevuto');
-        //sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount'], 'Conferma di ricevuto ordine', $messaggio);
+        sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount']), 'Conferma di ricevuto ordine', $messaggio);
         //rimuovi dal carrello del utente tutti i prodotti e inseriscili nella tabella degli ordini
         if(count($dbh->getLastOrderId()) != 0){
             $ordineid = (int)$dbh->getLastOrderId()[0]['idordine'] + 1;
@@ -55,9 +55,8 @@ if(isUserLoggedIn()){
             } else {
                 $prezzo += $prodotto['prezzo'] * $prodotto['quantita'];
             }
-            $dbh->insertProductInOrder($ordineid, $prodotto['quantita'], $prezzo, $prodotto['idprodotto']);
+            $dbh->insertProductInOrder($ordineid, $prodotto['quantita'], $prodotto['idprodotto'], $prezzo);
         }
-        //non esegue la parte di codice dove dovrebbe inserire i prodotti in prodotti in ordine, li inserisce con un prezzo sbagliato
     } else{
         header('Location: index.php');
     }
