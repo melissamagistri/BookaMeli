@@ -49,6 +49,14 @@ h2 {
   display: inline-flex;
 }
 
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
 .displayflexcenter {
   display: flex;
   justify-content: center;
@@ -84,6 +92,10 @@ h2 {
   text-align: inherit;
 }
 
+.initial-align {
+  text-align: initial;
+}
+
 .h1checkout {
   width: 20%;
   display: inline-block;
@@ -93,6 +105,18 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 100px;
+}
+
+.checkoutdivstyle {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.checkoutinput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .textareadimension {
