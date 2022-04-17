@@ -31,9 +31,9 @@ if(isUserLoggedIn()){
         //manda notifica cliente di ordine ricevuto
         $dbh->insertUserNotification($_SESSION['idaccount'][0]['idaccount'], $messaggio, 'Conferma di ricevuto ordine');
         //diminuisci quantità dei prodotti nel carrello
-        /*foreach($carrello as $prodotto){
+        foreach($carrello as $prodotto){
             $dbh->decreaseProductQuantity($prodotto['idprodotto'], $prodotto['quantita']);
-        }*/
+        }
         //invia mail e notifica al venditore per dire che un acquisto è avvenuto
         $dbh->insertUserNotification($dbh->getSellerId()[0]['idaccount'], $notifica, 'Ordine ricevuto');
         //sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount'], 'Conferma di ricevuto ordine', $messaggio);
@@ -51,13 +51,13 @@ if(isUserLoggedIn()){
             $dbh->removeProductFromCart($_SESSION['idaccount'][0]['idaccount'], $prodotto['idprodotto']);
             $prezzo = 0;
             if(!empty($prodotto['sconto'])){
-                $prezzo = round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP) * $prodotto['quantita'];
-            } else{
-                $prezzo = $prodotto['prezzo'] * $prodotto['quantita'];
+                $prezzo += round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP) * $prodotto['quantita'];
+            } else {
+                $prezzo += $prodotto['prezzo'] * $prodotto['quantita'];
             }
             $dbh->insertProductInOrder($ordineid, $prodotto['quantita'], $prezzo, $prodotto['idprodotto']);
         }
-        //non esegue la parte di codice dove dovrebbe inserire i prodotti in prodotti in ordine, li inserisce con un prezzo sbagliato, non diminuisce la quantità dei prodotti.
+        //non esegue la parte di codice dove dovrebbe inserire i prodotti in prodotti in ordine, li inserisce con un prezzo sbagliato
     } else{
         header('Location: index.php');
     }

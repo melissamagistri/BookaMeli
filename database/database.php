@@ -400,7 +400,7 @@ class database{
 
     //funzione che permette la diminuzione della quantità di un prodotto dopo che viene acquistato
     public function decreaseProductQuantity($idprodotto, $quantita){
-        $query = "UPDATE prodotti SET quantita = quantita - ? WHERE idprodotto = ?";
+        $query = "UPDATE prodotti SET quantità = quantità - ? WHERE idprodotto = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ii', $quantita, $idprodotto);
         
