@@ -26,17 +26,17 @@
 <body>
     <header> 
     <nav class='venditorenav'>
-        <ul style='text-align:left'>
-            <li style='display:inline'>
+        <ul>
+            <li>
                 <a href="#">Prodotti</a>
             </li>
-            <li style='display:inline'>
+            <li>
                 <a href="#">Categorie</a>
             </li>
-            <li style='display:inline'>
+            <li>
                 <a href="#">Notifiche</a>
             </li>
-            <li style='display:inline'>
+            <li>
                 <a href="#">Chats</a>
             </li>
         </ul>

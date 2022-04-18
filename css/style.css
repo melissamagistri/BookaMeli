@@ -4,6 +4,21 @@
   margin: 0;
 }
 
+.venditorenav > ul {
+  text-align: left;
+  padding: 20px;
+}
+.venditorenav > ul > li {
+  display: inline;
+  padding: 10px 0 10px 10px;
+}
+.venditorenav > ul > li > a:hover {
+  color: royalblue;
+}
+.venditorenav > ul > li > a {
+  color: black;
+}
+
 .p-padding {
   padding: 20px 0;
 }
