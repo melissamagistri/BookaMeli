@@ -78,10 +78,9 @@
 				</div>
 			</li>
 		</ul>
-		<footer>
+		<footer style="display: inline-flex">
 			<textarea placeholder="Type your message"></textarea>
-			<img src="" alt="">
-			<a href="#">Send</a>
+			<a style="margin-left: 0px;"href="#"><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></a>
 		</footer>
 </div>
 
