@@ -47,9 +47,7 @@ if(isUserLoggedIn()){
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     } else{
         //in questo caso l'utente è il venditore
-        $templateParams["titolo"] = "BookaMeli - Il tuo account";
-        $templateParams["nome"] = "template/venditore/account.php";
-        $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
+        header('Location: accountVenditore.php');
     }
 
 } else {

@@ -6,7 +6,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
     if(count($result) > 0){
         //caso in cui le credenziali siano di un account da attivare
         $dbh->activateAccount($_POST["email"]);
-        registerLoggedUser($result[0]["idaccount"]);
+        registerLoggedUser($dbh->getId($_POST['email']));
         header('Location: index.php');
     } else{
         //caso in cui le credenziali non siano di un account da attivare
