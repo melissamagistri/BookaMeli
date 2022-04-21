@@ -23,8 +23,20 @@
   padding: 20px 0;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .sectionpadding {
   padding: 30px 0;
+}
+
+.paddinglati {
+  padding: 0 30px;
+}
+
+.padding-bottom {
+  padding-bottom: 20px;
 }
 
 .textalingjustify {
@@ -134,9 +146,26 @@ h2 {
   justify-content: space-between;
 }
 
+.displayprod {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.ulprod {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
 .textareadimension {
   width: 50%;
   height: 150px;
+}
+
+.gap2 {
+  gap: 2em;
 }
 
 .hover {
@@ -452,7 +481,8 @@ body > main > form > ul > li:not(:last-of-type) > input {
 body > main > form > ul > li > input:not(input[type="submit"]),
 input[name="search"],
 .datiNome,
-.datiNumero {
+.datiNumero,
+.datiprodotto {
   width: 300px;
   height: 40px;
   font-size: large;
@@ -845,7 +875,7 @@ main footer a {
   display: inline-block;
 }
 
-.valutazione {
+.padding20 {
   padding: 20px;
 }
 
@@ -916,5 +946,18 @@ main footer a {
     display: flex;
     gap: 2em;
     padding: 40px;
+  }
+
+  .ulprod {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .datiprodotto {
+    width: 250px;
+    height: 40px;
+    font-size: large;
   }
 }

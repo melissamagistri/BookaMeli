@@ -26,7 +26,7 @@
                         <button class='bluebutton bottonerecensione'>Inserisci recensione</button>
                         <div class='recensione'>
                         <p>Scegli una valutazione al prodotto:</p>
-                        <div class="valutazione">
+                        <div class="padding20">
                             <input type="radio" id="star1" name="rate" value="1" />
                             <label for="star1" title="text">1 stella</label>
                             <input type="radio" id="star2" name="rate" value="2" />
@@ -55,7 +55,7 @@
                         <button class='bluebutton bottonerecensione'>Modifica recensione</button>
                         <div class='recensione'>
                         <p>Scegli una valutazione al prodotto:</p>
-                        <div class="valutazione">
+                        <div class="padding20">
                             <form action="">
                                 <input type="radio" id="star1" name="rate" value="1" class='<?php echo ($rec['voto']==1) ? 'radiobuttonattivo' : '' ?>'/>
                                 <label for="star1" title="text">1 stella</label>

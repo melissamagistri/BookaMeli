@@ -28,16 +28,16 @@
     <nav class='venditorenav'>
         <ul>
             <li>
-                <a href="#">Prodotti</a>
+                <a href="prodotto-venditore.php">Prodotti</a>
             </li>
             <li>
-                <a href="#">Categorie</a>
+                <a href="categorie.php">Categorie</a>
             </li>
             <li>
-                <a href="#">Notifiche</a>
+                <a href="notifiche-venditore.php">Notifiche</a>
             </li>
             <li>
-                <a href="#">Chats</a>
+                <a href="chats-venditore.php">Chats</a>
             </li>
         </ul>
     </nav>
