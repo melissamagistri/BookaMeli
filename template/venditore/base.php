@@ -28,7 +28,7 @@
     <nav class='venditorenav'>
         <ul>
             <li>
-                <a href="#">Prodotti</a>
+                <a href="prodottiVenditore.php">Prodotti</a>
             </li>
             <li>
                 <a href="#">Categorie</a>

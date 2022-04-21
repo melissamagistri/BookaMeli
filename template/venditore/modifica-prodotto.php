@@ -36,7 +36,10 @@
         <li>
             <label for="">Categoria:</label>
             <select name="" id="">
-                <option value=""></option>
+            <option value="nessunaCategoria">Nessuna Categoria</option>
+                <?php foreach($templateParams['categorie'] as $categoria):?>
+                    <option value=""><?php echo $categoria['nomecategoria']?></option>
+                <?php endforeach; ?>
             </select>
         </li>
 
