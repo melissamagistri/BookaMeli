@@ -726,33 +726,30 @@ body > main > section > div > ul > li > a:hover > img {
   margin-left: 7px;
 }
 
-main header {
+main .divheader {
   height: 110px;
   padding: 30px 20px 30px 40px;
 }
-main header > * {
+main .divheader > * {
   display: inline-block;
   vertical-align: top;
 }
-main header img:first-child {
+main .divheader img:first-child {
   border-radius: 50%;
 }
-main header img:last-child {
+main .divheader img:last-child {
   width: 24px;
   margin-top: 8px;
 }
-main header div {
+main .divheader div {
   margin-left: 10px;
   margin-right: 145px;
 }
-main header h2 {
+main .divheader p {
   font-size: 16px;
   margin-bottom: 5px;
-}
-main header h3 {
-  font-size: 14px;
-  font-weight: normal;
-  color: #7e818a;
+  font-weight: bold;
+  vertical-align: middle;
 }
 
 #chat {
@@ -767,11 +764,11 @@ main header h3 {
 #chat li {
   padding: 10px 30px;
 }
-#chat h2,
-#chat h3 {
+.chatElement {
   display: inline-block;
   font-size: 13px;
   font-weight: normal;
+  margin: 0 2px;
 }
 #chat h3 {
   color: #bbb;
@@ -857,6 +854,7 @@ main footer a {
 .contenutoNotifica {
   margin: 20px 0 0;
 }
+
 
 @media screen and (max-width: 768px) {
   body > header > div:nth-of-type(2) > ul > li:first-child > h3 {
