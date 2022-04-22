@@ -11,29 +11,33 @@
 		<ul id="chat">
 			<li class="you">
 				<div class="entete">
-					<span class="status green"></span>
 					<p class='chatElement'>Vincent</p>
 					<p class='chatElement'>10:12AM, Today</p>
 				</div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo liguoooooooooooo slvnmsdnvknsk nn eidide nnn crdrt ciao aio adi vjisdhcoi wiudhiu cjosdjcoisj eget dolor.</p>
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<p class='chatElement'>10:12AM, Today</p>
 					<p class='chatElement'>Vincent</p>
-					<span class="status blue"></span>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
-			
-		<footer style="display: inline-flex">
-			<textarea placeholder="Type your message"></textarea>
-			<a style="margin-left: 0px;"href="#"><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></a>
-		</footer>
-</div>
+			<li>
+				<div class='writeMessage'>
+					<form action="">
+					<textarea placeholder="Type your message"></textarea>
+					<button class='bluebutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" class='imgdatichat'></button>
+					</form>	
+				</div>
+			</li>
+		</ul>
+		
+		
+	</div>
 
 </section>
