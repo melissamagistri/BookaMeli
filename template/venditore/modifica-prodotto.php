@@ -37,16 +37,12 @@
 
         <li class="displayprod space-between">
             <label for="">Categoria:</label>
-<<<<<<< HEAD
-            <select class="datiprodotto" name="" id="">
-                <option value=""></option>
-=======
+
             <select name="" id="">
             <option value="nessunaCategoria">Nessuna Categoria</option>
                 <?php foreach($templateParams['categorie'] as $categoria):?>
                     <option value=""><?php echo $categoria['nomecategoria']?></option>
                 <?php endforeach; ?>
->>>>>>> 99ecb23e8d8c593a1050760c6827c55587744ec1
             </select>
         </li>
 

@@ -28,11 +28,7 @@
     <nav class='venditorenav'>
         <ul>
             <li>
-<<<<<<< HEAD
-                <a href="prodotto-venditore.php">Prodotti</a>
-=======
-                <a href="prodottiVenditore.php">Prodotti</a>
->>>>>>> 99ecb23e8d8c593a1050760c6827c55587744ec1
+            <a href="prodottiVenditore.php">Prodotti</a>
             </li>
             <li>
                 <a href="categorie.php">Categorie</a>

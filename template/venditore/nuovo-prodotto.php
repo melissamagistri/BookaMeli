@@ -35,12 +35,6 @@
             <input class="datiprodotto" type="text">
         </li>
 
-<<<<<<< HEAD
-        <li class="displayprod space-between"> 
-            <label for="">Categoria:</label>
-            <select class="datiprodotto" name="" id="">
-                <option value=""></option>
-=======
         <li>
             <label for="">Categoria:</label>
             <select name="" id="">
@@ -48,7 +42,6 @@
                 <?php foreach($templateParams['categorie'] as $categoria):?>
                     <option value=""><?php echo $categoria['nomecategoria']?></option>
                 <?php endforeach; ?>
->>>>>>> 99ecb23e8d8c593a1050760c6827c55587744ec1
             </select>
         </li>
 

@@ -779,38 +779,34 @@ main footer a {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-.padding20 {
-=======
-.divheader p{
+.divheader p {
   font-weight: bold;
   margin: 20px;
 }
 
-.divheader img{
+.divheader img {
   margin-left: 10px;
 }
 
-.entete{
+.entete {
   padding: 2px;
 }
 
-.entete > p:first-of-type{
+.entete > p:first-of-type {
   float: left;
 }
 
-.entete > p:nth-of-type(2){
+.entete > p:nth-of-type(2) {
   float: right;
 }
 
-.divheader{
+.divheader {
   display: inline-flex;
   width: 100%;
   padding: 20px 5px;
 }
 
-.valutazione {
->>>>>>> 99ecb23e8d8c593a1050760c6827c55587744ec1
+.padding20 {
   padding: 20px;
 }
 
@@ -823,32 +819,31 @@ main footer a {
   margin: 20px 0 0;
 }
 
-.divheader, #chat{
+.divheader,
+#chat {
   background-color: #d2d2d2;
-  margin:5px 0;
+  margin: 5px 0;
 }
 
-.you{
-  background-color:#6fbced;
+.you {
+  background-color: #6fbced;
   float: left;
   padding: 5px;
   border-radius: 5pt;
   width: 90%;
 }
 
-.me{
+.me {
   background-color: #58b666;
-  float:right;
+  float: right;
   padding: 5px;
   border-radius: 5pt;
   width: 90%;
 }
 
-.chatElement:first-of-type{
+.chatElement:first-of-type {
   font-weight: bold;
 }
-
-
 
 @media screen and (max-width: 768px) {
   body > header > div:nth-of-type(2) > ul > li:first-child > h3 {
