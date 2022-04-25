@@ -726,13 +726,80 @@ body > main > section > div > ul > li > a:hover > img {
   padding: 0;
 }
 
-/*css della chat da sistemare*/
+/*css della chat*/
 .status {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   display: inline-block;
   margin-right: 7px;
+}
+
+aside {
+  width: 260px;
+  height: 600px;
+  background-color: #3b3e49;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: top;
+}
+
+aside header {
+  padding: 30px 20px;
+}
+aside input {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 50px 0 20px;
+  background-color: #5e616a;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_search.png);
+  background-repeat: no-repeat;
+  background-position: 170px;
+  background-size: 40px;
+}
+aside input::placeholder {
+  color: #fff;
+}
+aside ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 690px;
+}
+aside li {
+  padding: 10px 0;
+}
+aside li:hover {
+  background-color: #5e616a;
+}
+h2,
+h3 {
+  margin: 0;
+}
+aside li img {
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 8px;
+}
+aside li div {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 12px;
+}
+aside li h2 {
+  font-size: 14px;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.chatwidth {
+  width: 80%;
 }
 
 .divheader p {
@@ -753,13 +820,12 @@ body > main > section > div > ul > li > a:hover > img {
   float: left;
 }
 
-#chat{
+#chat {
   background-color: #d2d2d2;
   height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-
 
 .divheader {
   display: inline-flex;
@@ -785,7 +851,7 @@ body > main > section > div > ul > li > a:hover > img {
 }
 
 .you {
-  background-color: #6fbced;
+  background-color: lightblue;
   float: left;
   padding: 5px;
   border-radius: 5pt;
@@ -793,7 +859,7 @@ body > main > section > div > ul > li > a:hover > img {
 }
 
 .me {
-  background-color: #58b666;
+  background-color: lightgreen;
   float: right;
   padding: 5px;
   border-radius: 5pt;
