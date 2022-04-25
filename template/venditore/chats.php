@@ -1,4 +1,4 @@
-<div id="container">
+<section id="container" class="flex">
 	<aside>
 		<header>
 			<input type="text" placeholder="search">
@@ -8,186 +8,132 @@
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status orange"></span>
-						offline
-					</h3>
 				</div>
 			</li>
 			<li>
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
 				</div>
 			</li>
 			<li>
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status orange"></span>
-						offline
-					</h3>
 				</div>
 			</li>
 			<li>
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
 				</div>
 			</li>
 			<li>
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status orange"></span>
-						offline
-					</h3>
 				</div>
 			</li>
 			<li>
 				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg" alt="">
 				<div>
 					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status green"></span>
-						online
-					</h3>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-					<h3>
-						<span class="status orange"></span>
-						offline
-					</h3>
 				</div>
 			</li>
 		</ul>
 	</aside>
-	<main>
-		<header>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+
+    
+    <div class="chatwidth">
+	
+		<div class='divheader'>
+			<img src="<?php echo UPLOAD_DIR.'user.png'?>" alt="user" class='imgdatichat'>
 			<div>
-				<h2>Chat with Vincent Porter</h2>
-				<h3>already 1902 messages</h3>
+				<p>Chat con il venditore</p>
 			</div>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png" alt="">
-		</header>
+		</div>
 		<ul id="chat">
 			<li class="you">
 				<div class="entete">
-					<span class="status green"></span>
-					<h2>Vincent</h2>
-					<h3>10:12AM, Today</h3>
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
-				<div class="triangle"></div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo liguoooooooooooo slvnmsdnvknsk nn eidide nnn crdrt ciao aio adi vjisdhcoi wiudhiu cjosdjcoisj eget dolor.</p>
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
-				<div class="triangle"></div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
-				<div class="triangle"></div>
 				<div class="message">
-					OK
-				</div>
-			</li>
-			<li class="you">
-				<div class="entete">
-					<span class="status green"></span>
-					<h2>Vincent</h2>
-					<h3>10:12AM, Today</h3>
-				</div>
-				<div class="triangle"></div>
-				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
-				<div class="triangle"></div>
 				<div class="message">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
 			<li class="me">
 				<div class="entete">
-					<h3>10:12AM, Today</h3>
-					<h2>Vincent</h2>
-					<span class="status blue"></span>
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
 				</div>
-				<div class="triangle"></div>
 				<div class="message">
-					OK
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
+				</div>
+				<div class="message">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
+				</div>
+				<div class="message">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+				</div>
+			</li>
+			<li class="me">
+				<div class="entete">
+					<p class='chatElement'>Vincent</p>
+					<p class='chatElement'>10:12AM, Today</p>
+				</div>
+				<div class="message">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
 		</ul>
-		<footer>
-			<textarea placeholder="Type your message"></textarea>
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
-			<a href="#">Send</a>
-		</footer>
-	</main>
-</div>
+		<div class='writeMessage'>
+			<form action="">
+				<textarea placeholder="Type your message"></textarea>
+				<button class='bluebutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" style='width:25px'></button>
+			</form>	
+		</div>
+		
+		
+	</div>
+
+</section>
