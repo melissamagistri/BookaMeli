@@ -163,6 +163,17 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione per prendere tutte le informazioni rigurdanti un determinato prodotto dato il suo id
+    public function getProductInfosbyId($idprodotto){
+        $query = "SELECT nome, descrizione, prezzo, sconto, foto, quantità, idprodotto FROM prodotti WHERE idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     //funzione per ottenere tutte le recensioni di un prodotto
     public function getProductReviews($idprodotto){
         $query = "SELECT voto, testorecensione, titolorecensione, nome, cognome FROM recensioni r, account a WHERE idprodotto = ? and r.idaccount = a.idaccount";
@@ -379,6 +390,16 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getProductCathegory($idprodotto){
+        $query = "SELECT nomecategoria from categorie where idprodotto = ? ";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     //funzione che ritorna tutte le notifiche di un user
     public function getUserNotifications($idaccount){
         $query = "SELECT idnotifica, contenuto, anteprima, letto, datanotifica, idaccount from notifiche where idaccount = ?";
@@ -459,8 +480,16 @@ class database{
         
         return $stmt->execute();
     }
-
     
+    //funzione che ritorna tutti i prodotti
+    public function getAllProducts(){
+        $query = "SELECT idprodotto, nome, descrizione, prezzo, sconto, dataUltimoAcquisto, quantità, foto, dataInserimento from prodotti order by nome";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 
 }
 
