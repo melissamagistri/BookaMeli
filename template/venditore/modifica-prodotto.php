@@ -1,8 +1,7 @@
 <section class="paddinglati">
     
         <div>
-            <img class="imgcarrello"
-            src="<?php echo UPLOAD_DIR.'onepiece1.png'?>" alt="">
+            <img class="imgcarrello" src="<?php echo UPLOAD_DIR.$templateParams['infoProdotto']['foto']?>" alt="">
             <form class="padding-bottom"  action="/action_page.php">
             <label for="img">Seleziona immagine:</label>
             <input type="file" id="img" name="img" accept="image/*">

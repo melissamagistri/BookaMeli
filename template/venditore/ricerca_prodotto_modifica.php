@@ -1,7 +1,7 @@
 <section>
     <div class="wrap">
        <div class="search">
-         <form action="listaprodotti.php" method="get">
+         <form action="" method="get">
             <select name="cat" id="cat" class='select'>
               <option value="tutte le categorie">Tutte le categorie</option>
               <?php for($i=0;$i<count($templateParams['categorie']);$i++):?>

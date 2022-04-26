@@ -6,7 +6,7 @@ $templateParams["nome"] = "template/venditore/ricerca_prodotto_modifica.php";
 $templateParams['categorie'] = $dbh->getCathegories();
 if(isset($_GET['cerca']) && isset($_GET['cat'])){
     if($_GET['cerca'] == '' && $_GET['cat'] == 'tutte le categorie'){
-        header('Location: index.php');
+        header('Location: ricerca_prodotto_modifica.php');
     } else if($_GET['cerca'] != '' && $_GET['cat'] != 'tutte le categorie'){
         //ricerca per prodotto e categoria
         $templateParams['prodotti'] = $dbh->getProducts($_GET['cerca'], $_GET['cat'], 1);
