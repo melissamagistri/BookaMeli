@@ -9,6 +9,9 @@
         </div>
         <ul class="ulprod">
         <li class="displayprod space-between">
+            <p id='idprodotto'>ID Prodotto: <?php echo $templateParams['infoProdotto']['idprodotto']?></p>    
+        </li>
+        <li class="displayprod space-between">
             <label for="">Titolo:</label>
             <input class="datiprodotto" type="text" value='<?php echo $templateParams['infoProdotto']['nome']?>'>
         </li>
@@ -42,6 +45,7 @@
                 <?php endforeach; ?>
             </select>
         </li>
+        
 
         <li class="displayflexcenter gap2">
             <button class="bluebutton" id='elimina'>Elimina prodotto</button>

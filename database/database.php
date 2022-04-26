@@ -491,6 +491,18 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che elimina il prodotto da tutte le tabelle
+    public function removeProduct($idprodotto){
+        $query = 'DELETE FROM avvisi WHERE idprodotto = ?;
+                    DELETE FROM categorie WHERE idprodotto = ?;
+                    DELETE FROM prodottinelcarrello WHERE idprodotto = ?;
+                    DELETE FROM recensioni WHERE idprodotto = ?;
+                    DELETE FROM prodotti WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        return $stmt->execute();
+    }
+
 }
 
 ?>
