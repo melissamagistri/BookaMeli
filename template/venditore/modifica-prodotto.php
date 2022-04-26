@@ -3,8 +3,8 @@
         <div>
             <img class="imgcarrello" src="<?php echo UPLOAD_DIR.$templateParams['infoProdotto']['foto']?>" alt="">
             <form class="padding-bottom"  action="/action_page.php">
-            <label for="img">Seleziona immagine:</label>
-            <input type="file" id="img" name="img" accept="image/*">
+                <label for="img">Modifica immagine:</label>
+                <input type="file" id="img" name="img" accept="image/*">
             </form>
         </div>
         <ul class="ulprod">
@@ -44,8 +44,8 @@
         </li>
 
         <li class="displayflexcenter gap2">
-            <button class="bluebutton">Elimina prodotto</button>
-            <button class="bluebutton">Salva Modifiche</button>
+            <button class="bluebutton" id='elimina'>Elimina prodotto</button>
+            <button class="bluebutton" id='salva'>Salva Modifiche</button>
         </li>
     </ul>
 </section>
