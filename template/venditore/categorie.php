@@ -2,20 +2,20 @@
     <h1 class="padding20">Scegli quale azione vuoi eseguire: </h1>
 
 <div class="padding20 displayflexcenter gap2">
-    <button class="bluebutton" onclick="window.location.href='modifica-categoria.php'">Elimina Categoria</button>
-    <button class="bluebutton" onclick="window.location.href='nuova-categoria.php'">Aggiungi nuova Categoria</button>
+    <button class="bluebutton" id="aggiungicategoria">Elimina Categoria</button>
+    <button class="bluebutton" id="eliminacategoria">Aggiungi nuova Categoria</button>
 </div>
 
-<div class="aggiungicategoria">
-    <input type="text">
-    <button>Aggiungi</button>
+<div class="aggiungicategoria categoria">
+    <input class="input" type="text">
+    <button class="bluebutton" >Aggiungi</button>
 </div>
 
-<div>
-    <select name="" id="">
-        <option value=""></option>
+<div class="eliminacategoria categoria">
+    <select class="select selectdim" name="" id="">
+        <option value="nessunacategoria">Nessuna Categoria</option>
     </select>
-    <button>Elimina</button>
+    <button class="bluebutton">Elimina</button>
 </div>
 
 </section>

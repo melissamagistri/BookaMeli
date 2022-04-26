@@ -482,7 +482,8 @@ body > main > form > ul > li > input:not(input[type="submit"]),
 input[name="search"],
 .datiNome,
 .datiNumero,
-.datiprodotto {
+.datiprodott,
+input {
   width: 300px;
   height: 40px;
   font-size: large;
@@ -870,6 +871,11 @@ aside li h2 {
   font-weight: bold;
 }
 
+.selectdim {
+  width: 300px;
+  height: 40px;
+}
+
 @media screen and (max-width: 768px) {
   body > header > div:nth-of-type(2) > ul > li:first-child > h3 {
     text-align: left;
@@ -941,5 +947,12 @@ aside li h2 {
     width: 250px;
     height: 40px;
     font-size: large;
+  }
+
+  .categoria {
+    display: inline-flex;
+    align-items: center;
+    gap: 4em;
+    padding-left: 10%;
   }
 }
