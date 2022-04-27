@@ -503,6 +503,7 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che permette l'inserimento di un prodotto all'interno del database
     public function insertProduct($nome, $descrizione, $prezzo, $sconto, $quantità, $foto){
         $query = 'INSERT INTO prodotti(nome, descrizione, prezzo, sconto, quantità, foto) VALUES(?,?,?,?,?,?)';
         $stmt = $this->db->prepare($query);
@@ -510,6 +511,7 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che permette di inserire all'interno della tabella categoria la categoria a cui appartiene un prodotto
     public function insertProductInCathegory($idprodotto, $nomeCategoria){
         $query = 'INSERT INTO categorie(nomecategoria, idprodotto) VALUES(?,?)';
         $stmt = $this->db->prepare($query);

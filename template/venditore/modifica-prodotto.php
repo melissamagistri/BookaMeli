@@ -1,15 +1,10 @@
 <section class="paddinglati">
-    
-        <div>
-            <img class="imgcarrello" src="<?php echo UPLOAD_DIR.$templateParams['infoProdotto']['foto']?>" alt="">
-            <form class="padding-bottom"  action="/action_page.php">
-                <label for="img">Modifica immagine:</label>
-                <input type="file" id="img" name="img" accept="image/*">
-            </form>
-        </div>
+    <form action="azioni-modifica-prodotto.php" method="POST" enctype="multipart/form-data">
         <ul class="ulprod">
-        <li class="displayprod space-between">
-            <p id='idprodotto'>ID Prodotto: <?php echo $templateParams['infoProdotto']['idprodotto']?></p>    
+        <li>
+            <img class="imgcarrello" src="<?php echo UPLOAD_DIR.$templateParams['infoProdotto']['foto']?>" alt="">
+            <label for="img">Modifica immagine:</label>
+            <input type="file" id="img" name="img">
         </li>
         <li class="displayprod space-between">
             <label for="">Titolo:</label>
@@ -48,8 +43,10 @@
         
 
         <li class="displayflexcenter gap2">
-            <button class="bluebutton" id='elimina'>Elimina prodotto</button>
-            <button class="bluebutton" id='salva'>Salva Modifiche</button>
+            <button class="bluebutton" name='azione' value = 1>Elimina prodotto</button>
+            <button class="bluebutton" name='azione' value = 0>Salva Modifiche</button>
         </li>
     </ul>
+    <input name="idprodotto" type="hidden" value="<?php echo $templateParams['infoProdotto']['idprodotto']?>" />
+    </form>
 </section>

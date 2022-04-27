@@ -5,17 +5,13 @@ $templateParams["titolo"] = "BookaMeli - Categorie";
 $templateParams["nome"] = var_dump($_POST);
 $templateParams["js"] = array("js/jquery-3.4.1.min.js", "js/categorie.js");
 
-/*
     //caso in cui voglio eliminare il prodotto
     if($_POST['azione'] == 1){
-        $prodotto = $_POST['azione']['prodotto'];
-        $str = explode(' ', $prodotto);
-        $idprodotto = $str[count($str)-1];
-        $dbh->removeProduct($idprodotto);
-        echo 'Il prodotto è stato eliminato con successo';
+        $dbh->removeProduct((int)$_POST['idprodotto']);
+        header('Location: accountVenditore.php');
     }
 
-    //caso in cui voglio modificare il prodotto
+ /*   //caso in cui voglio modificare il prodotto
     else if($_POST['azione'] == 0){
         echo 'modifica';
     }
