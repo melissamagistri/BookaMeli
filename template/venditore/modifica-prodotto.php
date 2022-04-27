@@ -13,7 +13,7 @@
 
         <li class="displayprod space-between">
             <label for="">Descrizione:</label>
-            <input class="datiprodotto" type="text" value='<?php echo $templateParams['infoProdotto']['descrizione']?>'>
+            <input class="datiprodotto descriptiontextarea" type="text" value='<?php echo $templateParams['infoProdotto']['descrizione']?>'>
         </li>
 
         <li class="displayprod space-between">
@@ -33,7 +33,7 @@
         <li class="displayprod space-between">
             <label for="">Categoria:</label>
 
-            <select name="" id="">
+            <select class="selectdim" name="" id="">
             <option value="nessunaCategoria" <?php echo ($templateParams['categoriaProdotto']['nomecategoria'] == 'Nessuna Categoria') ? 'selected' : ''?>>Nessuna Categoria</option>
                 <?php foreach($templateParams['categorie'] as $categoria):?>
                     <option value="" <?php echo ($templateParams['categoriaProdotto']['nomecategoria'] == $categoria['nomecategoria']) ? 'selected' : ''?>><?php echo $categoria['nomecategoria']?></option>

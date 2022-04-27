@@ -37,7 +37,7 @@
                 <a href="notifiche-venditore.php">Notifiche</a>
             </li>
             <li>
-                <a href="chats-venditore.php">Chats</a>
+                <a href="lista-chat.php">Chats</a>
             </li>
         </ul>
     </nav>

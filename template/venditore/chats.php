@@ -1,50 +1,5 @@
-<section id="container" class="flex">
-	<aside>
-		<header>
-			<input type="text" placeholder="search">
-		</header>
-		<ul>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-			<li>
-				<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg" alt="">
-				<div>
-					<h2>Prénom Nom</h2>
-				</div>
-			</li>
-		</ul>
-	</aside>
-
-    
-    <div class="chatwidth">
+<section id="container" class="flex" style="justify-content: center;">
+	<div class="chatwidth">
 	
 		<div class='divheader'>
 			<img src="<?php echo UPLOAD_DIR.'user.png'?>" alt="user" class='imgdatichat'>
@@ -126,10 +81,10 @@
 				</div>
 			</li>
 		</ul>
-		<div class='writeMessage'>
-			<form action="">
-				<textarea placeholder="Type your message"></textarea>
-				<button class='bluebutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" style='width:25px'></button>
+		<div class='writeMessage divsendmess'>
+			<form action="" class="width100">
+				<textarea class="textareachat" placeholder="Type your message"></textarea>
+				<button class='bluebutton minibutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" style='width:25px'></button>
 			</form>	
 		</div>
 		
