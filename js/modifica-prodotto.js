@@ -14,7 +14,7 @@ $(document).ready(function(){
     $('#salva').click(function(){
         var azione = {
             azione: 0,
-            prodotto: $('#idprodotto').value()
+            prodotto: $('#idprodotto').text()
         }
         $.post('azioni-modifica-prodotto.php',{
             azione: azione

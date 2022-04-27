@@ -503,6 +503,20 @@ class database{
         return $stmt->execute();
     }
 
+    public function insertProduct($nome, $descrizione, $prezzo, $sconto, $quantità, $foto){
+        $query = 'INSERT INTO prodotti(nome, descrizione, prezzo, sconto, quantità, foto) VALUES(?,?,?,?,?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssdiis',$nome,$descrizione, $prezzo, $sconto, $quantità, $foto);
+        return $stmt->execute();
+    }
+
+    public function insertProductInCathegory($idprodotto, $nomeCategoria){
+        $query = 'INSERT INTO categorie(nomecategoria, idprodotto) VALUES(?,?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('si',$nomeCategoria,$idprodotto);
+        return $stmt->execute();
+    }
+
 }
 
 ?>
