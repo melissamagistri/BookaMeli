@@ -37,7 +37,7 @@ $templateParams["js"] = array("js/jquery-3.4.1.min.js", "js/categorie.js");
                         header("Location: nuovo-prodotto.php?errore=numeri"); 
                     }
                     if($_POST['categoria'] != 'nessunaCategoria'){
-                        $idprodotto = $dbh->getProductIdFromName($_POST['titolo']);
+                        $idprodotto = $dbh->getProductIdFromName($_POST['titolo'])[0]['idprodotto'];
                         $dbh->insertProductInCathegory($idprodotto, $_POST['categoria']);
                     }
                     header('Location: accountVenditore.php');
