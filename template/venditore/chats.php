@@ -1,4 +1,4 @@
-<section id="container" class="flex" style="justify-content: center;">
+<section id="container" class="displayflexcenter">
 	<div class="chatwidth">
 	
 		<div class='divheader'>
@@ -84,7 +84,7 @@
 		<div class='writeMessage divsendmess'>
 			<form action="" class="width100">
 				<textarea class="textareachat" placeholder="Type your message"></textarea>
-				<button class='bluebutton minibutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" style='width:25px'></button>
+				<button class='bluebutton minibutton'><img class="img25" src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
 			</form>	
 		</div>
 		

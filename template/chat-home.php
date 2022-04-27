@@ -1,6 +1,6 @@
-<section>
+<section class="displayflexcenter">
     
-    <div id="container">
+    <div id="container" class="chatwidth">
 	
 		<div class='divheader'>
 			<img src="<?php echo UPLOAD_DIR.'user.png'?>" alt="user" class='imgdatichat'>
@@ -101,9 +101,9 @@
 			</li>
 		</ul>
 		<div class='writeMessage'>
-			<form action="">
-				<textarea placeholder="Type your message"></textarea>
-				<button class='bluebutton'><img src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio" style='width:25px'></button>
+			<form class="width100" action="">
+				<textarea class="textareachat" placeholder="Type your message"></textarea>
+				<button class='bluebutton minibutton'><img class="img25"src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
 			</form>	
 		</div>
 		

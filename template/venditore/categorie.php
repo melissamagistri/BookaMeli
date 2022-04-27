@@ -6,12 +6,12 @@
     <button class="bluebutton" id="eliminacategoria">Aggiungi nuova Categoria</button>
 </div>
 
-<div class="aggiungicategoria categoria">
+<div class="aggiungicategoria categoria gap2 displayflexcenter ">
     <input class="input" type="text">
     <button class="bluebutton" >Aggiungi</button>
 </div>
 
-<div class="eliminacategoria categoria">
+<div class="eliminacategoria categoria gap2 displayflexcenter ">
     <select class="select selectdim" name="" id="">
         <option value="nessunacategoria">Nessuna Categoria</option>
     </select>
