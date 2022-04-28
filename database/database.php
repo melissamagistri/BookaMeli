@@ -402,7 +402,7 @@ class database{
 
     //funzione che ritorna tutte le notifiche di un user
     public function getUserNotifications($idaccount){
-        $query = "SELECT idnotifica, contenuto, anteprima, letto, datanotifica, idaccount from notifiche where idaccount = ? order by datanotifica desc";
+        $query = "SELECT idnotifica, contenuto, anteprima, datanotifica, idaccount from notifiche where idaccount = ? order by datanotifica desc";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idaccount);
         $stmt->execute();
@@ -520,7 +520,7 @@ class database{
     }
 
     public function getSellerNotificationsOrders(){
-        $query = "SELECT  idnotifica, contenuto, anteprima, letto, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Ordine ricevuto' order by datanotifica desc ";
+        $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Ordine ricevuto' order by datanotifica desc ";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -529,7 +529,7 @@ class database{
     }
 
     public function getSellerNotificationsProducts(){
-        $query = "SELECT  idnotifica, contenuto, anteprima, letto, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Prodotto terminato' or anteprima = 'Prodotto non venduto da tempo' order by datanotifica desc ";
+        $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Prodotto terminato' or anteprima = 'Prodotto non venduto da tempo' order by datanotifica desc ";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
