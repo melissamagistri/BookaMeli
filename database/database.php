@@ -291,7 +291,7 @@ class database{
 
     //funziona che ritorna tutte le categorie presenti nel db
     public function getCathegories(){
-        $query = "SELECT nomecategoria from categorie group by nomecategoria";
+        $query = "SELECT nomecategoria from listacategorie";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -519,6 +519,7 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che restituisce le notifiche del venditore riguardanti gli ordini
     public function getSellerNotificationsOrders(){
         $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Ordine ricevuto' order by datanotifica desc ";
         $stmt = $this->db->prepare($query);
@@ -528,6 +529,7 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che restituisce le notifiche del venditore riguardanti gli ordini
     public function getSellerNotificationsProducts(){
         $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Prodotto terminato' or anteprima = 'Prodotto non venduto da tempo' order by datanotifica desc ";
         $stmt = $this->db->prepare($query);
@@ -536,6 +538,15 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    //funzione che inserisce una nuova categoria nel database
+    public function insertCathegory($nomecategoria){
+        $query = 'INSERT INTO listacategorie(nomecategoria) VALUES(?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s',$nomeCategoria);
+        return $stmt->execute();
+    }
+
 }
 
 ?>
