@@ -2,11 +2,12 @@
 
 <div class="custom-select">
 
-    <select name="" id="">
-        <option value="">Ordini</option>
-        <option value="">Prodotti</option>
+    <select name="selettoreNotifiche" id="selettoreNotifiche">
+        <option value="ordini">Ordini</option>
+        <option value="prodotti">Prodotti</option>
+        <option value="notifiche" selected>Tutte le notifiche</option>
     </select>
-    <ul>
+    <ul id='listaNotifiche'>
         <?php foreach($templateParams['notifiche'] as $notifica):?>
             <li class="border-radius notifica">
                 <div class="">

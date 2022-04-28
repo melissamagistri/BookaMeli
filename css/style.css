@@ -843,6 +843,10 @@ h3 {
   resize: none;
 }
 
+.nonLetto{
+  background-color: gray;
+}
+
 @media screen and (max-width: 768px) {
   body > header > div:nth-of-type(2) > ul > li:first-child > h3 {
     text-align: left;
