@@ -27,7 +27,7 @@ $(document).ready(function () {
   $('#elimina').click(function(){
     azione={
       azione: 2,
-      categoria: $('#categoria').val()
+      categoria: $('option:selected').val()
     }
     $.post('gestione-categorie-venditore.php',{
       azione: azione,

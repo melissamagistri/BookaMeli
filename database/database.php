@@ -547,6 +547,22 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che rimuove una data categoria dal database
+    public function deleteCathegory($nomecategoria){
+        $query = 'DELETE FROM listacategorie WHERE nomecategoria = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $nomecategoria);
+        return $stmt->execute();
+    }
+
+    //funzione che elima le tuple che associano una data categoria ai prodotti
+    public function deleteCathegoryProduct($nomecategoria){
+        $query = 'DELETE FROM categorie WHERE nomecategoria = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('s', $nomecategoria);
+        return $stmt->execute();
+    }
+
 }
 
 ?>
