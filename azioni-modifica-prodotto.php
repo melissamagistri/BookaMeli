@@ -7,7 +7,12 @@ $templateParams["js"] = array("js/jquery-3.4.1.min.js", "js/categorie.js");
 
     //caso in cui voglio eliminare il prodotto
     if($_POST['azione'] == 1){
-        $dbh->removeProduct((int)$_POST['idprodotto']);
+        $idprodotto = $_POST['idprodotto'];
+        $dbh->removeProductFromAdvice($idprodotto);
+        $dbh->removeProductFromCathegory($idprodotto);
+        $dbh->removeProductFromProductInCart($idprodotto);
+        $dbh->removeProductFromReviews($idprodotto);
+        $dbh->removeProductFromProducts($idprodotto);
         header('Location: accountVenditore.php');
     }
 

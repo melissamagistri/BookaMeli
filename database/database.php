@@ -495,15 +495,15 @@ class database{
     public function removeProductFromAdvice ($idprodotto){
         $query = 'DELETE FROM avvisi WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        $stmt->bind_param('i', $idprodotto);
         return $stmt->execute();
     }
 
     //funzione che elimina il prodotto dalle categorie
-    public function removeProductFromCathegory(){
+    public function removeProductFromCathegory($idprodotto){
         $query = 'DELETE FROM categorie WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        $stmt->bind_param('i', $idprodotto);
         return $stmt->execute();
     }
 
@@ -511,7 +511,7 @@ class database{
     public function removeProductFromProductInCart($idprodotto){
         $query = 'DELETE FROM prodottinelcarrello WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        $stmt->bind_param('i', $idprodotto);
         return $stmt->execute();
     }
 
@@ -519,7 +519,7 @@ class database{
     public function removeProductFromReviews($idprodotto){
         $query = 'DELETE FROM recensioni WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        $stmt->bind_param('i', $idprodotto);
         return $stmt->execute();
     }
 
@@ -527,7 +527,7 @@ class database{
     public function removeProductFromProducts($idprodotto){
         $query = 'DELETE FROM prodotti WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        $stmt->bind_param('i', $idprodotto);
         return $stmt->execute();
     }
 
