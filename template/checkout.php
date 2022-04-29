@@ -5,7 +5,7 @@
 <section class="border sectioncheckout">
     
     <div class="checkoutdivstyle">
-        <div>
+        <div class="padding-bottom30">
             <h1 class="h1checkout">1.Informazioni Personali</h1>
         </div>
         <div>
@@ -15,7 +15,7 @@
     </div>
             
     <div class="checkoutdivstyle">
-        <div class="inline-block">               
+        <div class="inline-block padding-bottom30">               
             <p>Nome:  <?php echo $templateParams["userinfo"][0]["nome"]; ?> </p>
             <p>Cognome: <?php echo $templateParams["userinfo"][0]["cognome"]; ?></p>
             <p>Email: <?php echo $templateParams["userinfo"][0]["email"]; ?> </p>

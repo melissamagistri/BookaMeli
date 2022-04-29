@@ -78,14 +78,18 @@
                                 <?php $totale = ($totale - ((float)$prodotto['prezzo'] * (int)$val)) + (round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP) * $val)?>
                             <?php endif; ?> </div>
                             </li>
-                            <li><button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>
+                            <li>
+                                <button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>
                         </ul>
                     </div>
                 </li>
                 <?php endforeach;?>
                 <li> <p class='totale'>Totale: <?php echo $totale.'€' ?></p></li>
                 <li>
-                <button class="bluebutton" onclick="window.location.href='checkout.php';">Procedi al checkout</button>
+                    <form action="checkout.php">
+                        <button class="bluebutton">Procedi al checkout</button>
+                    </form>
+                
                 </li>
                 <?php else:?>
                     <li><p>Non hai nessun prodotto nel carrello.</p></li>
@@ -94,7 +98,11 @@
             <?php else:?>
                 <ul>
                     <li><p>Per visualizzare il carrello devi accedere al tuo account</p></li>
-                    <li><button class="bluebutton" onclick="window.location.href='login.php';">Accedi o Registrati</button></li>
+                    <li>
+                        <form action="login.php">
+                            <button class="bluebutton">Accedi o Registrati</button>
+                        </form>
+                    </li>
                 </ul>
             <?php endif; ?>
                 

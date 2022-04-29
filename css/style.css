@@ -39,6 +39,10 @@
   padding-bottom: 20px;
 }
 
+.padding-bottom30 {
+  padding-bottom: 30px;
+}
+
 .textalingjustify {
   text-align: justify;
 }
@@ -134,10 +138,15 @@ h2 {
   gap: 100px;
 }
 
-.checkoutdivstyle {
+.checkoutdivinput {
   display: flex;
   flex-direction: column;
   gap: 4em;
+}
+
+.checkoutdivstyle {
+  display: flex;
+  flex-direction: column;
 }
 
 .checkoutinput {
@@ -485,7 +494,7 @@ input[name="search"],
 .datiNome,
 .datiNumero,
 .datiprodott,
-input {
+.inputcat {
   width: 300px;
   height: 40px;
   font-size: large;
@@ -797,7 +806,7 @@ h3 {
 
 .divlistaProdotti {
   background-color: lightblue;
-  margin: 0 10px 5px;
+  margin: 0 10px 15px;
 }
 
 .contenutoNotifica {
@@ -843,7 +852,7 @@ h3 {
   resize: none;
 }
 
-.nonLetto{
+.nonLetto {
   background-color: gray;
 }
 

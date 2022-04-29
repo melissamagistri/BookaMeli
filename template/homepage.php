@@ -46,7 +46,7 @@
 </div>
 
 <?php if(count($templateParams['prodottinuovi'])!=0):?>
-<section class='novita'>
+<section class='novita sectionpadding'>
   <h2>Novità</h2>
   
   <div>
@@ -86,7 +86,7 @@
 </section>
 <?php endif;?>
 
-<section>
+<section class="sectionpadding">
 <?php if(count($templateParams['prodottipopolari'])!=0):?>
 <section class='popolari'>
   <h2>Popolari</h2>

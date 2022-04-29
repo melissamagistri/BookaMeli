@@ -13,9 +13,9 @@
                 <p>Ordine numero: <?php echo $templateParams['ordini'][$i]['idordine']?></p>
                 <img src="<?php echo UPLOAD_DIR.'arrowDown.png'?>" alt="slider">
             </div>
-            <ul class='listaProdotti'>
+            <ul class='listaProdotti' style="padding-bottom: 15px; text-align: center">
                 <?php foreach($templateParams['prodottiinOrdine'][$i] as $ordine):?>
-                <li>
+                <li style="padding-bottom: 15px;">
                     <a class='image' href="prodotto.php?foto=<?php echo $ordine['foto']?> ">
                         <img class='imgordini' src="<?php echo UPLOAD_DIR.$ordine['foto']?>" alt="<?php echo $ordine['nome']?>">
                         <div><?php echo $ordine['nome']?></div>
@@ -38,8 +38,8 @@
                             <input type="radio" id="star5" name="rate" value="5" />
                             <label for="star5" title="text">5 stelle</label>
                         </div>
-                        <div class="search">
-                            <label for="titolo">Titolo:</label>
+                        <div class="search" style="padding-bottom: 15px">
+                            <label style="align-self: center;" for="titolo">Titolo:</label>
                             <input type="text" placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
                             <textarea class="textareadimension"  placeholder="Inserisci la tua recensione" id='recensione'></textarea> 
                             <button class="bluebutton invia">Invia</button>
@@ -70,7 +70,7 @@
                             </form>
                         </div>
                         <div class="search">
-                            <label for="titolo">Titolo:</label>
+                            <label style="align-self: center;" for="titolo">Titolo:</label>
                             <input type="text" value='<?php echo $rec['titolorecensione']?>' placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
                             <textarea class="textareadimension" placeholder="Inserisci la tua recensione" id='recensione'><?php echo $rec['testorecensione']?></textarea> 
                             <button class="bluebutton invia">Invia</button>

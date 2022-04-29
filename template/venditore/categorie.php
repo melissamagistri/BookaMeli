@@ -7,7 +7,7 @@
 </div>
 
 <div class="aggiungicategoria categoria gap2 displayflexcenter ">
-    <input class="input" id='categoria' type="text">
+    <input class="inputcat" id='categoria' type="text">
     <button class="bluebutton" id='aggiungi' >Aggiungi</button>
 </div>
 <div class="eliminacategoria categoria gap2 displayflexcenter ">
