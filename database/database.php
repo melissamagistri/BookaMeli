@@ -492,12 +492,40 @@ class database{
     }
 
     //funzione che elimina il prodotto da tutte le tabelle
-    public function removeProduct($idprodotto){
-        $query = 'DELETE FROM avvisi WHERE idprodotto = ?;
-                    DELETE FROM categorie WHERE idprodotto = ?;
-                    DELETE FROM prodottinelcarrello WHERE idprodotto = ?;
-                    DELETE FROM recensioni WHERE idprodotto = ?;
-                    DELETE FROM prodotti WHERE idprodotto = ?';
+    public function removeProductFromAdvice ($idprodotto){
+        $query = 'DELETE FROM avvisi WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        return $stmt->execute();
+    }
+
+    //funzione che elimina il prodotto dalle categorie
+    public function removeProductFromCathegory(){
+        $query = 'DELETE FROM categorie WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        return $stmt->execute();
+    }
+
+    //funzione che elimina il prodotto dal carrello degli user
+    public function removeProductFromProductInCart($idprodotto){
+        $query = 'DELETE FROM prodottinelcarrello WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        return $stmt->execute();
+    }
+
+    //funzione che elimina il prodotto dal carrello dalle recensioni
+    public function removeProductFromReviews($idprodotto){
+        $query = 'DELETE FROM recensioni WHERE idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
+        return $stmt->execute();
+    }
+
+    //funzione che elimina il prodotto dal carrello di prodotti
+    public function removeProductFromProducts($idprodotto){
+        $query = 'DELETE FROM prodotti WHERE idprodotto = ?';
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('iiiii', $idprodotto, $idprodotto, $idprodotto, $idprodotto, $idprodotto);
         return $stmt->execute();
