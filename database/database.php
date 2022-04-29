@@ -571,7 +571,7 @@ class database{
     public function insertCathegory($nomecategoria){
         $query = 'INSERT INTO listacategorie(nomecategoria) VALUES(?)';
         $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s',$nomeCategoria);
+        $stmt->bind_param('s',$nomecategoria);
         return $stmt->execute();
     }
 
