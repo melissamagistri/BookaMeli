@@ -583,11 +583,24 @@ class database{
         return $stmt->execute();
     }
 
-    //funzione che elima le tuple che associano una data categoria ai prodotti
+    //funzione che elimina le tuple che associano una data categoria ai prodotti
     public function deleteCathegoryProduct($nomecategoria){
         $query = 'DELETE FROM categorie WHERE nomecategoria = ?';
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $nomecategoria);
+        return $stmt->execute();
+    }
+
+    //funzione che prende i dati delle chat e le ordina per data
+    public function getChatsInfo($idaccount){
+        $query = 'SELECT m.testo, m.data, a.nome, a.cognome FROM chats c, messaggi m,  account a
+                    WHERE  m.idchat = c.idchat
+                    AND c.idaccount = ? 
+                    AND a.idaccount = ?
+                    GROUP BY c.idchat
+                    ORDER BY m.data DESC';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii', $idchats, $idchats);
         return $stmt->execute();
     }
 

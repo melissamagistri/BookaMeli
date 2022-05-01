@@ -16,11 +16,12 @@ $templateParams["js"] = array("js/jquery-3.4.1.min.js", "js/categorie.js");
         header('Location: accountVenditore.php');
     }
 
- /*   //caso in cui voglio modificare il prodotto
+     //caso in cui voglio modificare il prodotto
     else if($_POST['azione'] == 0){
-        echo 'modifica';
+        
     }
-*/
+
+
     //caso in cui si vuole inserire un nuovo prodotto
     if($_POST['azione']==2){
         if(!empty($_POST['titolo']) && !empty($_POST['prezzo']) && 
@@ -48,7 +49,7 @@ $templateParams["js"] = array("js/jquery-3.4.1.min.js", "js/categorie.js");
                 
             }else{
                 header("Location: nuovo-prodotto.php?errore=campiNonCompilati");
-            }    
+            } 
     } 
 require_once 'template/venditore/base.php';
 

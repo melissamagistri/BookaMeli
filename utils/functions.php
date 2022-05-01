@@ -72,7 +72,7 @@ require 'PHPMailer/src/SMTP.php';
         $imageName = basename($image["name"]);
         $fullPath = $path.$imageName;
         
-        $maxKB = 500;
+        $maxKB = 1000;
         $acceptedExtensions = array("jpg", "jpeg", "png", "gif");
         $result = 0;
         $msg = "";

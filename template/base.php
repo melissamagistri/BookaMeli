@@ -79,7 +79,10 @@
                             <?php endif; ?> </div>
                             </li>
                             <li>
-                                <button onclick="window.location.href='?rimuovi=<?php echo $prodotto['idprodotto']?>';" class="bluebutton">Rimuovi</button></li>
+                                <form action="index.php" method="get">
+                                    <button name="rimuovi" value="<?php echo $prodotto['idprodotto']?>" class="bluebutton">Rimuovi</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </li>

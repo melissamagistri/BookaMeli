@@ -56,7 +56,6 @@
                         <div class='recensione'>
                         <p>Scegli una valutazione al prodotto:</p>
                         <div class="padding20">
-                            <form action="">
                                 <input type="radio" id="star1" name="rate" value="1" class='<?php echo ($rec['voto']==1) ? 'radiobuttonattivo' : '' ?>'/>
                                 <label for="star1" title="text">1 stella</label>
                                 <input type="radio" id="star2" name="rate" value="2" class='<?php echo ($rec['voto']==2) ? 'radiobuttonattivo' : '' ?>'/>
@@ -67,7 +66,6 @@
                                 <label for="star4" title="text">4 stelle</label>
                                 <input type="radio" id="star5" name="rate" value="5" class='<?php echo ($rec['voto']==5) ? 'radiobuttonattivo' : '' ?>'/>
                                 <label for="star5" title="text">5 stelle</label>
-                            </form>
                         </div>
                         <div class="search">
                             <label class="align-self" for="titolo">Titolo:</label>

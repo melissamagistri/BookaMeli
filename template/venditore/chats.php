@@ -26,60 +26,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
 				</div>
 			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
+			
 		</ul>
 		<div class='writeMessage divsendmess'>
 			<form action="" class="width100">

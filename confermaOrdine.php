@@ -27,7 +27,8 @@ if(isUserLoggedIn()){
             }
         }
         $messaggio.='è stato ricevuto, per conoscerne lo stato consulta la schermata "I miei ordini" nel tuo profilo.';
-        sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
+        $templateParams["account"] = $dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'];
+        //sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
         //manda notifica cliente di ordine ricevuto
         $dbh->insertUserNotification($_SESSION['idaccount'][0]['idaccount'], $messaggio, 'Conferma di ricevuto ordine');
         //diminuisci quantità dei prodotti nel carrello

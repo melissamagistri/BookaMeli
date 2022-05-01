@@ -27,7 +27,7 @@
                 <?php
                     if($prodotto['quantità']==0):
                 ?> 
-                <button class="bluebutton" >Notificami della disponibilita</button>
+                <button class="bluebutton" >Notificami della disponibilità</button>
                 <?php
                     else:
                 ?> 
