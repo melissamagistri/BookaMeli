@@ -36,7 +36,7 @@ $(document).ready(function () {
         titolorecensione: $(".selected + div > div > #titolo").val(),
         testorecensione: $(".selected + div > div > #recensione").val(),
         voto: $(
-          '.selected + div > div > form > input[name="rate"]:checked'
+          '.selected + div > div > input[name="rate"]:checked'
         ).val(),
       };
       $.post(
