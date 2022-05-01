@@ -312,7 +312,7 @@ class database{
 
     //funzione che ritorna tutti gli ordini fatti da un utente
     public function getOrders($idaccount){
-        $query = "SELECT idordine, stato, prezzo, dataordine from ordini where idaccount = ?";
+        $query = "SELECT idordine, stato, prezzo, dataordine from ordini where idaccount = ? order by dataordine desc";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i',$idaccount);
         $stmt->execute();
