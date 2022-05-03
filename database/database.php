@@ -604,6 +604,38 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che aggiorna i dati relativi a un prodotto, se value = 1 non inserisco una nuova foto, se value = 0 inserisco nuova foto
+    public function updateProductInformation($idprodotto, $titolo, $descrizione, $prezzo, $sconto, $quantità, $foto, $value){
+        if($value == 1){
+            $query = "UPDATE prodotti SET nome = ?, descrizione = ?, prezzo = ?, sconto = ?, quantità = ? WHERE idprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ssdiii', $titolo, $descrizione, $prezzo, $sconto, $quantità, $idprodotto);
+        } else if ($value == 0){
+            $query = "UPDATE prodotti SET nome = ?, descrizione = ?, prezzo = ?, sconto = ?, quantità = ?, foto = ? WHERE idprodotto = ?";
+            $stmt = $this->db->prepare($query);
+            $stmt->bind_param('ssdiisi', $titolo, $descrizione, $prezzo, $sconto, $quantità, $foto, $idprodotto);
+        }
+        
+        return $stmt->execute();
+    }
+
+    //funzione che aggiorna la categoria di un prodotto
+    public function updateCathegoryProduct($idprodotto, $nomecategoria){
+        $query = "UPDATE categorie SET nomecategoria = ? WHERE idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('si', $nomecategoria,  $idprodotto);
+        return $stmt->execute();
+    }
+
+    public function getUsersWaitingForAdvice($idprodotto){
+        $query = "SELECT  idaccount from avvisi where idprodotto = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
