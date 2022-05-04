@@ -1,16 +1,18 @@
 <section class="displayflexcenter">
-    <p><?php var_dump( $templateParams['info']);?></p>
     <ul class="custom-select">
-    <?php for($i=0;$i<count($templateParams['info']);$i++):?>
-        <?php for($i=0;$i<count($templateParams['messaggi']);$i++):?>
+    <?php if(count($templateParams['chats']) >0):?>
+    <?php foreach($templateParams['chats'] as $chat):?>
         <li class="border-radius">
-            <a href="chats-venditore.php?">
-                <p><?php echo $templateParams['info'][$i]['nome'];?></p>
-                <p><?php echo $templateParams['info'][$i]['cognome'];?></p>
-                <p><?php echo $templateParams['messaggi'][$i]['testo'];?></p>
+            <a href="chats-venditore.php?idchat=<?php echo $chat['idchat']?>">
+                <p><?php echo 'IDChat: '.$chat['idchat']?></p>
+                <p><?php echo 'Nome user: '.$chat['nome'].' '.$chat['cognome'];?></p>
+                <p><?php echo $chat['datamessaggio'] ?></p>
+                <p><?php echo ($chat['venditore'] == 0) ? $chat['nome'].': '.$chat['testo'] : 'Tu'.': '.$chat['testo'];?></p>
             </a>
         </li>
-        <?php endfor;?>
-    <?php endfor;?>
+        <?php endforeach;?>
+    <?php else:?>
+        <p>Non hai ancora nessuna chat.</p>
+    <?php endif; ?>
     </ul>
 </section>

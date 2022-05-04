@@ -675,6 +675,17 @@ class database{
         $stmt->bind_param('sii',$messaggio, $idchat, $venditore);
         return $stmt->execute();
     }
+
+    //funzione che ritorna tutte le chat del venditore
+    public function getSellerChats(){
+        $query = "SELECT m.testo, m.idchat, m.datamessaggio, m.venditore, a.nome, a.cognome from messaggi m, chats c, account a where idmessaggio in
+                    (select max(idmessaggio) from messaggi group by idchat) and m.idchat = c.idchat and c.idaccount = a.idaccount ORDER BY datamessaggio DESC";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>
