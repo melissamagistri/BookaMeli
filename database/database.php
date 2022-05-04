@@ -640,7 +640,7 @@ class database{
 
     //funzione che ritorna tutti i messaggi della chat di un user dato
     public function getUserMessages($idaccount){
-        $query = "SELECT  idmessaggio, testo, c.idchat, datamessaggio, venditore from messaggi m, chats c where c.idaccount = ? and c.idchat = m.idchat order by datamessaggio";
+        $query = "SELECT  idmessaggio, testo, c.idchat, datamessaggio, venditore from messaggi m, chats c where c.idaccount = ? and c.idchat = m.idchat order by datamessaggio desc";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i', $idaccount);
         $stmt->execute();
