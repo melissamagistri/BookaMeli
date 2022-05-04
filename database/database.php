@@ -649,6 +649,17 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che ritorna tutti i messaggi di una chat passata
+    public function getSellerMessages($idchat){
+        $query = "SELECT  idmessaggio, testo, idchat, datamessaggio, venditore from messaggi where idchat = ? order by datamessaggio desc";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idchat);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     //funzione che permette l'inserimento della chat di un user nella lista delle chat
     public function insertUserChat($idaccount){
         $query = 'INSERT INTO chats(idaccount) VALUES(?)';

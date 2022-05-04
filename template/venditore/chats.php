@@ -4,34 +4,30 @@
 		<div class='divheader'>
 			<img src="<?php echo UPLOAD_DIR.'user.png'?>" alt="user" class='imgdatichat'>
 			<div>
-				<p>Chat con il venditore</p>
+				<p>Chat con il cliente</p>
 			</div>
 		</div>
 		<ul id="chat">
-			<li class="you">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo liguoooooooooooo slvnmsdnvknsk nn eidide nnn crdrt ciao aio adi vjisdhcoi wiudhiu cjosdjcoisj eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-			
+		<?php if(count($templateParams['messaggi']) == 0):?>
+				<li>Non sono ancora presenti messaggi.</li>
+			<?php else: ?>
+			<?php foreach($templateParams['messaggi'] as $messaggio):?>
+				<li class="<?php echo ($messaggio['venditore'] == 1) ? 'me' : 'you'?>">
+					<div class="entete">
+						<p class='chatElement'><?php echo ($messaggio['venditore'] == 1) ? 'Tu' : 'Cliente'?></p>
+						<p class='chatElement'><?php echo $messaggio['datamessaggio']?></p>
+					</div>
+					<div class="message">
+						<p><?php echo $messaggio['testo']?></p>
+					</div>
+				</li>
+			<?php endforeach; ?>
+			<?php endif; ?>
 		</ul>
 		<div class='writeMessage divsendmess'>
-			<form action="" class="width100">
-				<textarea class="textareachat" placeholder="Type your message"></textarea>
-				<button class='bluebutton minibutton'><img class="img25" src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
+			<form action="" onsubmit='return false' class="width100">
+				<textarea class="textareachat" id='messaggio' placeholder="Type your message"></textarea>
+				<button id='invia' class='bluebutton minibutton'><img class="img25" src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
 			</form>	
 		</div>
 		
