@@ -638,6 +638,7 @@ class database{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    //funzione che ritorna tutti i messaggi della chat di un user dato
     public function getUserMessages($idaccount){
         $query = "SELECT  idmessaggio, testo, c.idchat, datamessaggio, venditore from messaggi m, chats c where c.idaccount = ? and c.idchat = m.idchat order by datamessaggio";
         $stmt = $this->db->prepare($query);
@@ -646,6 +647,33 @@ class database{
         $result = $stmt->get_result();
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che permette l'inserimento della chat di un user nella lista delle chat
+    public function insertUserChat($idaccount){
+        $query = 'INSERT INTO chats(idaccount) VALUES(?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i',$idaccount);
+        return $stmt->execute();
+    }
+
+    //funzione che restituisce l'id della chat relativa ad un utente
+    public function getUserChat($idaccount){
+        $query = "SELECT  idchat from chats where idaccount = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che inserisce un messaggio nella chat, se venditore = 0, il messaggio è dell'user, se no del venditore
+    public function insertMessageInChat($idchat,$messaggio, $venditore){
+        $query = 'INSERT INTO messaggi(testo, idchat, venditore) VALUES(?, ?, ?)';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sii',$messaggio, $idchat, $venditore);
+        return $stmt->execute();
     }
 }
 

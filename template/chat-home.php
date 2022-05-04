@@ -26,8 +26,8 @@
 			<?php endif; ?>
 		</ul>
 		<div class='writeMessage'>
-			<form class="width100" action="">
-				<textarea class="textareachat" placeholder="Type your message"></textarea>
+			<form class="width100" action="" id='messageform' method='post'>
+				<textarea class="textareachat" name='messaggio'placeholder="Type your message"></textarea>
 				<button class='bluebutton minibutton'><img class="img25"src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
 			</form>	
 		</div>
