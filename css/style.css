@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.maringbottom {
+  margin-bottom: 10px;
+}
+
 .venditorenav > ul {
   text-align: left;
   padding: 20px;
@@ -15,7 +19,8 @@
 .venditorenav > ul > li > a:hover {
   color: royalblue;
 }
-.venditorenav > ul > li > a {
+.venditorenav > ul > li > a,
+.black {
   color: black;
 }
 

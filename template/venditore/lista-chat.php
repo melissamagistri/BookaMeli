@@ -2,8 +2,8 @@
     <ul class="custom-select">
     <?php if(count($templateParams['chats']) >0):?>
     <?php foreach($templateParams['chats'] as $chat):?>
-        <li class="border-radius">
-            <a href="chats-venditore.php?idchat=<?php echo $chat['idchat']?>">
+        <li class="border-radius maringbottom">
+            <a class="textcenter black" href="chats-venditore.php?idchat=<?php echo $chat['idchat']?>">
                 <p><?php echo 'IDChat: '.$chat['idchat']?></p>
                 <p><?php echo 'Nome user: '.$chat['nome'].' '.$chat['cognome'];?></p>
                 <p><?php echo $chat['datamessaggio'] ?></p>
