@@ -627,10 +627,21 @@ class database{
         return $stmt->execute();
     }
 
+    //funzione che ritorna tutti gli utenti in lista di attesa per un prodotto
     public function getUsersWaitingForAdvice($idprodotto){
         $query = "SELECT  idaccount from avvisi where idprodotto = ?";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i', $idprodotto);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getUserMessages($idaccount){
+        $query = "SELECT  idmessaggio, testo, c.idchat, datamessaggio, venditore from messaggi m, chats c where c.idaccount = ? and c.idchat = m.idchat order by datamessaggio";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idaccount);
         $stmt->execute();
         $result = $stmt->get_result();
 

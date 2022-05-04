@@ -9,25 +9,21 @@
 			</div>
 		</div>
 		<ul id="chat">
-			<li class="you">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo liguoooooooooooo slvnmsdnvknsk nn eidide nnn crdrt ciao aio adi vjisdhcoi wiudhiu cjosdjcoisj eget dolor.</p>
-				</div>
-			</li>
-			<li class="me">
-				<div class="entete">
-					<p class='chatElement'>Vincent</p>
-					<p class='chatElement'>10:12AM, Today</p>
-				</div>
-				<div class="message">
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-				</div>
-			</li>
-	
+			<?php if(count($templateParams['messaggi']) == 0):?>
+				<li>Non sono ancora presenti messaggi.</li>
+			<?php else: ?>
+			<?php foreach($templateParams['messaggi'] as $messaggio):?>
+				<li class="<?php echo ($messaggio['venditore'] == 0) ? 'me' : 'you'?>">
+					<div class="entete">
+						<p class='chatElement'><?php echo ($messaggio['venditore'] == 0) ? 'Tu' : 'Venditore'?></p>
+						<p class='chatElement'><?php echo $messaggio['datamessaggio']?></p>
+					</div>
+					<div class="message">
+						<p><?php echo $messaggio['testo']?></p>
+					</div>
+				</li>
+			<?php endforeach; ?>
+			<?php endif; ?>
 		</ul>
 		<div class='writeMessage'>
 			<form class="width100" action="">
