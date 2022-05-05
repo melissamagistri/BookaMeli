@@ -49,7 +49,7 @@ else if($_POST['azione'] == 0){
                                         $contenuto='Il prodotto '.$nomeProdotto.', che avevi messo nella lista di cui avvisarti è tornato disponibile.';
                                         $anteprima= 'Nuovamente disponibile il prodotto '.$nomeProdotto.'.';
                                         $dbh->insertUserNotification($user['idaccount'], $contenuto, $anteprima);
-                                        $emailDestinatario = $dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0];
+                                        $emailDestinatario = $dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'];
                                         sendMail($emailDestinatario, $anteprima, $contenuto);
                             }
                         }
@@ -90,7 +90,7 @@ else if($_POST['azione'] == 0){
                                 $contenuto='Il prodotto '.$nomeProdotto.', che avevi messo nella lista di cui avvisarti è tornato disponibile.';
                                 $anteprima= 'Nuovamente disponibile il prodotto '.$nomeProdotto.'.';
                                 $dbh->insertUserNotification($user['idaccount'], $contenuto, $anteprima);
-                                $emailDestinatario = $dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0];
+                                $emailDestinatario = $dbh->getUserEmail($user['idaccount'])[0]['email'];
                                 sendMail($emailDestinatario, $anteprima, $contenuto);
                     }
                 }

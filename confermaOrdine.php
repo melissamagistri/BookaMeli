@@ -23,12 +23,12 @@ if(isUserLoggedIn()){
                 $dbh->removeProductFromCarts($prodotto['idprodotto']);
                 $mess = 'Il prodotto: '.$prodotto['nome'].' è terminato.';
                 $dbh->insertUserNotification($dbh->getSellerId()[0]['idaccount'], $mess, 'Prodotto terminato');
-                //sendMail($dbh->getSellerId()[0]['idaccount'], 'Prodotto terminato', $mess);
+                sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount'])[0]['email'], 'Prodotto terminato', $mess);
             }
         }
         $messaggio.='è stato ricevuto, per conoscerne lo stato consulta la schermata "I miei ordini" nel tuo profilo.';
         $templateParams["account"] = $dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'];
-        //sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
+        sendMail($dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
         //manda notifica cliente di ordine ricevuto
         $dbh->insertUserNotification($_SESSION['idaccount'][0]['idaccount'], $messaggio, 'Conferma di ricevuto ordine');
         //diminuisci quantità dei prodotti nel carrello
@@ -37,7 +37,7 @@ if(isUserLoggedIn()){
         }
         //invia mail e notifica al venditore per dire che un acquisto è avvenuto
         $dbh->insertUserNotification($dbh->getSellerId()[0]['idaccount'], $notifica, 'Ordine ricevuto');
-        sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount']), 'Conferma di ricevuto ordine', $messaggio);
+        sendMail($dbh->getUserEmail($dbh->getSellerId()[0]['idaccount'])[0]['email'], 'Conferma di ricevuto ordine', $messaggio);
         //rimuovi dal carrello del utente tutti i prodotti e inseriscili nella tabella degli ordini
         if(count($dbh->getLastOrderId()) != 0){
             $ordineid = (int)$dbh->getLastOrderId()[0]['idordine'] + 1;
