@@ -1,6 +1,7 @@
 <?php
 require_once 'util.php';
 
+if(isUserLoggedIn()){
 $templateParams["titolo"] = "BookaMeli - Aggiungi prodotto";
 $templateParams["nome"] = "template/venditore/nuovo-prodotto.php";
 $templateParams["js"] = array("js/jquery-3.4.1.min.js");
@@ -14,6 +15,9 @@ if(isset($_GET['errore'])){
         $templateParams['errore'] = "Il prezzo o lo sconto o la quantità inseriti contengono errori.";
     }
 
+}
+} else {
+    header("Location: login.php");
 }
 
 

@@ -1,6 +1,6 @@
 <?php
 require_once('util.php');
-
+if(isUserLoggedIn()){
     if(isset($_POST['azione'])){
         if($_POST['azione'] == 'ordini'){
             $notifiche = $dbh->getSellerNotificationsOrders();
@@ -32,4 +32,7 @@ require_once('util.php');
             }
         echo $result;
     }
+} else {
+    header("Location: login.php");
+}
 ?>

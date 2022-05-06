@@ -56,7 +56,7 @@
           <div>
           <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
             <img class="imghome <?php echo $templateParams['prodottinuovi'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>">
-            <div><?php echo $templateParams['prodottinuovi'][$i]['nome']?></div>
+            <p><?php echo $templateParams['prodottinuovi'][$i]['nome']?></p>
           </a>
 
           <div class="display-inlineflex">
@@ -100,7 +100,7 @@
         <a class="flex-a"
             href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">
           <img class="imghome <?php echo $templateParams['prodottipopolari'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottipopolari'][$i]['nome']?>">
-          <div><?php echo $templateParams['prodottipopolari'][$i]['nome']?></div>
+          <p><?php echo $templateParams['prodottipopolari'][$i]['nome']?></p>
         </a>
         <div class="display-inlineflex">
           <p style='<?php echo ($templateParams['prodottipopolari'][$i]['sconto']!=0) ? 'text-decoration: line-through; font-size:10px' : ''?>'><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
