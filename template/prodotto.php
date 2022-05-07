@@ -26,13 +26,16 @@
                 <div>
                 <?php
                     if($prodotto['quantità']==0):
-                ?> 
-                <button class="bluebutton" >Notificami della disponibilità</button>
+                ?>
+                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                    <button class="bluebutton" name='notifica' value='<?php echo $prodotto['idprodotto']?>' >Notificami della disponibilità</button>
+                </form>
                 <?php
                     else:
                 ?> 
-                <button class="bluebutton">Aggiungi al carrello</button>
-
+                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                    <button class="bluebutton" name='carrello' value='<?php echo $prodotto['idprodotto']?>'>Aggiungi al carrello</button>
+                </form>
                 <?php
                     endif;
                 ?> 
