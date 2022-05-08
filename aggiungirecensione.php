@@ -20,7 +20,7 @@ if(isUserLoggedIn()){
         $idprodotto = $dbh->getProductIdFromName($_POST['elimina']['nomeprodotto'])[0]['idprodotto'];
         $dbh->deleteReview($_SESSION['idaccount'][0]['idaccount'], $idprodotto);
     }
-} else {
+} else {
     header("Location:login.php");
 }
 ?>

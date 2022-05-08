@@ -559,7 +559,7 @@ class database{
 
     //funzione che restituisce le notifiche del venditore riguardanti gli ordini
     public function getSellerNotificationsProducts(){
-        $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and anteprima = 'Prodotto terminato' or anteprima = 'Prodotto non venduto da tempo' order by datanotifica desc ";
+        $query = "SELECT  idnotifica, contenuto, anteprima, datanotifica from notifiche n, account a where n.idaccount = a.idaccount and a.venditore = 1 and (anteprima = 'Prodotto terminato' or anteprima = 'Prodotto non venduto da tempo') order by datanotifica desc ";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -691,6 +691,16 @@ class database{
     public function getSellerChats(){
         $query = "SELECT m.testo, m.idchat, m.datamessaggio, m.venditore, a.nome, a.cognome from messaggi m, chats c, account a where idmessaggio in
                     (select max(idmessaggio) from messaggi group by idchat) and m.idchat = c.idchat and c.idaccount = a.idaccount ORDER BY datamessaggio DESC";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che ritorna tutti i prodotti che non sono stati venduti da piu di 3 mesi
+    public function getProductNotSelled(){
+        $query = "SELECT  idprodotto, nome from prodotti where dataUltimoAcquisto < DATE_ADD(NOW(), INTERVAL -3 MONTH)";
         $stmt = $this->db->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();

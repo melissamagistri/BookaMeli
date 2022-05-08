@@ -47,6 +47,12 @@ if(isUserLoggedIn()){
         $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     } else{
         //in questo caso l'utente è il venditore
+        $prodotti = $dbh->getProductNotSelled();
+        foreach($prodotti as $prodotto){
+            $anteprima = 'Prodotto non venduto da tempo';
+            $contenuto = 'Il prodotto: '.$prodotto['nome'].' non è stato venduto da piu di 3 mesi';
+            $dbh->insertUserNotification($dbh->getSellerId()[0]['idaccount'], $contenuto, $anteprima);
+        }
         header('Location: accountVenditore.php');
     }
 
