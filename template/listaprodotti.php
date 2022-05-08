@@ -23,9 +23,13 @@
 
                 <div>
                     <?php if($templateParams['prodotti'][$i]['quantità']==0):?>
-                    <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilita</button>
+                        <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
+                            <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodotti'][$i]['idprodotto']?>'>Notificami della disponibilita</button>
+                        </form>
                     <?php else:?> 
-                    <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodotti'][$i]['idprodotto'] : 'login.php'?>';">Aggiungi al carrello</button>
+                    <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
+                        <button class="bluebutton" name='carrello' value='<?php echo $templateParams['prodotti'][$i]['idprodotto']?>'>Aggiungi al carrello</button>
+                    </form>
                     <?php endif;?>
                 </div>
                 

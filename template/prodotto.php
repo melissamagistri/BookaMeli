@@ -8,7 +8,7 @@
         ?>
 <section class="displayproduct">
     <div class="displaycenter">
-        <img class="imgprodotto" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
+        <img class="imgprodotto <?php echo $prodotto['quantità']==0 ? 'imgGray': ''?>" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
     </div>
 
     <div class="displaycenter displayproduct flexcolumn width50 inlineprodotto">

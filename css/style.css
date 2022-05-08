@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.textlinethrough{
+  text-decoration:line-through;
+}
+
 .maringbottom {
   margin-bottom: 10px;
 }
