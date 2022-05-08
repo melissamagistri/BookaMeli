@@ -69,11 +69,13 @@
           
           <div>
           <?php if($templateParams['prodottinuovi'][$i]['quantità']==0):?> 
-            
-              <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilita</button>
+            <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
+              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottinuovi'][$i]['idprodotto']?>'>Notificami della disponibilita</button>
+            </form>
           <?php else:?> 
-            
-              <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottinuovi'][$i]['idprodotto'] : 'login.php'?>';" >Aggiungi al carrello</button>
+            <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
+              <button class="bluebutton" name='carrello' value='<?php echo $templateParams['prodottinuovi'][$i]['idprodotto']?>'>Aggiungi al carrello</button>
+            </form>
           <?php endif;?> 
           </div>
           </div>
@@ -103,7 +105,7 @@
           <p><?php echo $templateParams['prodottipopolari'][$i]['nome']?></p>
         </a>
         <div class="display-inlineflex">
-          <p style='<?php echo ($templateParams['prodottipopolari'][$i]['sconto']!=0) ? 'text-decoration: line-through; font-size:10px' : ''?>'><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
+          <p class='<?php echo ($templateParams['prodottipopolari'][$i]['sconto']!=0) ? 'textlinethroughfontsize' : ''?>'><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
           <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
                   <p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
             <?php endif; ?>
@@ -113,10 +115,14 @@
           <?php
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
         ?>
-            <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?notifica='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>';">Notificami della disponibilità</button>
-        <?php else:?> 
-            <button class="bluebutton" onclick="window.location.href='<?php echo isUserLoggedIn() ? '?carrello='.$templateParams['prodottipopolari'][$i]['idprodotto'] : 'login.php'?>';">Aggiungi al carrello</button>
-        <?php endif;?> 
+           <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottipopolari'][$i]['idprodotto']?>'>Notificami della disponibilita</button>
+            </form>
+          <?php else:?> 
+          <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+              <button class="bluebutton" name='carrello' value='<?php echo $templateParams['prodottipopolari'][$i]['idprodotto']?>'>Aggiungi al carrello</button>
+            </form>
+          <?php endif;?> 
           </div>
         </div>
         </li>

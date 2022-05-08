@@ -8,7 +8,11 @@
         ?>
 <section class="displayproduct">
     <div class="displaycenter">
+<<<<<<< HEAD
         <img class="imgprodotto <?php echo $prodotto['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
+=======
+        <img class="imgprodotto <?php echo $prodotto['quantità']==0 ? 'imgGray': ''?>" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
+>>>>>>> dde37f0214564499ad6d285bfd6d69d08dd56914
     </div>
 
     <div class="displaycenter displayproduct flexcolumn width50 inlineprodotto">
@@ -26,13 +30,16 @@
                 <div>
                 <?php
                     if($prodotto['quantità']==0):
-                ?> 
-                <button class="bluebutton" >Notificami della disponibilità</button>
+                ?>
+                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                    <button class="bluebutton" name='notifica' value='<?php echo $prodotto['idprodotto']?>' >Notificami della disponibilità</button>
+                </form>
                 <?php
                     else:
                 ?> 
-                <button class="bluebutton">Aggiungi al carrello</button>
-
+                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                    <button class="bluebutton" name='carrello' value='<?php echo $prodotto['idprodotto']?>'>Aggiungi al carrello</button>
+                </form>
                 <?php
                     endif;
                 ?> 

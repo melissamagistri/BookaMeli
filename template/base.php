@@ -71,7 +71,7 @@
                             </li>
                             <li>
                                 <div class="displayflex">
-                                <p style=' <?php echo ($prodotto['sconto'] != 0) ? "text-decoration:line-through;" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
+                                <p class=' <?php echo ($prodotto['sconto'] != 0) ? "textlinethrough" : '';?>'> <?php echo $prodotto['prezzo'].'€'?></p>
                                 <?php $totale = $totale + ((float)$prodotto['prezzo'] * (int)$val)?>
                             <?php if($prodotto['sconto'] != 0):?>
                                 <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
