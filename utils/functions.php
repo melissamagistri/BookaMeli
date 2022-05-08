@@ -65,7 +65,7 @@ require 'PHPMailer/src/SMTP.php';
 
     //funzione che restituisce un array contenente le immagini che si vedono scorrere nella homepage
     function getHomeImages(){
-        return array("schermata_op.png","ciao.png");
+        return array("schermata_op.png","schermata_shonen.png");
     }
 
     function uploadImage($path, $image){

@@ -1,7 +1,7 @@
 <?php
 require_once 'util.php';
 
-if(isUserLoggedIn()){
+if(isUserLoggedIn() && $_SESSION['idaccount'][0]['idaccount'] == $dbh->getSellerId()[0]['idaccount']){
     $templateParams["titolo"] = "BookaMeli - Prodotti";
     $templateParams["nome"] = "template/venditore/ricerca_prodotto_modifica.php";
     $templateParams['categorie'] = $dbh->getCathegories();

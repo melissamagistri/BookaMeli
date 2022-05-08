@@ -1,6 +1,6 @@
 <?php
 require_once('util.php');
-if(isUserLoggedIn()){
+if(isUserLoggedIn() && $_SESSION['idaccount'][0]['idaccount'] == $dbh->getSellerId()[0]['idaccount']){
     if(isset($_POST['azione'])){
         if($_POST['azione'] == 'ordini'){
             $notifiche = $dbh->getSellerNotificationsOrders();

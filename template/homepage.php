@@ -22,9 +22,7 @@
       for($i=0;$i<count($templateParams["immaginihome"]);$i++):
   ?>
   <div>
-    <a href="<?php echo $templateParams["immaginihome"][$i]; ?>">
-      <img class="imghomescroll" src="<?php echo UPLOAD_DIR.$templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["immaginihome"][$i]; ?>">
-    </a>
+    <img class="imghomescroll" src="<?php echo UPLOAD_DIR.$templateParams["immaginihome"][$i]; ?>" alt="<?php echo $templateParams["immaginihome"][$i]; ?>">
   </div>
       
   <?php
