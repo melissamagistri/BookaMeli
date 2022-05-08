@@ -4,13 +4,13 @@
   margin: 0;
 }
 
-.textlinethrough{
-  text-decoration:line-through;
+.textlinethrough {
+  text-decoration: line-through;
 }
 
-.textlinethroughfontsize{
-  text-decoration: line-through; 
-  font-size:10px;
+.textlinethroughfontsize {
+  text-decoration: line-through;
+  font-size: 10px;
 }
 
 .maringbottom {
@@ -47,6 +47,10 @@
 
 .paddinglati {
   padding: 0 30px;
+}
+
+.padding-bottom5 {
+  padding-bottom: 5px;
 }
 
 .padding-bottom {

@@ -55,10 +55,10 @@
             <ul>
                 <?php for($i=0;$i<count($templateParams["recensioni"]);$i++): ?>
                 <li>
-                    <p><?php echo $templateParams['recensioni'][$i]['nome'].' '.$templateParams['recensioni'][$i]['cognome'] ?></p>
-                    <p><?php echo $templateParams['recensioni'][$i]['voto'] ?> su 5</p>
-                    <p class="boldtext"><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
-                    <p><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
+                    <p class="padding-bottom5"><?php echo $templateParams['recensioni'][$i]['nome'].' '.$templateParams['recensioni'][$i]['cognome'] ?></p>
+                    <p class="padding-bottom5"><?php echo $templateParams['recensioni'][$i]['voto'] ?> su 5</p>
+                    <p class="padding-bottom5 boldtext"><?php echo $templateParams['recensioni'][$i]['titolorecensione']?></p>
+                    <p class="padding-bottom5"><?php echo $templateParams['recensioni'][$i]['testorecensione'] ?></p>
                 </li>
                 <?php endfor; ?>
             </ul>
