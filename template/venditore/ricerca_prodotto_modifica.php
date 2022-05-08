@@ -33,7 +33,7 @@
                     <div><?php echo $templateParams['prodotti'][$i]['nome']?></div>
                 </a>
                 <div class="display-inlineflex">
-                    <p style='<?php echo ($templateParams['prodotti'][$i]['sconto']!=0) ? 'text-decoration: line-through; font-size:10px' : ''?>'><?php echo $templateParams['prodotti'][$i]['prezzo'].'€'?></p>
+                    <p class='<?php echo ($templateParams['prodotti'][$i]['sconto']!=0) ? '.textlinethroughfontsize' : ''?>'><?php echo $templateParams['prodotti'][$i]['prezzo'].'€'?></p>
                     <?php if($templateParams['prodotti'][$i]['sconto']!=0): ?>
                     <p><?php echo round($templateParams['prodotti'][$i]['prezzo'] - ($templateParams['prodotti'][$i]['prezzo']*$templateParams['prodotti'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
                     <?php endif; ?>

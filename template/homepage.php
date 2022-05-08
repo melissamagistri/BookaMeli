@@ -105,7 +105,7 @@
           <p><?php echo $templateParams['prodottipopolari'][$i]['nome']?></p>
         </a>
         <div class="display-inlineflex">
-          <p style='<?php echo ($templateParams['prodottipopolari'][$i]['sconto']!=0) ? 'text-decoration: line-through; font-size:10px' : ''?>'><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
+          <p class='<?php echo ($templateParams['prodottipopolari'][$i]['sconto']!=0) ? 'textlinethroughfontsize' : ''?>'><?php echo $templateParams['prodottipopolari'][$i]['prezzo'].'€'?></p>
           <?php if($templateParams['prodottipopolari'][$i]['sconto']!=0): ?>
                   <p><?php echo round($templateParams['prodottipopolari'][$i]['prezzo'] - ($templateParams['prodottipopolari'][$i]['prezzo']*$templateParams['prodottipopolari'][$i]['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
             <?php endif; ?>
