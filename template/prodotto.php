@@ -8,39 +8,39 @@
         ?>
 <section class="displayproduct">
     <div class="displaycenter">
-        <img class="imgprodotto <?php echo $prodotto['quantità']==0 ? 'imgGray': ''?>" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
+        <img class="imgprodotto <?php echo $prodotto['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$prodotto['foto']?>" alt="<?php echo $prodotto['foto'] ?>">
     </div>
 
     <div class="displaycenter displayproduct flexcolumn width50 inlineprodotto">
         
-            <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
-            <p class="textalingjustify"><?php echo $prodotto['descrizione']?></p>
-            <div class="inlineflex">
-                <p><?php echo $prodotto['prezzo'].'€'?></p>
-                <?php if($prodotto['sconto']!=0): ?>
-                    <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
-                <?php endif; ?>
+        <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
+        <p class="textalingjustify"><?php echo $prodotto['descrizione']?></p>
+        <div class="inlineflex">
+            <p><?php echo $prodotto['prezzo'].'€'?></p>
+            <?php if($prodotto['sconto']!=0): ?>
+                <p><?php echo round($prodotto['prezzo'] - ($prodotto['prezzo']*$prodotto['sconto']/100),2,PHP_ROUND_HALF_UP).'€'?></p>
+            <?php endif; ?>
 
-            </div>
+        </div>
    
-                <div>
+        <div>
+            <?php
+                if($prodotto['quantità']==0):
+            ?>
+            <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                <button class="bluebutton" name='notifica' value='<?php echo $prodotto['idprodotto']?>' >Notificami della disponibilità</button>
+            </form>
                 <?php
-                    if($prodotto['quantità']==0):
-                ?>
-                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
-                    <button class="bluebutton" name='notifica' value='<?php echo $prodotto['idprodotto']?>' >Notificami della disponibilità</button>
-                </form>
-                <?php
-                    else:
+                else:
                 ?> 
-                <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
-                    <button class="bluebutton" name='carrello' value='<?php echo $prodotto['idprodotto']?>'>Aggiungi al carrello</button>
-                </form>
-                <?php
-                    endif;
-                ?> 
-        
-                </div>
+            <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
+                <button class="bluebutton" name='carrello' value='<?php echo $prodotto['idprodotto']?>'>Aggiungi al carrello</button>
+            </form>
+            <?php
+            endif;
+            ?> 
+    
+        </div>
          
     </div>
 
