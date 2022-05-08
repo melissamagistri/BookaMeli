@@ -1,7 +1,7 @@
 <?php
 require_once 'util.php';
 
-if(isUserLoggedIn()){
+
     if(isset($_POST['recensione'])){
         if(!empty($_POST['recensione']['nomeprodotto']) && !empty($_POST['recensione']['titolorecensione']) && !empty($_POST['recensione']['testorecensione']) && !empty($_POST['recensione']['voto'])){
             $userReviews = $dbh->getUserReviews($_SESSION['idaccount'][0]['idaccount']);
@@ -20,7 +20,5 @@ if(isUserLoggedIn()){
         $idprodotto = $dbh->getProductIdFromName($_POST['elimina']['nomeprodotto'])[0]['idprodotto'];
         $dbh->deleteReview($_SESSION['idaccount'][0]['idaccount'], $idprodotto);
     }
-} else {
-    header("Location:login.php");
-}
+
 ?>

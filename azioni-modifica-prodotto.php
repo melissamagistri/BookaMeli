@@ -1,7 +1,6 @@
 <?php
 require_once 'util.php';
 //caso in cui voglio eliminare il prodotto
-if(isUserLoggedIn()){
     if($_POST['azione'] == 1){
                 $idprodotto = $_POST['idprodotto'];
                 $dbh->removeProductFromAdvice($idprodotto);
@@ -131,7 +130,5 @@ if(isUserLoggedIn()){
                         header("Location: nuovo-prodotto.php?errore=campiNonCompilati");
             } 
     } 
-} else {
-    header("Location: login.php");
-}
+
 ?>
