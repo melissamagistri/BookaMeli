@@ -26,11 +26,19 @@
             </li>
 
             <li>
+                <a href="avvisi.php">
+                    <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'lightbulb.png'?>" alt="avvisi">    
+                    <p>Avvisi</p> 
+                </a>
+            </li>
+
+            <li>
                 <a href="index.php">
                     <img class="imgdatichat" src="<?php echo UPLOAD_DIR.'undo.png'?>" alt="esci">    
                     <p>Esci</p> 
                 </a>
             </li>
+
 
         </ul>
     </div>
