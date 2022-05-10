@@ -707,6 +707,24 @@ class database{
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    //funzione che permette di prendere tutti gli ordini dal database
+    public function getAllOrders(){
+        $query = "SELECT idordine, stato, prezzo, dataordine from ordini order by dataordine desc";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che permette di cambiare stato dell'ordine, se stato = 1 ordine consegnato
+    public function changeOrderState($idordine, $stato){
+        $query = "UPDATE ordini SET stato = ? WHERE idordine = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii', $stato,  $idordine);
+        return $stmt->execute();
+    }
 }
 
 ?>

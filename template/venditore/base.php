@@ -34,6 +34,9 @@
                 <a href="categorie.php">Categorie</a>
             </li>
             <li>
+                <a href="ordiniVenditore.php">Ordini</a>
+            </li>
+            <li>
                 <a href="notifiche-venditore.php">Notifiche</a>
             </li>
             <li>
