@@ -725,6 +725,25 @@ class database{
         $stmt->bind_param('ii', $stato,  $idordine);
         return $stmt->execute();
     }
+
+    //funzione che ritorna tutti i prodotti per il quale l'utente ha chiesto di essere avvisato
+    public function getUserAdvices($idaccount){
+        $query = "SELECT p.idprodotto, p.nome, p.foto from avvisi a, prodotti p where a.idaccount = ? and a.idprodotto = p.idprodotto";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $idaccount);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    //funzione che permette la rimozione di un prodotto dalla lista degli avvisi da parte di un utente
+    public function removeFromAdvice($idaccount, $idprodotto){
+        $query = 'DELETE FROM avvisi WHERE idaccount = ? and idprodotto = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii', $idaccount, $idprodotto);
+        return $stmt->execute();
+    }
 }
 
 ?>
