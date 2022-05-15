@@ -17,14 +17,14 @@
             <ul class='listaProdotti textcenter padding-bottom'>
                 <?php foreach($templateParams['prodottiinOrdine'][$i] as $ordine):?>
                 <li class="padding-bottom">
-                    <a class='image' href="prodotto.php?foto=<?php echo $ordine['foto']?> ">
-                        <img class='imgordini' src="<?php echo UPLOAD_DIR.$ordine['foto']?>" alt="<?php echo $ordine['nome']?>">
-                        <div><?php echo $ordine['nome']?></div>
+                    <a class='image padding-bottom5' href="prodotto.php?foto=<?php echo $ordine['foto']?> ">
+                        <img class='imgordini padding-bottom10' src="<?php echo UPLOAD_DIR.$ordine['foto']?>" alt="<?php echo $ordine['nome']?>">
+                        <div class="padding-bottom5"><?php echo $ordine['nome']?></div>
                     </a>
-                    <p>Quantità: <?php echo $ordine['quantita']?></p>
-                    <p>Prezzo: <?php echo $ordine['costo']?></p>
+                    <p class="padding-bottom5">Quantità: <?php echo $ordine['quantita']?></p>
+                    <p class="padding-bottom5">Prezzo: <?php echo $ordine['costo']?></p>
                     <label for="statoOrdine">Cambia stato Ordine:</label>
-                    <select name="" id="statoOrdine">
+                    <select class="padding-bottom5 select" name="" id="statoOrdine">
                         <option <?php echo ($templateParams['ordini'][$i]['stato']) == 0 ? '' : 'selected'?> value="consegnato">Consegnato</option>
                         <option <?php echo ($templateParams['ordini'][$i]['stato']) == 0 ? 'selected' : ''?> value="nonAncoraSpedito">Non ancora spedito</option>
                     </select>    
