@@ -32,7 +32,7 @@ if(isset($_GET['rimuovi'])){
 
 //funzione per l'inserimento di un prodotto nel carrello
 if(isUserLoggedIn()){
-    if(isset($_GET['carrello']) && ($dbh->getProductQuantity($_GET['carrello'][0])[0]['quantità'] != 0)){
+    if(isset($_GET['carrello']) && ($dbh->getProductQuantity($_GET['carrello'])[0]['quantità'] != 0)){
         $dbh->addProductToCart($_SESSION['idaccount'][0]['idaccount'], $_GET['carrello']);
         //refresha la pagina per la corretta visualizzazione del carrello
         $url = $_SERVER['REQUEST_URI'];
@@ -48,7 +48,7 @@ if(isUserLoggedIn()){
     }
 
     //funzione per l'inserimento del cliente nella lista dei clienti da avvisare quando un prodotto torna disponibile
-    if(isset($_GET['notifica']) && ($dbh->getProductQuantity($_GET['notifica'][0])[0]['quantità'] == 0)){
+    if(isset($_GET['notifica']) && ($dbh->getProductQuantity($_GET['notifica'])[0]['quantità'] == 0)){
         $dbh->addUserToNotifyList($_SESSION['idaccount'][0]['idaccount'], $_GET['notifica']);
         //refresha la pagina per la corretta visualizzazione del carrello
         $url = $_SERVER['REQUEST_URI'];
