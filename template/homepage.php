@@ -1,13 +1,14 @@
 <div class="wrap">
    <div class="search">
      <form action="listaprodotti.php" method="get">
+       <label for="cat" hidden='hidden'>Categoria</label>
         <select name="cat" id="cat" class='select'>
           <option value="tutte le categorie">Tutte le categorie</option>
           <?php for($i=0;$i<count($templateParams['categorie']);$i++):?>
             <option value="<?php echo $templateParams['categorie'][$i]['nomecategoria']?>"><?php echo $templateParams['categorie'][$i]['nomecategoria']?></option>
           <?php endfor;?>
         </select>
-        <label for="cerca"></label>
+        <label for="cerca" hidden>Ricerca</label>
         <input type="search" class="searchTerm" placeholder="Che cosa stai cercando?" size="50" id='cerca' name='cerca'>
         <button type="submit" class="searchButton">
           <img class="imgsearch" src="<?php echo UPLOAD_DIR."loupe.png"; ?>" alt="Cerca">

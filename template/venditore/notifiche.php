@@ -2,6 +2,7 @@
 
 <div class="custom-select">
 
+<label for="selettoreNotifiche" hidden>Seleziona filtro notifica</label>
     <select name="selettoreNotifiche" id="selettoreNotifiche">
         <option value="ordini">Ordini</option>
         <option value="prodotti">Prodotti</option>

@@ -9,33 +9,33 @@
             <input class="datiprodotto" type="file" id="img" name="img">
         </li>
         <li class="displayprod space-between"> 
-            <label for="">Titolo:</label>
+            <label for="titolo">Titolo:</label>
             <input class="datiprodotto" type="text" name='titolo' id='titolo'>
         </li>
 
         <li class="displayprod space-between"> 
-            <label for="">Prezzo:</label>
+            <label for="prezzo">Prezzo:</label>
             <input class="datiprodotto" type="text" name = 'prezzo' id='prezzo'>
         </li>
 
         <li class="displayprod space-between"> 
-            <label for="">Descrizione:</label>
+            <label for="descrizione">Descrizione:</label>
             <textarea class="datiprodotto descriptiontextarea" type="text" name='descrizione' id='descrizione'> </textarea>
         </li>
 
         <li class="displayprod space-between"> 
-            <label for="">Sconto:</label>
+            <label for="sconto">Sconto:</label>
             <input class="datiprodotto" type="text" name='sconto' id='sconto'>
         </li>
 
         <li class="displayprod space-between"> 
-            <label for="">Quantità:</label>
+            <label for="quantità">Quantità:</label>
             <input class="datiprodotto" type="text" name='quantità' id='quantità'>
         </li>
 
         <li class="displayprod space-between">
-            <label for="">Categoria:</label>
-            <select class="selectdim" name="categoria" id="">
+            <label for="categoria">Categoria:</label>
+            <select class="selectdim" name="categoria" id="categoria">
             <option value="nessunaCategoria">Nessuna Categoria</option>
                 <?php foreach($templateParams['categorie'] as $categoria):?>
                     <option value='<?php echo $categoria['nomecategoria']?>'><?php echo $categoria['nomecategoria']?></option>

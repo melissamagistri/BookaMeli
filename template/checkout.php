@@ -6,10 +6,10 @@
     
     <div class="checkoutdivstyle">
         <div class="padding-bottom30">
-            <h1 class="h1checkout">1.Informazioni Personali</h1>
+            <h2 class="h1checkout">1.Informazioni Personali</h2>
         </div>
         <div>
-            <h1 class="h1checkout">2.Pagamento</h1>
+            <h2 class="h1checkout">2.Pagamento</h2>
         </div>
         
     </div>
@@ -23,37 +23,40 @@
 
         <div class="textcenter no-padding inline-block">
         <form class="form" action="#" method="POST">
-            
-        <div class="base-list-style flexcolumn flex">
-            <div class="inlineflex">
-                <input type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
-                <label for="contanti">Contanti</label>
+        <fieldset>
+            <legend class="legend">Scegli un metodo di pagamento</legend>
+            <div class="base-list-style flexcolumn flex">
+                <div class="inlineflex">
+                    <input class="inputradio" type="radio" id="contanti" name="metodo_pagamento" value="Contanti">
+                    <label for="contanti">Contanti</label>
+                </div>
+                
+                <div class="inlineflex">
+                    <input class="inputradio" type="radio" id="carta" name="metodo_pagamento" value="Carta di credito">
+                    <label for="carta">Carta di credito</label>
+                </div>
+                
             </div>
+
             
-            <div class="inlineflex">
-                <input type="radio" id="carta" name="metodo_pagamento" value="Carta di credito">
-                <label for="carta">Carta di credito</label>
+            <div class="checkoutdiv initial-align">
+            <h3>Inserisci i dati della tua carta</h3>
+                <div class="checkoutinput">
+                    <label for="numerocarta">Numero Carta:</label>
+                    <input type="text" id="numerocarta" name="datiNumero" class='datiNumero'placeholder="Numero">
+                </div>
+
+                <div>
+                    <label for="nomeproprietario">Nome proprietario:</label>
+                    <input type="text" id="nomeproprietario" name="datiNome" class='datiNome' placeholder="Proprietario">
+                </div>
+            
             </div>
-            
+        </fieldset>
+
+        <div class="grid">
+            <button class="bluebutton submit">Continua</button>
         </div>
-
-        
-        <div class="checkoutdiv initial-align">
-        <h3>Inserisci i dati della tua carta</h3>
-            <div class="checkoutinput">
-                <label for="Numero carta">Numero Carta:</label>
-                <input type="text" name="datiNumero" class='datiNumero'placeholder="Numero">
-            </div>
-
-            <div>
-                <label for="Nome Proprietario">Nome proprietario:</label>
-                <input type="text" name="datiNome" class='datiNome' placeholder="Proprietario">
-            </div>
-           
-        </div>
-
-                 
-        <div class="grid"><button class="bluebutton submit">Continua</button></div>
         </form>
 
 

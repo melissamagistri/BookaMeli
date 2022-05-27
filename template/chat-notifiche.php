@@ -1,5 +1,5 @@
 <section>
-    <h1>Chat e Notifiche</h1>
+    <h2>Chat e Notifiche</h2>
 
     <div class="vertical-items">
         <ul class="center-ul">

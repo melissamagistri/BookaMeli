@@ -26,6 +26,7 @@
 		</ul>
 		<div class='writeMessage divsendmess'>
 			<form action="" onsubmit='return false' class="width100">
+				<label for="messaggio" hidden>messaggio</label>
 				<textarea class="textareachat" id='messaggio' placeholder="Type your message"></textarea>
 				<button id='invia' class='bluebutton minibutton'><img class="img25" src="<?php echo UPLOAD_DIR."send.png"; ?>" alt="invio messaggio"></button>
 			</form>	

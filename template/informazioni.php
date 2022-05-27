@@ -1,5 +1,5 @@
 <section>
-    <h1>Chi siamo?</h1>
+    <h2>Chi siamo?</h2>
 
     <div class="descrizioni">
         <p>Siamo un team di giovani imprenditori che si pongono lo scopo di portare la lettura nelle vostre case!

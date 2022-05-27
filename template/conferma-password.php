@@ -1,4 +1,4 @@
-<h1>Conferma Nuovi Dati</h1>
+<h2>Conferma Nuovi Dati</h2>
 <form action="#" method="POST">
             
             
@@ -9,20 +9,20 @@
                     <?php endif; ?>
                 </li>
                 <li>
-                    <label for="Email">Email:</label>
-                    <input type="text"  name="email" required/>
+                    <label for="email">Email:</label>
+                    <input type="text"  name="email" id="email" required/>
                 </li>
                 <li>
-                    <label for="Password">Password:</label>
-                    <input type="password"  name="password" required/>
+                    <label for="password">Password:</label>
+                    <input type="password"  name="password" id="password" required/>
                 </li>
                 <li>
-                    <label for="Ripeti Password">Ripeti Password:</label>
-                    <input type="password"  name="confermapassword"  required/>
+                    <label for="confermaPassword">Ripeti Password:</label>
+                    <input type="password"  name="confermapassword" id="confermaPassword" required/>
                 </li>
                 <li class="text-center">
-                    <label for="Invia"></label>
-                    <input type="submit" name="submit" value="Invia" />
+                    <label for="submit"></label>
+                    <input type="submit" name="submit" id="submit" value="Invia" />
                 </li>
             </ul>
         </form>

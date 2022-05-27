@@ -1,4 +1,4 @@
-<h1>Storico Ordini</h1>
+<h2>Storico Ordini</h2>
 <section>
     <ul>
      <?php if(count($templateParams['ordini']) == 0):?>
@@ -41,6 +41,7 @@
                         <div class="search padding-bottom">
                             <label class="align-self" for="titolo">Titolo:</label>
                             <input type="text" placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
+                            <label for="recensione" hidden>recensione</label>
                             <textarea class="textareadimension"  placeholder="Inserisci la tua recensione" id='recensione'></textarea> 
                             <button class="bluebutton invia">Invia</button>
                         </div>
@@ -71,6 +72,7 @@
                         <div class="search">
                             <label class="align-self" for="titolo">Titolo:</label>
                             <input type="text" value='<?php echo $rec['titolorecensione']?>' placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
+                            <label for="recensione" hidden>recensione</label>
                             <textarea class="textareadimension" placeholder="Inserisci la tua recensione" id='recensione'><?php echo $rec['testorecensione']?></textarea> 
                             <button class="bluebutton invia">Invia</button>
                             <button class='bluebutton elimina'>Elimina recensione</button>

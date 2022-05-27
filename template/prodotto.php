@@ -13,7 +13,7 @@
 
     <div class="displaycenter displayproduct flexcolumn width50 inlineprodotto">
         
-        <h1 class="h1product"><?php echo $prodotto['nome']?></h1>
+        <h2 class="h1product"><?php echo $prodotto['nome']?></h2>
         <p class="textalingjustify"><?php echo $prodotto['descrizione']?></p>
         <div class="inlineflex">
             <p><?php echo $prodotto['prezzo'].'€'?></p>

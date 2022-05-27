@@ -45,7 +45,7 @@
         <div class="sidenavcar" >
             <div>
                 <img class="img" src="<?php echo UPLOAD_DIR.'chiusura.png'?>" alt="chiusura">
-                <h1>Carrello</h1>
+                <h2>Carrello</h2>
             </div>
             <?php if(isUserLoggedIn()):?>
             <ul>
@@ -60,7 +60,8 @@
                         <ul>
                             <li class='titolo'><a class="hover" href="prodotto.php?foto=<?php echo $prodotto['foto'] ?>"><?php echo $prodotto['nome']?></a></li>
                             <li> 
-                            <select name="" id="">
+                                <label for="selquantita" hidden>Seleziona Quantità prodotto</label>
+                            <select name="" id="selquantita">
                                     <?php $quantity = $dbh->getProductQuantity($prodotto['idprodotto'])[0]['quantità']; ?>
                                     <?php $val = $dbh->getProductInCartQuantity($_SESSION['idaccount'][0]['idaccount'], $prodotto['idprodotto'])[0]['quantita'] ?>
                                     <?php for($i=1; $i <= (($quantity > 10) ? 10 : $quantity); $i++):?>

@@ -1,4 +1,4 @@
-<h1>Crea Account</h1>
+<h2>Crea Account</h2>
 <form action="#" method="POST">
         
             
@@ -9,29 +9,30 @@
                     <?php endif; ?>
                 </li>
                 <li>
-                    <label for="Nome">Nome:</label>
-                    <input type="text"  name="nome" required/>
+                    <label for="nome">Nome:</label>
+                    <input type="text"  name="nome" id="nome" required/>
                 </li>
                 <li>
-                    <label for="Cognome">Cognome:</label>
-                    <input type="text"  name="cognome"  required/>
-                </li>
-
-                <li>
-                    <label for="Email">Email:</label>
-                    <input type="text"  name="email" required/>
-                </li>
-                <li>
-                    <label for="Password">Password:</label>
-                    <input type="password"  name="password" required/>
+                    <label for="cognome">Cognome:</label>
+                    <input type="text"  name="cognome" id="cognome" required/>
                 </li>
 
                 <li>
-                    <label for="Conferma password">Conferma Password:</label>
-                    <input type="password"  name="confermapassword" required/>
+                    <label for="email">Email:</label>
+                    <input type="text"  name="email" id="email"required/>
+                </li>
+                <li>
+                    <label for="password">Password:</label>
+                    <input type="password"  name="password" id="password" required/>
+                </li>
+
+                <li>
+                    <label for="confermapassword">Conferma Password:</label>
+                    <input type="password"  name="confermapassword" id="confermapassword" required/>
                 </li>
                 <li class="text-center">
-                    <input type="submit" name="submit" value="Invia" />
+                    <label for="submit" hidden>Registrati</label>
+                    <input type="submit" name="submit" id="submit" value="Invia" />
                 </li>
             </ul>
         </form>

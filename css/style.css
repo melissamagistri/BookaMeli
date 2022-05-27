@@ -4,6 +4,16 @@
   margin: 0;
 }
 
+.legend {
+  background-color: lightblue;
+  color: black;
+  padding: 3px 6px;
+}
+
+.inputradio {
+  margin: 0.4rem;
+}
+
 .textlinethrough {
   text-decoration: line-through;
 }

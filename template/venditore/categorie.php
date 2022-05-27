@@ -7,13 +7,15 @@
 </div>
 
 <div class="aggiungicategoria categoria gap2 displayflexcenter ">
+    <label for="categoria" hidden>Categoria</label>
     <input class="inputcat" id='categoria' type="text">
     <button class="bluebutton" id='aggiungi' >Aggiungi</button>
 </div>
 <div class="eliminacategoria categoria gap2 displayflexcenter ">
 <?php if(count($templateParams['categorie']) > 0):?>
 
-    <select class="select selectdim" name="" id="">
+    <label for="selezionacategoria" hidden>seleziona categoria</label>
+    <select class="select selectdim" name="" id="selezionacategoria">
     <?php foreach($templateParams['categorie'] as $categoria):?>
         <option value="<?php echo $categoria['nomecategoria']?>"><?php echo $categoria['nomecategoria']?></option>
     <?php endforeach;?>

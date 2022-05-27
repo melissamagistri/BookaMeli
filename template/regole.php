@@ -62,7 +62,7 @@
 </section>
 
 <section class="sectionpadding">
-<h1>Preordini</h1>
+<h2>Preordini</h2>
 
 <div class="descrizioni">
     <p class="textalingjustify">Tutti i prodotti acquistati nella sezione Preordini saranno spediti 
