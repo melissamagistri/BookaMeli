@@ -2,26 +2,28 @@
     <p class="textcenter"> <?php echo $templateParams['errore'] ?></p>
 <?php endif; ?>
 
-<section class="border sectioncheckout">
+<section class="blocksection padding10 border sectioncheckout">
     
     <div class="checkoutdivstyle">
         <div class="padding-bottom30">
             <h2 class="h1checkout">1.Informazioni Personali</h2>
         </div>
-        <div>
-            <h2 class="h1checkout">2.Pagamento</h2>
-        </div>
-        
-    </div>
-            
-    <div class="checkoutdivstyle">
+
         <div class="inline-block padding-bottom30">               
             <p>Nome:  <?php echo $templateParams["userinfo"][0]["nome"]; ?> </p>
             <p>Cognome: <?php echo $templateParams["userinfo"][0]["cognome"]; ?></p>
             <p>Email: <?php echo $templateParams["userinfo"][0]["email"]; ?> </p>
         </div>
+        
+        
+    </div>
+            
+    <div class="checkoutdivstyle">
+        <div class="maringbottom">
+            <h2 class="h1checkout">2.Pagamento</h2>
+        </div>
 
-        <div class="textcenter no-padding inline-block">
+        <div class="textcenter no-padding inline-block checkout80">
         <form class="form" action="#" method="POST">
         <fieldset>
             <legend class="legend">Scegli un metodo di pagamento</legend>
@@ -41,7 +43,7 @@
             
             <div class="checkoutdiv initial-align">
             <h3>Inserisci i dati della tua carta</h3>
-                <div class="checkoutinput">
+                <div>
                     <label for="numerocarta">Numero Carta:</label>
                     <input type="text" id="numerocarta" name="datiNumero" class='datiNumero'placeholder="Numero">
                 </div>
@@ -55,7 +57,7 @@
         </fieldset>
 
         <div class="grid">
-            <button class="bluebutton submit">Continua</button>
+            <button class="checkoutbutton bluebutton submit">Continua</button>
         </div>
         </form>
 

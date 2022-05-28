@@ -16,7 +16,7 @@ if(isUserLoggedIn()){
 
 //funzione per la rimozione di un prodotto dal carrello
 if(isset($_GET['rimuovi'])){
-    $dbh->removeProductFromCart($_SESSION['idaccount'][0]['idaccount'], (int)$_GET['rimuovi'][0]);
+    $dbh->removeProductFromCart($_SESSION['idaccount'][0]['idaccount'], (int)$_GET['rimuovi']);
     //refresha la pagina per la corretta visualizzazione del carrello
     $url = $_SERVER['REQUEST_URI'];
     $suburl = explode('?', $url);

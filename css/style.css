@@ -10,6 +10,11 @@
   padding: 3px 6px;
 }
 
+.padding10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .inputradio {
   margin: 0.4rem;
 }
@@ -171,7 +176,6 @@ h2 {
 .sectioncheckout {
   display: flex;
   justify-content: center;
-  gap: 100px;
 }
 
 .checkoutdivinput {
@@ -787,7 +791,8 @@ h3 {
   margin: 0;
 }
 
-.chatwidth {
+.chatwidth,
+.checkout80 {
   width: 80%;
 }
 
@@ -984,5 +989,23 @@ h3 {
   .textareachat {
     width: 80%;
     resize: none;
+  }
+
+  .blocksection,
+  .blockprod {
+    display: block;
+  }
+
+  .search {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .titolo {
+    height: 50px;
+  }
+
+  .textareadimension {
+    width: 100%;
   }
 }

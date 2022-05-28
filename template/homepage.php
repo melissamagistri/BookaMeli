@@ -49,9 +49,9 @@
   <h2>Novità</h2>
   
   <div>
-      <ul class="no-padding displayflex">
+      <ul class="blockprod no-padding displayflex">
       <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
-        <li class="no-margin textcenter">
+        <li class=" textcenter">
           <div>
           <a href="prodotto.php?foto=<?php echo $templateParams['prodottinuovi'][$i]['foto']?> ">
             <img class="imghome <?php echo $templateParams['prodottinuovi'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodottinuovi'][$i]['nome']?>">
@@ -93,10 +93,10 @@
   <h2>Popolari</h2>
   
   <div>
-      <ul class="no-padding displayflex">
+      <ul class="blockprod no-padding displayflex">
       <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
 
-        <li class="no-margin textcenter">
+        <li class="padding-bottom10  textcenter">
         <div>
         <a class="flex-a"
             href="prodotto.php?foto=<?php echo $templateParams['prodottipopolari'][$i]['foto']?> ">

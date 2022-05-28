@@ -1,13 +1,13 @@
 <section>
     <div>
-        <ul class="no-padding displayflex">
+        <ul class="no-padding displayflex blockprod">
             <?php if(count($templateParams['prodotti']) == 0):?>
                 <p>La tua ricerca non ha prodotto risultati.</p>
             <?php else:?>
 
             <?php for($i=0;$i<count($templateParams['prodotti']);$i++):?>
 
-            <li class="no-margin textcenter prodotti">
+            <li class=" textcenter prodotti">
                 <div>
                 <a class="flex-a"
                     href="prodotto.php?foto=<?php echo $templateParams['prodotti'][$i]['foto']?> ">
