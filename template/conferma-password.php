@@ -9,8 +9,14 @@
                     <?php endif; ?>
                 </li>
                 <li>
-                    <label for="email">Email:</label>
-                    <input type="text"  name="email" id="email" required/>
+                    
+                    <?php if(isset($templateParams['email'])):?>
+                        <label for="email">Email: <?php echo $templateParams['email']?></label>
+                            <input type="text"  name="email" id="email" value='<?php echo $templateParams['email']?>' hidden/>
+                        <?php else: ?>
+                            <label for="email">Email:</label>
+                            <input type="text"  name="email" id="email" required/>
+                        <?php endif;?>
                 </li>
                 <li>
                     <label for="password">Password:</label>
