@@ -29,7 +29,7 @@
             <li class="no-margin textcenter prodotti">
                 <div>
                 <a class="flex-a"
-                    href="prodotto.php?foto=<?php echo $templateParams['prodotti'][$i]['foto']?> ">
+                    href="visualizza_prodotto.php?foto=<?php echo $templateParams['prodotti'][$i]['foto']?> ">
                     <img class="imghome <?php echo $templateParams['prodotti'][$i]['quantità']==0 ? 'imgGray' : ''?>" src="<?php echo UPLOAD_DIR.$templateParams['prodotti'][$i]['foto']?>" alt="<?php echo UPLOAD_DIR.$templateParams['prodotti'][$i]['nome']?>">
                     <div><?php echo $templateParams['prodotti'][$i]['nome']?></div>
                 </a>
