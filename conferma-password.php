@@ -26,6 +26,8 @@ if(isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["conferma
     $templateParams["js"] = array("js/jquery-3.4.1.min.js","js/baseScript.js");
     if(isUserLoggedIn()){
         $templateParams['email']=$dbh->getUserEmail($_SESSION['idaccount'][0]['idaccount'])[0]['email'];
+    }else if(isset($_GET['email'])){
+        $templateParams['email'] = $_GET['email'];
     }
 }
 require_once 'template/base.php';
