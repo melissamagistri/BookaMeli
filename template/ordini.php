@@ -72,7 +72,7 @@
                         <div class="search">
                             <label class="align-self" for="titolo">Titolo:</label>
                             <input class="titolo" type="text" value='<?php echo $rec['titolorecensione']?>' placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
-                            <label for="recensione">Descrizione:</label>
+                            <label class="align-self" for="recensione">Descrizione:</label>
                             <textarea class="textareadimension" placeholder="Inserisci la tua recensione" id='recensione'><?php echo $rec['testorecensione']?></textarea> 
                             <button class="bluebutton invia">Invia</button>
                             <button class='bluebutton elimina'>Elimina recensione</button>
