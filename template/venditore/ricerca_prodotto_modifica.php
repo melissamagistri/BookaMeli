@@ -19,7 +19,7 @@
     </div>
 
     <div class="vertical-items">
-        <ul class="no-padding displayflex">
+        <ul class="no-padding displayflex flexwrap align-items-end">
             <?php if(count($templateParams['prodotti']) == 0):?>
                 <p>La tua ricerca non ha prodotto risultati.</p>
             <?php else:?>

@@ -19,6 +19,14 @@
   margin: 0.4rem;
 }
 
+.flexwrap {
+  flex-wrap: wrap;
+}
+
+.align-items-end {
+  align-items: end;
+}
+
 .textlinethrough {
   text-decoration: line-through;
 }
