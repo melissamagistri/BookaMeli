@@ -103,31 +103,31 @@ require_once 'util.php';
     }
     //caso in cui si vuole inserire un nuovo prodotto
     if($_POST['azione']==2){
-                if(!empty($_POST['titolo']) && !empty($_POST['prezzo']) && 
-                    !empty($_POST['descrizione']) && !empty($_POST['sconto']) && 
-                    !empty($_POST['quantità']) && !empty($_POST['categoria']) && $_FILES['img']['name'] != ''){
-                        list($result, $msg) = uploadImage(UPLOAD_DIR, $_FILES["img"]);
-                        if($result!=0){
-                            $img = $msg;
-                            $prezzo = floatval($_POST['prezzo']);
-                            $sconto = intval($_POST['sconto']);
-                            $quantità = intval($_POST['quantità']);
-                            if($sconto >= 0 && $sconto <= 100 && $quantità >= 0 && $prezzo >=0){
-                                $dbh->insertProduct($_POST['titolo'], $_POST['descrizione'], $prezzo, $sconto, $quantità, $img);
+            if(!empty($_POST['titolo']) && (!empty($_POST['prezzo']) || $_POST['prezzo']==0) && 
+                !empty($_POST['descrizione']) && (!empty($_POST['sconto']) || $_POST['sconto']==0) && 
+                (!empty($_POST['quantità']) || $_POST['quantità']==0) && !empty($_POST['categoria']) && !empty($_FILES['img']['name'])){
+                list($result, $msg) = uploadImage(UPLOAD_DIR, $_FILES["img"]);
+                if($result!=0){
+                    $img = $msg;
+                    $prezzo = floatval($_POST['prezzo']);
+                    $sconto = intval($_POST['sconto']);
+                    $quantità = intval($_POST['quantità']);
+                    if($sconto >= 0 && $sconto <= 100 && $quantità >= 0 && $prezzo >=0){
+                        $dbh->insertProduct($_POST['titolo'], $_POST['descrizione'], $prezzo, $sconto, $quantità, $img);
                     } else {
-                                header("Location: nuovo-prodotto.php?errore=numeri"); 
+                        header("Location: nuovo-prodotto.php?errore=numeri"); 
                     }
-                    if($_POST['categoria'] != 'nessunaCategoria'){
-                                $idprodotto = $dbh->getProductIdFromName($_POST['titolo'])[0]['idprodotto'];
-                                $dbh->insertProductInCathegory($idprodotto, $_POST['categoria']);
-                    }
-                    header('Location: accountVenditore.php');
+                if($_POST['categoria'] != 'nessunaCategoria'){
+                            $idprodotto = $dbh->getProductIdFromName($_POST['titolo'])[0]['idprodotto'];
+                            $dbh->insertProductInCathegory($idprodotto, $_POST['categoria']);
+                }
+                header('Location: accountVenditore.php');
                 } else {
-                            header("Location: nuovo-prodotto.php?errore=immagine");
+                    header("Location: nuovo-prodotto.php?errore=immagine");
                 }
                 
             }else{
-                        header("Location: nuovo-prodotto.php?errore=campiNonCompilati");
+                header("Location: nuovo-prodotto.php?errore=campiNonCompilati");
             } 
     } 
 
