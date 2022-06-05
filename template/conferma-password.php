@@ -22,5 +22,5 @@
     </ul>
 </form>
 <?php else:?>
-    <p>C'è stato un errore di comunicazione, si prega di riprovare più tardi</p>
+    <p class="textcenter" >C'è stato un errore di comunicazione, si prega di riprovare più tardi</p>
 <?php endif;?>

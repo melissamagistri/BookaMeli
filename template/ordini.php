@@ -41,7 +41,7 @@
                         <div class="search padding-bottom">
                             <label class="align-self" for="titolo">Titolo:</label>
                             <input class="titolo" type="text" placeholder='Inserisci il titolo' name='titolo' id='titolo'></input>
-                            <label for="recensione">Descrizione:</label>
+                            <label class="align-self" for="recensione">Descrizione:</label>
                             <textarea class="textareadimension"  placeholder="Inserisci la tua recensione" id='recensione'></textarea> 
                             <button class="bluebutton invia">Invia</button>
                         </div>
