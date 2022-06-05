@@ -1,6 +1,6 @@
 <section>
     <div>
-        <ul class="no-padding displayflex blockprod">
+        <ul class="no-padding displayflex blockprod align-items-end">
             <?php if(count($templateParams['prodotti']) == 0):?>
                 <p>La tua ricerca non ha prodotto risultati.</p>
             <?php else:?>

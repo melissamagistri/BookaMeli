@@ -49,7 +49,7 @@
   <h2>Novità</h2>
   
   <div>
-      <ul class="blockprod no-padding displayflex">
+      <ul class="blockprod no-padding displayflex align-items-end">
       <?php for($i=0;$i<count($templateParams['prodottinuovi']);$i++):?>
         <li class=" textcenter">
           <div>
@@ -69,7 +69,7 @@
           <div>
           <?php if($templateParams['prodottinuovi'][$i]['quantità']==0):?> 
             <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
-              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottinuovi'][$i]['idprodotto']?>'>Notificami della disponibilita</button>
+              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottinuovi'][$i]['idprodotto']?>'>Notificami della disponibilità</button>
             </form>
           <?php else:?> 
             <form action="<?php echo isUserLoggedIn() ? '' : 'login.php'?>" method='get'>
@@ -93,7 +93,7 @@
   <h2>Popolari</h2>
   
   <div>
-      <ul class="blockprod no-padding displayflex">
+      <ul class="blockprod no-padding displayflex align-items-end">
       <?php for($i=0;$i<count($templateParams['prodottipopolari']);$i++):?>
 
         <li class="padding-bottom10  textcenter">
@@ -115,7 +115,7 @@
             if($templateParams['prodottipopolari'][$i]['quantità']==0):
         ?>
            <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
-              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottipopolari'][$i]['idprodotto']?>'>Notificami della disponibilita</button>
+              <button class="bluebutton" name='notifica' value='<?php echo $templateParams['prodottipopolari'][$i]['idprodotto']?>'>Notificami della disponibilità</button>
             </form>
           <?php else:?> 
           <form action="<?php echo isUserLoggedIn() ? 'index.php' : 'login.php'?>" method='get'>
